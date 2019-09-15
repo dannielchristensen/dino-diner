@@ -4,8 +4,8 @@ namespace DinoDiner.Menu.Entrees
 {
     public class TRexKingBurger
     {
-        public double price { get; set; }
-        public uint calories { get; set; }
+        public double Price { get; set; }
+        public uint Calories { get; set; }
         private bool bun = true;
         private bool pickle = true;
         private bool ketchup = true;
@@ -15,11 +15,11 @@ namespace DinoDiner.Menu.Entrees
         private bool onion = true;
         private bool mayo = true;
 
-        public List<string> ingredients
+        public List<string> Ingredients
         {
             get
             {
-                List<string> s = new List<string>() { "3 Steakburger Patties" };
+                List<string> s = new List<string>() { "Steakburger Pattie", "Steakburger Pattie", "Steakburger Pattie" };
                 if (bun) s.Add("Whole Wheat Bun");
                 if (pickle) s.Add("Pickle");
                 if (ketchup) s.Add("Ketchup");
@@ -36,17 +36,17 @@ namespace DinoDiner.Menu.Entrees
 
         public TRexKingBurger()
         {
-            this.price = 8.45;
-            this.calories = 728;
+            this.Price = 8.45;
+            this.Calories = 728;
         }
-        public void holdBun() => this.bun = false;
-        public void holdKetchup() => this.ketchup = false;
-        public void holdPickle() => this.pickle = false;
-        public void holdMustard() => this.mustard = false;
-        public void holdLettuce() => this.lettuce = false;
-        public void holdMayo() => this.mayo = false;
-        public void holdOnion() => this.onion = false;
-        public void holdTomato() => this.tomato = false;
+        public void HoldBun() => this.bun = false;
+        public void HoldKetchup() => this.ketchup = false;
+        public void HoldPickle() => this.pickle = false;
+        public void HoldMustard() => this.mustard = false;
+        public void HoldLettuce() => this.lettuce = false;
+        public void HoldMayo() => this.mayo = false;
+        public void HoldOnion() => this.onion = false;
+        public void HoldTomato() => this.tomato = false;
     }
 
 }
