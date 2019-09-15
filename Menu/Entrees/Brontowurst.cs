@@ -7,10 +7,10 @@ namespace DinoDiner.Menu.Entrees
         
         private bool bun = true;
         private bool peppers = true;
-        private bool mustard = true;
+        private bool onions = true;
         
-        public double price { get; set; }
-        public uint calories { get; set; }
+        public double Price { get; set; }
+        public uint Calories { get; set; }
 
         public List<string> Ingredients
         {
@@ -19,20 +19,20 @@ namespace DinoDiner.Menu.Entrees
                 List<string> i = new List<string>() { "brautwurst" };
                 if (bun) i.Add("Whole=Wheat bun");
                 if (peppers) i.Add("Peppers");
-                if (mustard) i.Add("Mustard");
+                if (onions) i.Add("Mustard");
                 return i;
             }
         }
 
         public Brontowurst()
         {
-            this.price = 5.36;
-            this.calories = 498;
+            this.Price = 5.36;
+            this.Calories = 498;
         }
 
-        public void holdBun() => this.bun = false;
-        public void holdPeppers() => this.peppers = false;
-        public void holdMustard() => this.mustard = false;
+        public void HoldBun() => this.bun = false;
+        public void HoldPeppers() => this.peppers = false;
+        public void HoldOnion() => this.onions = false;
 
     }
 }
