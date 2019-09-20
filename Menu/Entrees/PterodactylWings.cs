@@ -1,12 +1,29 @@
-﻿using System.Collections.Generic;
+﻿/*  PterodactylWings.cs
+ *  Author: Danniel Christensen
+ */
+using System.Collections.Generic;
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class PterodactylWings
+    /// <summary>
+    /// The PterodactylWings objects extends the Entree abstract class
+    /// </summary>
+    public class PterodactylWings : Entree
     {
-        public double Price { get; set; }
-        public uint Calories { get; set; }
-        public List<string> Ingredients
+        /// <summary>
+        /// Allws access to Price via getter and setter
+        /// </summary>
+        public override double Price { get; set; }
+
+        /// <summary>
+        /// Allws access to Calories via getter and setter
+        /// </summary>
+        public override uint Calories { get; set; }
+
+        /// <summary>
+        /// List containing the ingredients of the PterodactylWings using bools
+        /// </summary>
+        public override List<string> Ingredients
         {
             get
             {
@@ -15,6 +32,9 @@ namespace DinoDiner.Menu.Entrees
             }
         }
 
+        /// <summary>
+        /// Initializes the value of a PterodactylWings and its price/calories to small
+        /// </summary>
         public PterodactylWings()
         {
             this.Price = 7.21;

@@ -13,9 +13,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Sides\FryceritopsTest.cs" />
-    <Compile Remove="Sides\MeteorMacAndCheeseTest.cs" />
-    <Compile Remove="Sides\MezzorellaSticksTest.cs" />
+    <Compile Remove="BrontowurstTest.cs" />
+    <Compile Remove="DinoNuggetsTest.cs" />
+    <Compile Remove="PrehistoricPBJTest.cs" />
+    <Compile Remove="PterodactylWingsTest.cs" />
+    <Compile Remove="SteakosaurusBurgerTest.cs" />
+    <Compile Remove="TRexKingBurgerTest.cs" />
+    <Compile Remove="VelociWrapTest.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,11 +1,25 @@
-﻿using System.Collections.Generic;
+﻿/*  Fryceritops.cs
+ *  Author: Danniel Christensen
+ */
+
+using System.Collections.Generic;
 
 
 namespace DinoDiner.Menu.Sides
 {
+    /// <summary>
+    /// The Fryceritops objects extends the Side abstract class
+    /// </summary>
     public class Fryceritops: Side
     {
+        /// <summary>
+        /// Creates Size object to hold size of object
+        /// </summary>
         private Size size;
+
+        /// <summary>
+        /// Allws access to size via getter and setter
+        /// </summary>
         public override Size Size
         {
             get
@@ -33,6 +47,9 @@ namespace DinoDiner.Menu.Sides
                 }
             }
         }
+        /// <summary>
+        /// Constructor for Fryceritops. Sets default Calories and Price to size small.
+        /// </summary>
         public Fryceritops()
         {
             base.Calories = 222;
@@ -40,8 +57,19 @@ namespace DinoDiner.Menu.Sides
 
 
         }
+        /// <summary>
+        /// Creates the list Ingredients for Fryceritops 
+        /// Overrides Ingredients in side
+        /// </summary>
 
-        public List<string> Ingredients = new List<string>{ "Potato", "Salt", "Vegetable Oil" };
+        public override List<string> Ingredients
+        {
+            get
+            {
+                return new List<string> { "Potato", "Salt", "Vegetable Oil" };
+
+            }
+        }
 
     }
 }

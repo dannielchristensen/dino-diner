@@ -1,12 +1,26 @@
-﻿using System;
+﻿/*  Triceritots.cs
+*  Author: Danniel Christensen
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DinoDiner.Menu.Sides
 {
+    /// <summary>
+    /// The Fryceritops objects extends the Side abstract class
+    /// </summary>
     public class Triceritots: Side
     {
+        /// <summary>
+        /// Creates Size object to hold size of object
+        /// </summary>
         private Size size;
+
+        /// <summary>
+        /// Allws access to size via getter and setter
+        /// </summary>
         public override Size Size
         {
             get
@@ -35,6 +49,9 @@ namespace DinoDiner.Menu.Sides
             }
         }
 
+        /// <summary>
+        /// Constructor for Triceritots. Sets default Calories and Price to size small.
+        /// </summary>
         public Triceritots()
         {
             base.Calories = 352;
@@ -43,6 +60,17 @@ namespace DinoDiner.Menu.Sides
 
         }
 
-        public List<string> Ingredients = new List<string> { "Potato", "Salt", "Vegetable Oil" };
+        /// <summary>
+        /// Creates the list Ingredients for Triceritots 
+        /// Overrides Ingredients in side
+        /// </summary>
+        public override List<string> Ingredients
+        {
+            get
+            {
+                return new List<string> { "Potato", "Salt", "Vegetable Oil" };
+
+            }
+        }
     }
 }

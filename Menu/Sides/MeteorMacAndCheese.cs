@@ -1,11 +1,25 @@
-﻿using System.Collections.Generic;
+﻿/*  MeteorMacAndCheese.cs
+ *  Author: Danniel Christensen
+ */
+
+using System.Collections.Generic;
 
 
 namespace DinoDiner.Menu.Sides
 {
+    /// <summary>
+    /// The MeteorMacAndCheese objects extends the Side abstract class
+    /// </summary>
     public class MeteorMacAndCheese : Side
     {
+        /// <summary>
+        /// Creates Size object to hold size of object
+        /// </summary>
         private Size size;
+
+        /// <summary>
+        /// Allws access to size via getter and setter
+        /// </summary>
         public override Size Size
         {
             get
@@ -33,7 +47,9 @@ namespace DinoDiner.Menu.Sides
                 }
             }
         }
-
+        /// <summary>
+        /// Constructor for MeteorMacAndCheese. Sets default Calories and Price to size small.
+        /// </summary>
         public MeteorMacAndCheese()
         {
             base.Calories = 420;
@@ -41,7 +57,17 @@ namespace DinoDiner.Menu.Sides
 
 
         }
+        /// <summary>
+        /// Creates the list Ingredients for MeteorMacAndCheese 
+        /// Overrides Ingredients in side
+        /// </summary>
+        public override List<string> Ingredients
+        {
+            get
+            {
+               return new List<string> { "Macaroni Noodles", "Cheese Product", "Pork Sausage" };
 
-        public List<string> Ingredients = new List<string> { "Macaroni Noodles", "Cheese Product","Pork Sausage"};
+            }
+        }
     }
 }
