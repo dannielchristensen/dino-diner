@@ -8,15 +8,20 @@
 
   <ItemGroup>
     <Compile Remove="Entrees\**" />
+    <Compile Remove="Sides\**" />
     <EmbeddedResource Remove="Entrees\**" />
+    <EmbeddedResource Remove="Sides\**" />
     <None Remove="Entrees\**" />
+    <None Remove="Sides\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="BrontowurstTest.cs" />
     <Compile Remove="DinoNuggetsTest.cs" />
+    <Compile Remove="Drinks\SodasaurusTest.cs" />
     <Compile Remove="PrehistoricPBJTest.cs" />
     <Compile Remove="PterodactylWingsTest.cs" />
+    <Compile Remove="SodasaurusTest.cs" />
     <Compile Remove="SteakosaurusBurgerTest.cs" />
     <Compile Remove="TRexKingBurgerTest.cs" />
     <Compile Remove="VelociWrapTest.cs" />

@@ -4,6 +4,101 @@
         <name>Menu</name>
     </assembly>
     <members>
+        <member name="T:DinoDiner.Menu.Drinks.Size">
+            <summary>
+            Creates the enum to go through the sizes of sides
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Size.Small">
+            <summary>
+            Size small for a drink
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Size.Medium">
+            <summary>
+            Size medium for a drink
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Size.Large">
+            <summary>
+            Size large for a drink
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.Drink">
+            <summary>
+            Abstract class for all members that are drinks
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Ingredients">
+            <summary>
+            List of ingredients for the drink
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Price">
+            <summary>
+            Gets and sets the price
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Calories">
+            <summary>
+            Gets and sets the calories
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Size">
+            <summary>
+            Gets or sets the size
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Drink.holdIce">
+            <summary>
+            sets Ice bool to false
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.Flavors">
+            <summary>
+            Enum for the flavors that Sodasaurus comes in
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Flavors.Cola">
+            <summary>
+            Flavoring
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Flavors.RootBeer">
+            <summary>
+            Flavoring
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Flavors.Cherry">
+            <summary>
+            Flavoring
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Flavors.Vanilla">
+            <summary>
+            Flavoring
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Flavors.Chocolate">
+            <summary>
+            Flavoring
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Flavors.Lime">
+            <summary>
+            Flavoring
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Flavors.Orange">
+            <summary>
+            Flavoring
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Flavors.Grape">
+            <summary>
+            Flavoring
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Entrees.Brontowurst">
             <summary>
             The Brontowurst objects extends the Entree abstract class
