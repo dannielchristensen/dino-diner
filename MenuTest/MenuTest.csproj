@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Remove="Entrees\**" />
     <Compile Remove="Sides\**" />
     <EmbeddedResource Remove="Entrees\**" />
@@ -25,6 +26,15 @@
     <Compile Remove="SteakosaurusBurgerTest.cs" />
     <Compile Remove="TRexKingBurgerTest.cs" />
     <Compile Remove="VelociWrapTest.cs" />
+=======
+    <Compile Remove="Entrees\BrontowurstTest.cs" />
+    <Compile Remove="Entrees\DinoNuggetsTest.cs" />
+    <Compile Remove="Entrees\PrehistoricPBJTest.cs" />
+    <Compile Remove="Entrees\PterodactylWingsTest.cs" />
+    <Compile Remove="Entrees\SteakosaurusBurgerTest.cs" />
+    <Compile Remove="Entrees\TRexKingBurgerTest.cs" />
+    <Compile Remove="Entrees\VelociWrapTest.cs" />
+>>>>>>> 4493590877a0dab5e32321c9274607699a301c11
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +45,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Menu\Menu.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Entrees\" />
   </ItemGroup>
 
 </Project>
