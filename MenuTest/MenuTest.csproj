@@ -6,36 +6,11 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
-  <ItemGroup>
-<<<<<<< HEAD
-    <Compile Remove="Entrees\**" />
-    <Compile Remove="Sides\**" />
-    <EmbeddedResource Remove="Entrees\**" />
-    <EmbeddedResource Remove="Sides\**" />
-    <None Remove="Entrees\**" />
-    <None Remove="Sides\**" />
-  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="BrontowurstTest.cs" />
-    <Compile Remove="DinoNuggetsTest.cs" />
-    <Compile Remove="Drinks\SodasaurusTest.cs" />
-    <Compile Remove="PrehistoricPBJTest.cs" />
-    <Compile Remove="PterodactylWingsTest.cs" />
-    <Compile Remove="SodasaurusTest.cs" />
-    <Compile Remove="SteakosaurusBurgerTest.cs" />
-    <Compile Remove="TRexKingBurgerTest.cs" />
-    <Compile Remove="VelociWrapTest.cs" />
-=======
-    <Compile Remove="Entrees\BrontowurstTest.cs" />
-    <Compile Remove="Entrees\DinoNuggetsTest.cs" />
-    <Compile Remove="Entrees\PrehistoricPBJTest.cs" />
-    <Compile Remove="Entrees\PterodactylWingsTest.cs" />
-    <Compile Remove="Entrees\SteakosaurusBurgerTest.cs" />
-    <Compile Remove="Entrees\TRexKingBurgerTest.cs" />
-    <Compile Remove="Entrees\VelociWrapTest.cs" />
->>>>>>> 4493590877a0dab5e32321c9274607699a301c11
-  </ItemGroup>
+  
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />

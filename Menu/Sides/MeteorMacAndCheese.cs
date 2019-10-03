@@ -5,12 +5,12 @@
 using System.Collections.Generic;
 
 
-namespace DinoDiner.Menu.Sides
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// The MeteorMacAndCheese objects extends the Side abstract class
     /// </summary>
-    public class MeteorMacAndCheese : Side
+    public class MeteorMacAndCheese : Sides, IMenuItem
     {
         /// <summary>
         /// Creates Size object to hold size of object
@@ -57,6 +57,12 @@ namespace DinoDiner.Menu.Sides
 
 
         }
+
+        public override string ToString()
+        {
+            return size.ToString() + " Meteor Mac and Cheese";
+        }
+
         /// <summary>
         /// Creates the list Ingredients for MeteorMacAndCheese 
         /// Overrides Ingredients in side

@@ -3,12 +3,12 @@
  */
 using System.Collections.Generic;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// The PterodactylWings objects extends the Entree abstract class
     /// </summary>
-    public class PterodactylWings : Entree
+    public class PterodactylWings : Entree, IMenuItem
     {
         /// <summary>
         /// Allws access to Price via getter and setter
@@ -39,6 +39,11 @@ namespace DinoDiner.Menu.Entrees
         {
             this.Price = 7.21;
             this.Calories = 318;
+        }
+
+        public override string ToString()
+        {
+            return "Pterodactyl Wings";
         }
     }
 }

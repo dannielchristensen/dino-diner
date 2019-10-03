@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
-using DinoDiner.Menu.Drinks;
+using DinoDiner.Menu;
 
 namespace MenuTest
 {
@@ -89,14 +89,14 @@ namespace MenuTest
         public void HasCorrectIngredients()
         {
             Sodasaurus s = new Sodasaurus();
-            List<string> i = new List<string> { "Water", "Natural Flavors", "Cane Sugar" };
+            List<string> i = new List<string> { "Water", "Natural SodasaurusFlavor", "Cane Sugar" };
             Assert.Equal<List<string>>(s.Ingredients, i);
         }
         [Fact]
         public void CanHoldIce()
         {
             Sodasaurus s = new Sodasaurus();
-            s.holdIce();
+            s.HoldIce();
             Assert.False(s.Ice);
         }
         [Fact]
@@ -104,7 +104,7 @@ namespace MenuTest
         {
             Sodasaurus s = new Sodasaurus();
             s.setFlavorToCola();
-            Assert.Equal<Flavors>(Flavors.Cola, s.flavor);
+            Assert.Equal<SodasaurusFlavor>(SodasaurusFlavor.Cola, s.Flavor);
 
         }
         [Fact]
@@ -112,7 +112,7 @@ namespace MenuTest
         {
             Sodasaurus s = new Sodasaurus();
             s.setFlavorToCherry();
-            Assert.Equal<Flavors>(Flavors.Cherry, s.flavor);
+            Assert.Equal<SodasaurusFlavor>(SodasaurusFlavor.Cherry, s.Flavor);
 
         }
         [Fact]
@@ -120,7 +120,7 @@ namespace MenuTest
         {
             Sodasaurus s = new Sodasaurus();
             s.setFlavorToChocolate();
-            Assert.Equal<Flavors>(Flavors.Chocolate, s.flavor);
+            Assert.Equal<SodasaurusFlavor>(SodasaurusFlavor.Chocolate, s.Flavor);
 
         }
         [Fact]
@@ -128,7 +128,7 @@ namespace MenuTest
         {
             Sodasaurus s = new Sodasaurus();
             s.setFlavorToGrape();
-            Assert.Equal<Flavors>(Flavors.Grape, s.flavor);
+            Assert.Equal<SodasaurusFlavor>(SodasaurusFlavor.Grape, s.Flavor);
 
         }
         [Fact]
@@ -136,7 +136,7 @@ namespace MenuTest
         {
             Sodasaurus s = new Sodasaurus();
             s.setFlavorToLime();
-            Assert.Equal<Flavors>(Flavors.Lime, s.flavor);
+            Assert.Equal<SodasaurusFlavor>(SodasaurusFlavor.Lime, s.Flavor);
 
         }
         [Fact]
@@ -144,7 +144,7 @@ namespace MenuTest
         {
             Sodasaurus s = new Sodasaurus();
             s.setFlavorToOrange();
-            Assert.Equal<Flavors>(Flavors.Orange, s.flavor);
+            Assert.Equal<SodasaurusFlavor>(SodasaurusFlavor.Orange, s.Flavor);
 
         }
         [Fact]
@@ -152,7 +152,7 @@ namespace MenuTest
         {
             Sodasaurus s = new Sodasaurus();
             s.setFlavorToRootBeer();
-            Assert.Equal<Flavors>(Flavors.RootBeer, s.flavor);
+            Assert.Equal<SodasaurusFlavor>(SodasaurusFlavor.RootBeer, s.Flavor);
 
         }
         [Fact]
@@ -160,7 +160,7 @@ namespace MenuTest
         {
             Sodasaurus s = new Sodasaurus();
             s.setFlavorToVanilla();
-            Assert.Equal<Flavors>(Flavors.Vanilla, s.flavor);
+            Assert.Equal<SodasaurusFlavor>(SodasaurusFlavor.Vanilla, s.Flavor);
 
         }
     }

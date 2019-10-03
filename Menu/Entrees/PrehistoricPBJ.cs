@@ -4,12 +4,12 @@
  */
 using System.Collections.Generic;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// The PrehistoricPBJ objects extends the Entree abstract class
     /// </summary>
-    public class PrehistoricPBJ : Entree
+    public class PrehistoricPBJ : Entree, IMenuItem
     {
 
         /// <summary>
@@ -53,6 +53,11 @@ namespace DinoDiner.Menu.Entrees
         {
             this.Price = 6.52;
             this.Calories = 483;
+        }
+
+        public override string ToString()
+        {
+            return "Prehistoric PB&J";
         }
 
         /// <summary>

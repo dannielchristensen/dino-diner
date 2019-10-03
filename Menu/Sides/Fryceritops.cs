@@ -5,12 +5,12 @@
 using System.Collections.Generic;
 
 
-namespace DinoDiner.Menu.Sides
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// The Fryceritops objects extends the Side abstract class
     /// </summary>
-    public class Fryceritops: Side
+    public class Fryceritops: Sides, IMenuItem
     {
         /// <summary>
         /// Creates Size object to hold size of object
@@ -62,6 +62,10 @@ namespace DinoDiner.Menu.Sides
         /// Overrides Ingredients in side
         /// </summary>
 
+        public override string ToString()
+        {
+            return size.ToString() + " Friceritops";
+        }
         public override List<string> Ingredients
         {
             get

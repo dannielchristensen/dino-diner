@@ -5,12 +5,12 @@
 using System.Collections.Generic;
 
 
-namespace DinoDiner.Menu.Sides
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// The MezzorellaSticks objects extends the Side abstract class
     /// </summary>
-    public class MezzorellaSticks : Side
+    public class MezzorellaSticks : Sides, IMenuItem
     {
         /// <summary>
         /// Creates Size object to hold size of object
@@ -56,6 +56,11 @@ namespace DinoDiner.Menu.Sides
             base.Price = 0.99;
 
 
+        }
+
+        public override string ToString()
+        {
+            return size.ToString() + " Mezzorella Sticks";
         }
 
         /// <summary>

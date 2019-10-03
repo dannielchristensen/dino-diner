@@ -3,12 +3,12 @@
  */
 using System.Collections.Generic;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// The VelociWrap objects extends the Entree abstract class
     /// </summary>
-    public class TRexKingBurger : Entree
+    public class TRexKingBurger : Entree, IMenuItem
     {
         /// <summary>
         /// Allws access to Price via getter and setter
@@ -90,6 +90,12 @@ namespace DinoDiner.Menu.Entrees
             this.Price = 8.45;
             this.Calories = 728;
         }
+
+        public override string ToString()
+        {
+            return "T-Rex King Burger";
+        }
+
         /// <summary>
         /// Sets bun to false to show that there is no bun
         /// </summary>

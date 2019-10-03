@@ -3,12 +3,12 @@
  */
 using System.Collections.Generic;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// The SteakosaurusBurger objects extends the Entree abstract class
     /// </summary>
-    public class SteakosaurusBurger : Entree
+    public class SteakosaurusBurger : Entree, IMenuItem
     {
         /// <summary>
         /// Allws access to Price via getter and setter
@@ -65,6 +65,12 @@ namespace DinoDiner.Menu.Entrees
             this.Price = 5.15;
             this.Calories = 621;
         }
+
+        public override string ToString()
+        {
+            return "Steakosaurus Burger";
+        }
+
         /// <summary>
         /// Sets bun to false to show that there is no bun
         /// </summary>

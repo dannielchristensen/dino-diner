@@ -6,12 +6,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Sides
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// The Fryceritops objects extends the Side abstract class
     /// </summary>
-    public class Triceritots: Side
+    public class Triceritots: Sides, IMenuItem
     {
         /// <summary>
         /// Creates Size object to hold size of object
@@ -58,6 +58,11 @@ namespace DinoDiner.Menu.Sides
             base.Price = 0.99;
 
 
+        }
+
+        public override string ToString()
+        {
+            return size.ToString() + " Triceritots";
         }
 
         /// <summary>

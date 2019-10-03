@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
-    public class Water
+    public class Water : Drink, IMenuItem
     {
         public uint Calories { get; set; }
         public double Price { get; set; }
@@ -42,11 +42,16 @@ namespace DinoDiner.Menu.Drinks
             Size = Size.Small;
         }
 
+        public override string ToString()
+        {
+            return size.ToString() + " Water";
+        }
+
         public void AddLemon()
         {
             Lemon = true;
         }
-        public void HoldIce()
+        public override void HoldIce()
         {
             Ice = false;
         }

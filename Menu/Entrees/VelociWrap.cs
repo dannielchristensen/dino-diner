@@ -3,12 +3,12 @@
  */
 using System.Collections.Generic;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// The VelociWrap objects extends the Entree abstract class
     /// </summary>
-    public class VelociWrap : Entree
+    public class VelociWrap : Entree, IMenuItem
     {
         /// <summary>
         /// Allws access to Price via getter and setter
@@ -60,6 +60,11 @@ namespace DinoDiner.Menu.Entrees
         {
             this.Price = 6.86;
             this.Calories = 356;
+        }
+
+        public override string ToString()
+        {
+            return "Veloci-Wrap";
         }
 
         /// <summary>

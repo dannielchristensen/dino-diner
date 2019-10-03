@@ -3,12 +3,12 @@
  */
 using System.Collections.Generic;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// The DinoNuggets objects extends the Entree abstract class
     /// </summary>
-    public class DinoNuggets : Entree
+    public class DinoNuggets : Entree, IMenuItem
     {
 
         /// <summary>
@@ -53,6 +53,11 @@ namespace DinoDiner.Menu.Entrees
             this.Price = 4.25;
             this.Calories = (uint) numNugs * 59;
 
+        }
+
+        public override string ToString()
+        {
+            return "Dino-Nuggets";
         }
 
         /// <summary>

@@ -3,12 +3,12 @@
  */
 using System.Collections.Generic;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// The Brontowurst objects extends the Entree abstract class
     /// </summary>
-    public class Brontowurst : Entree
+    public class Brontowurst : Entree, IMenuItem
     {
         /// <summary>
         /// Initializes the bool bun to true to show that there is a bun in a normal order
@@ -58,6 +58,11 @@ namespace DinoDiner.Menu.Entrees
         {
             this.Price = 5.36;
             this.Calories = 498;
+        }
+
+        public override string ToString()
+        {
+            return "Brontowurst";
         }
 
         /// <summary>

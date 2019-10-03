@@ -7,31 +7,15 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
-    /// <summary>
-    /// Creates the enum to go through the sizes of sides
-    /// </summary>
-    public enum Size
-    {
-        /// <summary>
-        /// Size small for a drink
-        /// </summary>
-        Small,
-        /// <summary>
-        /// Size medium for a drink
-        /// </summary>
-        Medium,
-        /// <summary>
-        /// Size large for a drink
-        /// </summary>
-        Large
-    }
+
+
 
     /// <summary>
     /// Abstract class for all members that are drinks
     /// </summary>
-    public abstract class Drink
+    public abstract class Drink : IMenuItem 
     {
         /// <summary>
         /// List of ingredients for the drink
@@ -55,6 +39,6 @@ namespace DinoDiner.Menu.Drinks
         /// <summary>
         /// sets Ice bool to false
         /// </summary>
-        public abstract void holdIce();
+        public abstract void HoldIce();
     }
 }

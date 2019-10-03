@@ -4,651 +4,662 @@
         <name>Menu</name>
     </assembly>
     <members>
-        <member name="T:DinoDiner.Menu.Drinks.Size">
+        <member name="T:DinoDiner.Menu.CretaceousCombo">
             <summary>
-            Creates the enum to go through the sizes of sides
+            A class representing a combo meal
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.Size.Small">
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Entree">
             <summary>
-            Size small for a drink
+            Gets and sets the entree
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.Size.Medium">
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Side">
             <summary>
-            Size medium for a drink
+            Gets and sets the side
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.Size.Large">
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Drink">
             <summary>
-            Size large for a drink
+            Gets and sets the drink
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Drinks.Drink">
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Price">
+            <summary>
+            Gets the price of the combo
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Calories">
+            <summary>
+            Gets the calories of the combo
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Size">
+            <summary>
+            Gets or sets the size of the combo
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Ingredients">
+            <summary>
+            Gets the list of ingredients for the combo
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.CretaceousCombo.#ctor(DinoDiner.Menu.Entree)">
+            <summary>
+            Constructs a new combo with the specified entree
+            </summary>
+            <param name="entree">The entree to use</param>
+        </member>
+        <member name="T:DinoDiner.Menu.Drink">
             <summary>
             Abstract class for all members that are drinks
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Drink.Ingredients">
+        <member name="P:DinoDiner.Menu.Drink.Ingredients">
             <summary>
             List of ingredients for the drink
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Drink.Price">
+        <member name="P:DinoDiner.Menu.Drink.Price">
             <summary>
             Gets and sets the price
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Drink.Calories">
+        <member name="P:DinoDiner.Menu.Drink.Calories">
             <summary>
             Gets and sets the calories
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Drinks.Drink.Size">
+        <member name="P:DinoDiner.Menu.Drink.Size">
             <summary>
             Gets or sets the size
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Drinks.Drink.holdIce">
+        <member name="M:DinoDiner.Menu.Drink.HoldIce">
             <summary>
             sets Ice bool to false
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Drinks.Flavors">
+        <member name="T:DinoDiner.Menu.SodasaurusFlavor">
             <summary>
-            Enum for the flavors that Sodasaurus comes in
+            Enum for the SodasaurusFlavor that Sodasaurus comes in
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.Flavors.Cola">
-            <summary>
-            Flavoring
-            </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.Drinks.Flavors.RootBeer">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Cola">
             <summary>
             Flavoring
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.Flavors.Cherry">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.RootBeer">
             <summary>
             Flavoring
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.Flavors.Vanilla">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Cherry">
             <summary>
             Flavoring
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.Flavors.Chocolate">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Vanilla">
             <summary>
             Flavoring
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.Flavors.Lime">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Chocolate">
             <summary>
             Flavoring
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.Flavors.Orange">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Lime">
             <summary>
             Flavoring
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Drinks.Flavors.Grape">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Orange">
             <summary>
             Flavoring
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Entrees.Brontowurst">
+        <member name="F:DinoDiner.Menu.SodasaurusFlavor.Grape">
+            <summary>
+            Flavoring
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Brontowurst">
             <summary>
             The Brontowurst objects extends the Entree abstract class
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.Brontowurst.bun">
+        <member name="F:DinoDiner.Menu.Brontowurst.bun">
             <summary>
             Initializes the bool bun to true to show that there is a bun in a normal order
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.Brontowurst.peppers">
+        <member name="F:DinoDiner.Menu.Brontowurst.peppers">
             <summary>
             Initializes the bool peppers to true to show that there is a peppers in a normal order
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.Brontowurst.onions">
+        <member name="F:DinoDiner.Menu.Brontowurst.onions">
             <summary>
             Initializes the bool onions to true to show that there is a onions in a normal order
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Price">
+        <member name="P:DinoDiner.Menu.Brontowurst.Price">
             <summary>
             Allws access to Price via getter and setter
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Calories">
+        <member name="P:DinoDiner.Menu.Brontowurst.Calories">
             <summary>
             Allws access to Calories via getter and setter
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.Brontowurst.Ingredients">
+        <member name="P:DinoDiner.Menu.Brontowurst.Ingredients">
             <summary>
             List containing the ingredients of the Brontowurst using bools
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.Brontowurst.#ctor">
+        <member name="M:DinoDiner.Menu.Brontowurst.#ctor">
             <summary>
             Initializes the value of a Brontowurst and its price/calories to small
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.Brontowurst.HoldBun">
+        <member name="M:DinoDiner.Menu.Brontowurst.HoldBun">
             <summary>
             Sets bun to false to show that there is no bun
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.Brontowurst.HoldPeppers">
+        <member name="M:DinoDiner.Menu.Brontowurst.HoldPeppers">
             <summary>
             Sets peppers to false to show that there is no peppers
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.Brontowurst.HoldOnion">
+        <member name="M:DinoDiner.Menu.Brontowurst.HoldOnion">
             <summary>
             Sets onions to false to show that there is no onions
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Entrees.DinoNuggets">
+        <member name="T:DinoDiner.Menu.DinoNuggets">
             <summary>
             The DinoNuggets objects extends the Entree abstract class
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.DinoNuggets.numNugs">
+        <member name="F:DinoDiner.Menu.DinoNuggets.numNugs">
             <summary>
             The numbers of nuggets in the order
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Price">
+        <member name="P:DinoDiner.Menu.DinoNuggets.Price">
             <summary>
             Allws access to Price via getter and setter
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Calories">
+        <member name="P:DinoDiner.Menu.DinoNuggets.Calories">
             <summary>
             Allws access to Calories via getter and setter
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.DinoNuggets.Ingredients">
+        <member name="P:DinoDiner.Menu.DinoNuggets.Ingredients">
             <summary>
             List containing the ingredients of the DinoNuggets using bools
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.DinoNuggets.#ctor">
+        <member name="M:DinoDiner.Menu.DinoNuggets.#ctor">
             <summary>
             Initializes the value of a DinoNuggets to six (6) nuggets and calculates calories off number of nuggets
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.DinoNuggets.AddNugget">
+        <member name="M:DinoDiner.Menu.DinoNuggets.AddNugget">
             <summary>
             Adds one nugget to an order of DinoNuggets
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.DinoNuggets.AddNugget(System.Int32)">
+        <member name="M:DinoDiner.Menu.DinoNuggets.AddNugget(System.Int32)">
             <summary>
             Adds a determined amount (a) nugget to an order of DinoNuggets
             </summary>
             <param name="a">amount of DinoNuggets to add</param>
         </member>
-        <member name="T:DinoDiner.Menu.Entrees.Entree">
+        <member name="T:DinoDiner.Menu.Entree">
             <summary>
             Abstract class to be implemted by all entrees
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.Entree.Ingredients">
+        <member name="P:DinoDiner.Menu.Entree.Ingredients">
             <summary>
             Getter/setter for Ingredients
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.Entree.Price">
+        <member name="P:DinoDiner.Menu.Entree.Price">
             <summary>
             Getter/Setter for price
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.Entree.Calories">
+        <member name="P:DinoDiner.Menu.Entree.Calories">
             <summary>
             Getter/Setter for Calories
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Entrees.PrehistoricPBJ">
+        <member name="T:DinoDiner.Menu.PrehistoricPBJ">
             <summary>
             The PrehistoricPBJ objects extends the Entree abstract class
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.PrehistoricPBJ.peanutButter">
+        <member name="F:DinoDiner.Menu.PrehistoricPBJ.peanutButter">
             <summary>
             Initializes the bool peanutButter to true to show that there is a peanutButter in a normal order
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.PrehistoricPBJ.jelly">
+        <member name="F:DinoDiner.Menu.PrehistoricPBJ.jelly">
             <summary>
             Initializes the bool jelly to true to show that there is a jelly in a normal order
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Price">
+        <member name="P:DinoDiner.Menu.PrehistoricPBJ.Price">
             <summary>
             Allws access to Price via getter and setter
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Calories">
+        <member name="P:DinoDiner.Menu.PrehistoricPBJ.Calories">
             <summary>
             Allws access to Calories via getter and setter
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.PrehistoricPBJ.Ingredients">
+        <member name="P:DinoDiner.Menu.PrehistoricPBJ.Ingredients">
             <summary>
             List containing the ingredients of the PrehistoricPBJ using bools
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.PrehistoricPBJ.#ctor">
+        <member name="M:DinoDiner.Menu.PrehistoricPBJ.#ctor">
             <summary>
             Initializes the value of a PrehistoricPBJ and its price/calories to small
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.PrehistoricPBJ.HoldPeanutButter">
+        <member name="M:DinoDiner.Menu.PrehistoricPBJ.HoldPeanutButter">
             <summary>
             Sets peanutButter to false to show that there is no peanutButter
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.PrehistoricPBJ.HoldJelly">
+        <member name="M:DinoDiner.Menu.PrehistoricPBJ.HoldJelly">
             <summary>
             Sets jelly to false to show that there is no jelly
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Entrees.PterodactylWings">
+        <member name="T:DinoDiner.Menu.PterodactylWings">
             <summary>
             The PterodactylWings objects extends the Entree abstract class
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Price">
+        <member name="P:DinoDiner.Menu.PterodactylWings.Price">
             <summary>
             Allws access to Price via getter and setter
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Calories">
+        <member name="P:DinoDiner.Menu.PterodactylWings.Calories">
             <summary>
             Allws access to Calories via getter and setter
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.PterodactylWings.Ingredients">
+        <member name="P:DinoDiner.Menu.PterodactylWings.Ingredients">
             <summary>
             List containing the ingredients of the PterodactylWings using bools
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.PterodactylWings.#ctor">
+        <member name="M:DinoDiner.Menu.PterodactylWings.#ctor">
             <summary>
             Initializes the value of a PterodactylWings and its price/calories to small
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Entrees.SteakosaurusBurger">
+        <member name="T:DinoDiner.Menu.SteakosaurusBurger">
             <summary>
             The SteakosaurusBurger objects extends the Entree abstract class
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Price">
+        <member name="P:DinoDiner.Menu.SteakosaurusBurger.Price">
             <summary>
             Allws access to Price via getter and setter
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Calories">
+        <member name="P:DinoDiner.Menu.SteakosaurusBurger.Calories">
             <summary>
             Allws access to Calories via getter and setter
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.SteakosaurusBurger.bun">
+        <member name="F:DinoDiner.Menu.SteakosaurusBurger.bun">
             <summary>
             Initializes the bool bun to true to show that there is a bun in a normal order
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.SteakosaurusBurger.pickle">
+        <member name="F:DinoDiner.Menu.SteakosaurusBurger.pickle">
             <summary>
             Initializes the bool pickle to true to show that there is a pickle in a normal order
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.SteakosaurusBurger.ketchup">
+        <member name="F:DinoDiner.Menu.SteakosaurusBurger.ketchup">
             <summary>
             Initializes the bool ketchup to true to show that there is a ketchup in a normal order
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.SteakosaurusBurger.mustard">
+        <member name="F:DinoDiner.Menu.SteakosaurusBurger.mustard">
             <summary>
             Initializes the mustard bun to true to show that there is a mustard in a normal order
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.SteakosaurusBurger.Ingredients">
+        <member name="P:DinoDiner.Menu.SteakosaurusBurger.Ingredients">
             <summary>
             List containing the ingredients of the SteakosaurusBurger using bools
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.#ctor">
+        <member name="M:DinoDiner.Menu.SteakosaurusBurger.#ctor">
             <summary>
             Initializes the value of a SteakosaurusBurger and its price/calories to small
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.HoldBun">
+        <member name="M:DinoDiner.Menu.SteakosaurusBurger.HoldBun">
             <summary>
             Sets bun to false to show that there is no bun
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.HoldKetchup">
+        <member name="M:DinoDiner.Menu.SteakosaurusBurger.HoldKetchup">
             <summary>
             Sets ketchup to false to show that there is no ketchup
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.HoldPickle">
+        <member name="M:DinoDiner.Menu.SteakosaurusBurger.HoldPickle">
             <summary>
             Sets pickle to false to show that there is no pickle
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.SteakosaurusBurger.HoldMustard">
+        <member name="M:DinoDiner.Menu.SteakosaurusBurger.HoldMustard">
             <summary>
             Sets mustard to false to show that there is no mustard
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Entrees.TRexKingBurger">
+        <member name="T:DinoDiner.Menu.TRexKingBurger">
             <summary>
             The VelociWrap objects extends the Entree abstract class
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Price">
+        <member name="P:DinoDiner.Menu.TRexKingBurger.Price">
             <summary>
             Allws access to Price via getter and setter
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Calories">
+        <member name="P:DinoDiner.Menu.TRexKingBurger.Calories">
             <summary>
             Allws access to Calories via getter and setter
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.TRexKingBurger.bun">
+        <member name="F:DinoDiner.Menu.TRexKingBurger.bun">
             <summary>
             Initializes the bool bun to true to show that there is a bun in a normal order
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.TRexKingBurger.pickle">
+        <member name="F:DinoDiner.Menu.TRexKingBurger.pickle">
             <summary>
             Initializes the bool pickle to true to show that there is a pickle in a normal order
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.TRexKingBurger.ketchup">
+        <member name="F:DinoDiner.Menu.TRexKingBurger.ketchup">
             <summary>
             Initializes the bool ketchup to true to show that there is a ketchup in a normal order
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.TRexKingBurger.mustard">
+        <member name="F:DinoDiner.Menu.TRexKingBurger.mustard">
             <summary>
             Initializes the bool mustard to true to show that there is a mustard in a normal order
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.TRexKingBurger.lettuce">
+        <member name="F:DinoDiner.Menu.TRexKingBurger.lettuce">
             <summary>
             Initializes the bool lettuce to true to show that there is a lettuce in a normal order
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.TRexKingBurger.tomato">
+        <member name="F:DinoDiner.Menu.TRexKingBurger.tomato">
             <summary>
             Initializes the bool Tomato to true to show that there is a Tomato in a normal order
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.TRexKingBurger.onion">
+        <member name="F:DinoDiner.Menu.TRexKingBurger.onion">
             <summary>
             Initializes the bool Onion to true to show that there is a Onion in a normal order
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.TRexKingBurger.mayo">
+        <member name="F:DinoDiner.Menu.TRexKingBurger.mayo">
             <summary>
             Initializes the bool Mayo to true to show that there is a Mayo in a normal order
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Ingredients">
+        <member name="P:DinoDiner.Menu.TRexKingBurger.Ingredients">
             <summary>
             List containing the ingredients of the TRexKingBurger using bools
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.#ctor">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.#ctor">
             <summary>
             Initializes the value of a TRexKingBurger and its price/calories to small
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldBun">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.HoldBun">
             <summary>
             Sets bun to false to show that there is no bun
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldKetchup">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.HoldKetchup">
             <summary>
             Sets ketchup to false to show that there is no ketchup
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldPickle">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.HoldPickle">
             <summary>
             Sets pickle to false to show that there is no pickle
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldMustard">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.HoldMustard">
             <summary>
             Sets mustard to false to show that there is no mustard
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldLettuce">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.HoldLettuce">
             <summary>
             Sets lettuce to false to show that there is no lettuce
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldMayo">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.HoldMayo">
             <summary>
             Sets mayo to false to show that there is mayo bun
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldOnion">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.HoldOnion">
             <summary>
             Sets onion to false to show that there is no onion
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldTomato">
+        <member name="M:DinoDiner.Menu.TRexKingBurger.HoldTomato">
             <summary>
             Sets tomato to false to show that there is no tomato
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Entrees.VelociWrap">
+        <member name="T:DinoDiner.Menu.VelociWrap">
             <summary>
             The VelociWrap objects extends the Entree abstract class
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Price">
+        <member name="P:DinoDiner.Menu.VelociWrap.Price">
             <summary>
             Allws access to Price via getter and setter
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Calories">
+        <member name="P:DinoDiner.Menu.VelociWrap.Calories">
             <summary>
             Allws access to Calories via getter and setter
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.VelociWrap.dressing">
+        <member name="F:DinoDiner.Menu.VelociWrap.dressing">
             <summary>
             Initializes the bool dressing to true to show that there is a dressing in a normal order
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.VelociWrap.lettuce">
+        <member name="F:DinoDiner.Menu.VelociWrap.lettuce">
             <summary>
             Initializes the lettuce dressing to true to show that there is a lettuce in a normal order
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Entrees.VelociWrap.cheese">
+        <member name="F:DinoDiner.Menu.VelociWrap.cheese">
             <summary>
             Initializes the bool cheese to true to show that there is a cheese in a normal order
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Ingredients">
+        <member name="P:DinoDiner.Menu.VelociWrap.Ingredients">
             <summary>
             List containing the ingredients of the VelociWrap using bools
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.#ctor">
+        <member name="M:DinoDiner.Menu.VelociWrap.#ctor">
             <summary>
             Initializes the value of a VelociWrap and its price/calories to small
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.HoldLettuce">
+        <member name="M:DinoDiner.Menu.VelociWrap.HoldLettuce">
             <summary>
             Sets lettuce to false to show that there is no lettuce
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.HoldCheese">
+        <member name="M:DinoDiner.Menu.VelociWrap.HoldCheese">
             <summary>
             Sets cheese to false to show that there is no cheese
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.HoldDressing">
+        <member name="M:DinoDiner.Menu.VelociWrap.HoldDressing">
             <summary>
             Sets dressing to false to show that there is no dressing
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Sides.Fryceritops">
+        <member name="T:DinoDiner.Menu.Fryceritops">
             <summary>
             The Fryceritops objects extends the Side abstract class
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Sides.Fryceritops.size">
+        <member name="F:DinoDiner.Menu.Fryceritops.size">
             <summary>
             Creates Size object to hold size of object
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.Fryceritops.Size">
+        <member name="P:DinoDiner.Menu.Fryceritops.Size">
             <summary>
             Allws access to size via getter and setter
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Sides.Fryceritops.#ctor">
+        <member name="M:DinoDiner.Menu.Fryceritops.#ctor">
             <summary>
             Constructor for Fryceritops. Sets default Calories and Price to size small.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.Fryceritops.Ingredients">
+        <member name="M:DinoDiner.Menu.Fryceritops.ToString">
             <summary>
             Creates the list Ingredients for Fryceritops 
             Overrides Ingredients in side
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Sides.MeteorMacAndCheese">
+        <member name="T:DinoDiner.Menu.MeteorMacAndCheese">
             <summary>
             The MeteorMacAndCheese objects extends the Side abstract class
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Sides.MeteorMacAndCheese.size">
+        <member name="F:DinoDiner.Menu.MeteorMacAndCheese.size">
             <summary>
             Creates Size object to hold size of object
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.MeteorMacAndCheese.Size">
+        <member name="P:DinoDiner.Menu.MeteorMacAndCheese.Size">
             <summary>
             Allws access to size via getter and setter
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Sides.MeteorMacAndCheese.#ctor">
+        <member name="M:DinoDiner.Menu.MeteorMacAndCheese.#ctor">
             <summary>
             Constructor for MeteorMacAndCheese. Sets default Calories and Price to size small.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.MeteorMacAndCheese.Ingredients">
+        <member name="P:DinoDiner.Menu.MeteorMacAndCheese.Ingredients">
             <summary>
             Creates the list Ingredients for MeteorMacAndCheese 
             Overrides Ingredients in side
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Sides.MezzorellaSticks">
+        <member name="T:DinoDiner.Menu.MezzorellaSticks">
             <summary>
             The MezzorellaSticks objects extends the Side abstract class
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Sides.MezzorellaSticks.size">
+        <member name="F:DinoDiner.Menu.MezzorellaSticks.size">
             <summary>
             Creates Size object to hold size of object
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.MezzorellaSticks.Size">
+        <member name="P:DinoDiner.Menu.MezzorellaSticks.Size">
             <summary>
             Allws access to size via getter and setter
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Sides.MezzorellaSticks.#ctor">
+        <member name="M:DinoDiner.Menu.MezzorellaSticks.#ctor">
             <summary>
             Constructor for MezzorellaSticks. Sets default Calories and Price to size small.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.MezzorellaSticks.Ingredients">
+        <member name="P:DinoDiner.Menu.MezzorellaSticks.Ingredients">
             <summary>
             Creates the list Ingredients for MezzorellaSticks 
             Overrides Ingredients in side
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Sides.Size">
+        <member name="T:DinoDiner.Menu.Sides">
             <summary>
             Creates the enum to go through the sizes of sides
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Sides.Size.Small">
-            <summary>
-            Size small for a side
-            </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.Sides.Size.Medium">
-            <summary>
-            Size medium for a side
-            </summary>
-        </member>
-        <member name="F:DinoDiner.Menu.Sides.Size.Large">
-            <summary>
-            Size large for a side
-            </summary>
-        </member>
-        <member name="P:DinoDiner.Menu.Sides.Side.Price">
+        <member name="P:DinoDiner.Menu.Sides.Price">
             <summary>
             Gets and sets the price
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.Side.Calories">
+        <member name="P:DinoDiner.Menu.Sides.Calories">
             <summary>
             Gets and sets the calories
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.Side.Ingredients">
+        <member name="P:DinoDiner.Menu.Sides.Ingredients">
             <summary>
             Gets the ingredients list
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.Side.Size">
+        <member name="P:DinoDiner.Menu.Sides.Size">
             <summary>
             Gets or sets the size
             </summary>
         </member>
-        <member name="T:DinoDiner.Menu.Sides.Triceritots">
+        <member name="T:DinoDiner.Menu.Triceritots">
             <summary>
             The Fryceritops objects extends the Side abstract class
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Sides.Triceritots.size">
+        <member name="F:DinoDiner.Menu.Triceritots.size">
             <summary>
             Creates Size object to hold size of object
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.Triceritots.Size">
+        <member name="P:DinoDiner.Menu.Triceritots.Size">
             <summary>
             Allws access to size via getter and setter
             </summary>
         </member>
-        <member name="M:DinoDiner.Menu.Sides.Triceritots.#ctor">
+        <member name="M:DinoDiner.Menu.Triceritots.#ctor">
             <summary>
             Constructor for Triceritots. Sets default Calories and Price to size small.
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Sides.Triceritots.Ingredients">
+        <member name="P:DinoDiner.Menu.Triceritots.Ingredients">
             <summary>
             Creates the list Ingredients for Triceritots 
             Overrides Ingredients in side

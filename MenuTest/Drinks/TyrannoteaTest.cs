@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
-using DinoDiner.Menu.Drinks;
+using DinoDiner.Menu;
 
 namespace MenuTest.Drinks
 {
@@ -155,7 +155,7 @@ namespace MenuTest.Drinks
         public void CanHoldIce()
         {
             Tyrannotea s = new Tyrannotea();
-            s.holdIce();
+            s.HoldIce();
             Assert.False(s.Ice);
         }
        

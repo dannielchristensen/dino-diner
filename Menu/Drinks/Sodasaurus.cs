@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
-    public class Sodasaurus : Drink
+    public class Sodasaurus : Drink,  IMenuItem
     {
 
         public double Price { get; set; }
@@ -16,12 +16,12 @@ namespace DinoDiner.Menu.Drinks
         {
             get
             {
-                return new List<string> { "Water", "Natural Flavors", "Cane Sugar" };
+                return new List<string> { "Water", "Natural SodasaurusFlavor", "Cane Sugar" };
             }
 
         }
-        private Flavors Flavor { get; set; }
-        public Flavors flavor
+        private SodasaurusFlavor flavor { get; set; }
+        public SodasaurusFlavor Flavor
         {
             get { return Flavor; }
             set { Flavor = value; }
@@ -59,46 +59,51 @@ namespace DinoDiner.Menu.Drinks
             Calories = 112;
             Ice = true;
             size = Size.Small;
-            flavor = Flavors.Cola;
+            flavor = SodasaurusFlavor.Cola;
         }
 
-        public override void holdIce()
+        public override string ToString()
+        {
+            return size.ToString() + " " + flavor.ToString() + " Sodasaurus";
+        }
+
+        public override void HoldIce()
         {
             Ice = false;
         }
 
         public void setFlavorToCola()
         {
-            this.flavor = Flavors.Cola;
+            this.Flavor = SodasaurusFlavor.Cola;
         }
 
         public void setFlavorToRootBeer()
         {
-            this.flavor = Flavors.RootBeer;
+            this.Flavor = SodasaurusFlavor.RootBeer;
         }
         public void setFlavorToCherry()
         {
-            this.flavor = Flavors.Cherry;
+            this.Flavor = SodasaurusFlavor.Cherry;
         }
         public void setFlavorToVanilla()
         {
-            this.flavor = Flavors.Vanilla;
+            this.Flavor = SodasaurusFlavor.Vanilla;
         }
         public void setFlavorToChocolate()
         {
-            this.flavor = Flavors.Chocolate;
+            this.Flavor = SodasaurusFlavor.Chocolate;
         }
         public void setFlavorToLime()
         {
-            this.flavor = Flavors.Lime;
+            this.Flavor = SodasaurusFlavor.Lime;
         }
         public void setFlavorToOrange()
         {
-            this.flavor = Flavors.Orange;
+            this.Flavor = SodasaurusFlavor.Orange;
         }
         public void setFlavorToGrape()
         {
-            this.flavor = Flavors.Grape;
+            this.Flavor = SodasaurusFlavor.Grape;
         }
 
     }
