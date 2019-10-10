@@ -8,157 +8,34 @@
       d:DesignHeight="500" d:DesignWidth="800"
       Title="ComboSelection">
 
-    <Grid Background="White">
-        <Button x:Name ="uxDinoNuggetButton"
-            Content="Dino-Nuggets&#xA;     Combo"
-            HorizontalAlignment="Left"
-            Margin="206,63,0,0"
-            VerticalAlignment="Top"
-            Width="159"
-            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24" Click="DinoNuggets_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button x:Name="uxBrontowurstButton" 
-            Content="Brontowurst&#xA;    Combo"
-            HorizontalAlignment="Left"
-            Margin="10,63,0,0"
-            VerticalAlignment="Top"
-            Width="159"
-            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24" Click="Brontowurst_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button x:Name="uxPBJButton"
-            Content="Prehistoric &#xA;    PB &amp;j&#xA;   Combo"
-            HorizontalAlignment="Left"
-            Margin="411,63,0,0"
-            VerticalAlignment="Top"
-            Width="159"
-            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24" Click="PrehistoricPBandJ_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
+    <WrapPanel Margin="0,0,0,0">
+        <WrapPanel.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Width" Value="200" />
+                <Setter Property="Height" Value="200" />
+            </Style>
+        </WrapPanel.Resources>
         <Button x:Name="uxSteakBurgerButton"
             Content="Steakosaurus&#xA;     Burger&#xA;    Combo"
-            HorizontalAlignment="Left"
-            Margin="206,205,0,0"
-            VerticalAlignment="Top"
-            Width="159"
-            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24" Click="SteakosaurusBurger_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button x:Name="uxWingsButton"
-            Content="Pterodactyl&#xA;    Wings&#xA;   Combo"
-            HorizontalAlignment="Left"
-            Margin="10,205,0,0"
-            VerticalAlignment="Top"
-            Width="159"
-            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24" Click="PterodactylWings_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
+           FontSize="24" Click="SteakosaurusBurger_Click"/>
         <Button x:Name="uxKingBurgerButton"
             Content="   T-Rex&#xA;KingBurger&#xA;   Combo"
-            HorizontalAlignment="Left"
-            Margin="411,205,0,0"
-            VerticalAlignment="Top"
-            Width="159"
-            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24" Click="TRexKingBurger_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
+            FontSize="24" Click="TRexKingBurger_Click"/>
         <Button x:Name="uxWrapButton"
             Content="Veloci-Wrap&#xA;   Combo"
-            HorizontalAlignment="Left"
-            Margin="10,345,0,0"
-            VerticalAlignment="Top"
-            Width="159"
-            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24" Click="VelociWrap_Click">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <TextBox x:Name="uxCurrentOrder" Margin="612,37,10,70" BorderThickness="2" BorderBrush="Black" VerticalScrollBarVisibility="Visible"/>
-        <Button
-            x:Name="uxCancelButton"
-            Content="Cancel"
-            HorizontalAlignment="Left"
-            Margin="612,446,0,0"
-            VerticalAlignment="Top"
-            Width="77"
-            RenderTransformOrigin="0.5,0.5" Height="44" FontSize="18">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button
-            x:Name="uxPayButton"
-            Content="Pay"
-            HorizontalAlignment="Left"
-            Margin="706,446,0,0"
-            VerticalAlignment="Top"
-            Width="84"
-            RenderTransformOrigin="0.5,0.5" Height="44" FontSize="18">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Label x:Name="Label1"  
-            Content="Current Order"   
-            FontSize="18" FontFamily="Georgia" Margin="626,10,28,463" RenderTransformOrigin="1.521,1.285"/>
+            FontSize="24" Click="VelociWrap_Click"/>
+        <Button x:Name ="uxDinoNuggetButton"
+            Content="Dino-Nuggets&#xA;     Combo"
+            FontSize="24" Click="DinoNuggets_Click"/>
+        <Button x:Name="uxBrontowurstButton" 
+            Content="Brontowurst&#xA;    Combo"
+            FontSize="24" Click="Brontowurst_Click"/>
+        <Button x:Name="uxPBJButton"
+            Content="Prehistoric &#xA;    PB &amp;j&#xA;   Combo"
+            FontSize="24" Click="PrehistoricPBandJ_Click"/>
+        <Button x:Name="uxWingsButton"
+            Content="Pterodactyl&#xA;    Wings&#xA;   Combo"
+           FontSize="24" Click="PterodactylWings_Click"/>
 
-    </Grid>
+    </WrapPanel>
 </Page>

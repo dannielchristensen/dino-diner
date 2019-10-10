@@ -117,44 +117,6 @@
         <Label x:Name="Flavor"  
             Content="Flavor" Height="40"   
             FontSize="24" FontFamily="Georgia" Margin="237,34,476,375.6" RenderTransformOrigin="1.521,1.285"/>
-        <TextBox x:Name="uxCurrentOrder" Margin="612,37,10,70" BorderThickness="2" BorderBrush="Black" VerticalScrollBarVisibility="Visible"/>
-        <Button
-            x:Name="uxCancelButton"
-            Content="Cancel"
-            HorizontalAlignment="Left"
-            Margin="612,446,0,0"
-            VerticalAlignment="Top"
-            Width="77"
-            RenderTransformOrigin="0.5,0.5" Height="44" FontSize="18">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Button
-            x:Name="uxPayButton"
-            Content="Pay"
-            HorizontalAlignment="Left"
-            Margin="706,446,0,0"
-            VerticalAlignment="Top"
-            Width="84"
-            RenderTransformOrigin="0.5,0.5" Height="44" FontSize="18">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
-        <Label x:Name="Label1"  
-            Content="Current Order"   
-            FontSize="18" FontFamily="Georgia" Margin="626,10,28,463" RenderTransformOrigin="1.521,1.285"/>
 
     </Grid>
 </Page>
