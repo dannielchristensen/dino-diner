@@ -1,0 +1,156 @@
+﻿<Page x:Class="PointOfSale.Entree"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PointOfSale"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="Entree">
+
+    <Grid Background="White">
+        <Button Content="Dino-Nuggets"
+            HorizontalAlignment="Left"
+            Margin="237,63,0,0"
+            VerticalAlignment="Top"
+            Width="159"
+           RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Brontowurst"
+            HorizontalAlignment="Left"
+            Margin="41,63,0,0"
+            VerticalAlignment="Top"
+            Width="159"
+            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Prehistoric &#xa;    PB &amp;j"
+            HorizontalAlignment="Left"
+            Margin="442,63,0,0"
+            VerticalAlignment="Top"
+            Width="159"
+            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Steakosaurus&#xa;     Burger"
+            HorizontalAlignment="Left"
+            Margin="237,205,0,0"
+            VerticalAlignment="Top"
+            Width="159"
+            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Pterodactyl&#xa;    Wings"
+            HorizontalAlignment="Left"
+            Margin="41,205,0,0"
+            VerticalAlignment="Top"
+            Width="159"
+            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="   T-Rex&#xa;KingBurger"
+            HorizontalAlignment="Left"
+            Margin="442,205,0,0"
+            VerticalAlignment="Top"
+            Width="159"
+            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Veloci-Wrap"
+            HorizontalAlignment="Left"
+            Margin="41,345,0,0"
+            VerticalAlignment="Top"
+            Width="159"
+            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBox x:Name="uxCurrentOrder" Margin="612,37,10,70" BorderThickness="2" BorderBrush="Black" VerticalScrollBarVisibility="Visible"/>
+        <Button
+            x:Name="uxCancelButton"
+            Content="Cancel"
+            HorizontalAlignment="Left"
+            Margin="612,446,0,0"
+            VerticalAlignment="Top"
+            Width="77"
+            RenderTransformOrigin="0.5,0.5" Height="44" FontSize="18">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button
+            x:Name="uxPayButton"
+            Content="Pay"
+            HorizontalAlignment="Left"
+            Margin="706,446,0,0"
+            VerticalAlignment="Top"
+            Width="84"
+            RenderTransformOrigin="0.5,0.5" Height="44" FontSize="18">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label x:Name="Label1"  
+            Content="Current Order"   
+            FontSize="18" FontFamily="Georgia" Margin="626,10,28,463" RenderTransformOrigin="1.521,1.285"/>
+    </Grid>
+</Page>

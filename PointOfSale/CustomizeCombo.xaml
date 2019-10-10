@@ -1,0 +1,137 @@
+﻿<Page x:Class="PointOfSale.CustomizeCombo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PointOfSale"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="CustomizeCombo">
+
+    <Grid Background="White">
+        <Button Content="SIDE INFO"
+            HorizontalAlignment="Left"
+            Margin="105,100,0,0"
+            VerticalAlignment="Top"
+            Width="159"
+            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24" Click="Side_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button
+            Content="DRINK INFO"
+            HorizontalAlignment="Left"
+            Margin="269,100,0,0"
+            VerticalAlignment="Top"
+            Width="159"
+            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24" Click="Drink_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Small"
+            HorizontalAlignment="Left"
+            Margin="21,331,0,0"
+            VerticalAlignment="Top"
+            Width="166"
+            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Large"
+            HorizontalAlignment="Left"
+            Margin="351,331,0,0"
+            VerticalAlignment="Top"
+            Width="166"
+            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Medium"
+            HorizontalAlignment="Left"
+            Margin="186,331,0,0"
+            VerticalAlignment="Top"
+            Width="165"
+            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label x:Name="Flavor"  
+            Content="Side" Height="40"   
+            FontSize="24" FontFamily="Georgia" Margin="142,27,571,382.6" RenderTransformOrigin="1.521,1.285"/>
+        <Label x:Name="Flavor_Copy"  
+            Content="Drink" Height="40"   
+            FontSize="24" FontFamily="Georgia" Margin="303,27,410,382.6" RenderTransformOrigin="1.521,1.285"/>
+        <Label x:Name="Flavor_Copy1"  
+            Content="Size" Height="40"   
+            FontSize="24" FontFamily="Georgia" Margin="223,218,490,191.6" RenderTransformOrigin="1.521,1.285"/>
+        <TextBox x:Name="uxCurrentOrder" Margin="612,37,10,70" BorderThickness="2" BorderBrush="Black" VerticalScrollBarVisibility="Visible"/>
+        <Button
+            x:Name="uxCancelButton"
+            Content="Cancel"
+            HorizontalAlignment="Left"
+            Margin="612,446,0,0"
+            VerticalAlignment="Top"
+            Width="77"
+            RenderTransformOrigin="0.5,0.5" Height="44" FontSize="18">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button
+            x:Name="uxPayButton"
+            Content="Pay"
+            HorizontalAlignment="Left"
+            Margin="706,446,0,0"
+            VerticalAlignment="Top"
+            Width="84"
+            RenderTransformOrigin="0.5,0.5" Height="44" FontSize="18">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label x:Name="Label1"  
+            Content="Current Order"   
+            FontSize="18" FontFamily="Georgia" Margin="626,10,28,463" RenderTransformOrigin="1.521,1.285"/>
+
+    </Grid>
+</Page>

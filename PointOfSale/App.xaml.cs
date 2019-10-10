@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* App.xaml.cs
+*   Author: Danniel Christensen
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;

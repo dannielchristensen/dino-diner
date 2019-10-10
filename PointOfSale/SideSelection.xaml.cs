@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* SideSelection.xaml.cs
+*   Author: Danniel Christensen
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,13 +20,18 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for side.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class side : Page
     {
-        public MainWindow()
+        /// <summary>
+        /// Creates side screen
+        /// </summary>
+        public side()
         {
             InitializeComponent();
         }
+
+        
     }
 }
