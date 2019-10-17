@@ -84,13 +84,41 @@ namespace MenuTest.Entrees
             Assert.Contains("Hold Pickle", sb.Special);
             Assert.Contains("Hold Ketchup", sb.Special);
         }
-
+        [Fact]
+        public void CorrectSpecialHold2()
+        {
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+            sb.HoldBun();
+            sb.HoldMustard();
+            
+            Assert.Contains("Hold Bun", sb.Special);
+            Assert.Contains("Hold Mustard", sb.Special);
+            
+        }
+        [Fact]
+        public void CorrectSpecialHold3()
+        {
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+            sb.HoldBun();
+            sb.HoldMustard();
+            sb.HoldKetchup();
+            Assert.Contains("Hold Bun", sb.Special);
+            Assert.Contains("Hold Mustard", sb.Special);
+            Assert.Contains("Hold Ketchup", sb.Special);
+        }
         [Fact]
         public void CorrectToString()
         {
             SteakosaurusBurger sb = new SteakosaurusBurger();
             Assert.Equal("Steakosaurus Burger", sb.ToString());
 
+        }
+
+        [Fact]
+        public void shouldHaveEmptySpecialByDefault()
+        {
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+            Assert.Empty(sb.Special);
         }
     }
 

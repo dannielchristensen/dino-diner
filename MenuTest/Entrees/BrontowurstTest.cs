@@ -84,8 +84,13 @@ namespace MenuTest.Entrees
             Assert.Equal("Brontowurst", bw.ToString());
 
         }
+        [Fact]
+        public void shouldHaveEmptySpecialByDefault()
+        {
+            Brontowurst bw = new Brontowurst();
+            Assert.Empty(bw.Special);
+        }
 
-        
     }
 
 }

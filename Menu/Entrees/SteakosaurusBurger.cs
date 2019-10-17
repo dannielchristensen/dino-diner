@@ -56,7 +56,7 @@ namespace DinoDiner.Menu
             }
 
         }
-        public string Description
+        public override string Description
         {
             get
             {
@@ -64,7 +64,7 @@ namespace DinoDiner.Menu
             }
         }
 
-        public List<string> Special
+        public override List<string> Special
         {
             get
             {

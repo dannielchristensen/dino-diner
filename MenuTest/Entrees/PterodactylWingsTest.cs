@@ -51,6 +51,11 @@ namespace MenuTest.Entrees
             Assert.Equal("Pterodactyl Wings", pw.ToString());
 
         }
-
+        [Fact]
+        public void shouldHaveEmptySpecialByDefault()
+        {
+            PterodactylWings pw = new PterodactylWings();
+            Assert.Empty(pw.Special);
+        }
     }
 }

@@ -127,5 +127,11 @@ namespace MenuTest.Drinks
             Assert.Contains( "Make Decaf", j.Special);
             Assert.Contains("Leave room for Cream", j.Special);
         }
+        [Fact]
+        public void shouldHaveEmptySpecialByDefault()
+        {
+            JurassicJava j = new JurassicJava();
+            Assert.Empty(j.Special);
+        }
     }
 }

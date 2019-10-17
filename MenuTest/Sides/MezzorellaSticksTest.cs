@@ -106,5 +106,12 @@ namespace MenuTest.Sides
             Assert.Equal(ms.Size.ToString() + " Mezzorella Sticks", ms.ToString());
 
         }
+
+        [Fact]
+        public void shouldHaveEmptySpecialByDefault()
+        {
+            MezzorellaSticks ms = new MezzorellaSticks();
+            Assert.Empty(ms.Special);
+        }
     }
 }

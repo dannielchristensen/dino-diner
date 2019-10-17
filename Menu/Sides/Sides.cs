@@ -12,9 +12,9 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Creates the enum to go through the sizes of sides
     /// </summary>
- 
 
-    public abstract class Sides : IMenuItem
+
+    public abstract class Sides : IMenuItem, IOrderItem
     {
         /// <summary>
         /// Gets and sets the price
@@ -36,5 +36,11 @@ namespace DinoDiner.Menu
         /// </summary>
         public virtual Size Size { get; set; }
 
+        public virtual string Description
+        {
+            get;
+        }
+
+        public virtual List<string> Special { get; }
     }
 }

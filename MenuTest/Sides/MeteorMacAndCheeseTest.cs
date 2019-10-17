@@ -105,5 +105,12 @@ namespace MenuTest.Sides
             Assert.Equal(mmc.Size.ToString() + " Meteor Mac And Cheese", mmc.ToString());
 
         }
+
+        [Fact]
+        public void shouldHaveEmptySpecialByDefault()
+        {
+            MeteorMacAndCheese mmc = new MeteorMacAndCheese();
+            Assert.Empty(mmc.Special);
+        }
     }
 }

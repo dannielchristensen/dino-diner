@@ -246,5 +246,12 @@ namespace MenuTest
             Assert.Contains("Hold Ice", s.Special);
         }
 
+        [Fact]
+        public void shouldHaveEmptySpecialByDefault()
+        {
+            Sodasaurus s = new Sodasaurus();
+            Assert.Empty(s.Special);
+        }
+
     }
 }

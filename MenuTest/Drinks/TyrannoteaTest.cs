@@ -35,7 +35,7 @@ namespace MenuTest.Drinks
         public void HasCorrectDefaultIce()
         {
             Tyrannotea s = new Tyrannotea();
-            Assert.False(s.Ice);
+            Assert.True(s.Ice);
         }
         [Fact]
         public void HasCorrectDefaultSize()
@@ -192,6 +192,13 @@ namespace MenuTest.Drinks
             Assert.Contains("Hold Ice", s.Special);
             Assert.Contains("Add Lemon", s.Special);
 
+        }
+
+        [Fact]
+        public void shouldHaveEmptySpecialByDefault()
+        {
+            Tyrannotea s = new Tyrannotea();
+            Assert.Empty(s.Special);
         }
 
     }

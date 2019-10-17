@@ -85,7 +85,7 @@ namespace MenuTest
         {
             MeteorMacAndCheese mmc = new MeteorMacAndCheese();
             mmc.Size = size;
-            Assert.Equal($"{size} Meteor Mac and Cheese", mmc.ToString());
+            Assert.Equal($"{size} Meteor Mac And Cheese", mmc.ToString());
         }
 
         [Theory]

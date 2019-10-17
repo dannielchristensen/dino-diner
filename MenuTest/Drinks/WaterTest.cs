@@ -150,7 +150,12 @@ namespace MenuTest.Drinks
             Assert.Contains("Add Lemon", w.Special);
 
         }
-
+        [Fact]
+        public void shouldHaveEmptySpecialByDefault()
+        {
+            Water w = new Water();
+            Assert.Empty(w.Special);
+        }
     }
 }
 

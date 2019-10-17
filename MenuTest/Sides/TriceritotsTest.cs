@@ -106,5 +106,12 @@ namespace MenuTest.Sides
             Assert.Equal((tt.Size.ToString() + " Triceritots"), tt.ToString());
 
         }
+
+        [Fact]
+        public void shouldHaveEmptySpecialByDefault()
+        {
+            Triceritots tt = new Triceritots();
+            Assert.Empty(tt.Special);
+        }
     }
 }

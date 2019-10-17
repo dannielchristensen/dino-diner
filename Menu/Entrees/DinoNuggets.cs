@@ -2,13 +2,14 @@
  *  Author: Danniel Christensen
  */
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// The DinoNuggets objects extends the Entree abstract class
     /// </summary>
-    public class DinoNuggets : Entree, IMenuItem, IOrderItem
+    public class DinoNuggets : Entree, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -16,6 +17,7 @@ namespace DinoDiner.Menu
         /// </summary>
         public  int numNugs = 6;
 
+        
         /// <summary>
         /// Allws access to Price via getter and setter
         /// </summary>
@@ -45,7 +47,7 @@ namespace DinoDiner.Menu
             
         }
 
-        public string Description
+        public override string Description
         {
             get
             {
@@ -53,12 +55,16 @@ namespace DinoDiner.Menu
             }
         }
 
-        public List<string> Special
+        public override List<string> Special
         {
             get
             {
                 List<string> l = new List<string>();
-                l.Add($"Total Nugs: {numNugs}");
+
+                if (numNugs != 6)
+                {
+                    l.Add($"{numNugs-6} Extra Nuggets");
+                }
 
                 return l;
 
@@ -87,6 +93,10 @@ namespace DinoDiner.Menu
             this.numNugs++;
             this.Price += .25;
             this.Calories = (uint) numNugs * 59;
+            NotifyOfPropertyChanged("Calories");
+            NotifyOfPropertyChanged("Price");
+            NotifyOfPropertyChanged("Description");
+            NotifyOfPropertyChanged("Special");
         }
 
         /// <summary>
@@ -102,6 +112,10 @@ namespace DinoDiner.Menu
             this.numNugs += a;
             this.Price += (.25 * a);
             this.Calories = (uint) numNugs * 59;
+            NotifyOfPropertyChanged("Calories");
+            NotifyOfPropertyChanged("Price");
+            NotifyOfPropertyChanged("Description");
+            NotifyOfPropertyChanged("Special");
         }
     }
 

@@ -7,12 +7,12 @@ namespace DinoDiner.Menu
     public class Sodasaurus : Drink,  IMenuItem, IOrderItem
     {
 
-        public double Price { get; set; }
-        public uint Calories { get; set; }
+        public override double Price { get; set; }
+        public override uint Calories { get; set; }
 
         public bool Ice { get; set; }
         public Size size { get; set; }
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
@@ -20,7 +20,7 @@ namespace DinoDiner.Menu
             }
 
         }
-        public string Description
+        public override string Description
         {
             get
             {
@@ -28,7 +28,7 @@ namespace DinoDiner.Menu
             }
         }
 
-        public List<string> Special
+        public override List<string> Special
         {
             get
             {
@@ -43,8 +43,8 @@ namespace DinoDiner.Menu
         private SodasaurusFlavor flavor { get; set; }
         public SodasaurusFlavor Flavor
         {
-            get { return Flavor; }
-            set { Flavor = value; }
+            get { return flavor; }
+            set { flavor = value; }
         }
         public override Size Size
         {

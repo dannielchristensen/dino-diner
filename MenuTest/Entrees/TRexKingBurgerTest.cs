@@ -138,11 +138,65 @@ namespace MenuTest.Entrees
         }
 
         [Fact]
+        public void CorrectSpecial6Hold()
+        {
+            TRexKingBurger trex = new TRexKingBurger();
+            trex.HoldBun();
+            trex.HoldLettuce();
+            trex.HoldMayo();
+            trex.HoldOnion();
+            trex.HoldPickle();
+            trex.HoldTomato();
+            Assert.Contains("Hold Bun", trex.Special);
+            Assert.Contains("Hold Lettuce", trex.Special);
+            Assert.Contains("Hold Mayo", trex.Special);
+            Assert.Contains("Hold Onion", trex.Special);
+            Assert.Contains("Hold Pickle", trex.Special);
+            Assert.Contains("Hold Tomato", trex.Special);
+
+
+        }
+        [Fact]
+        public void CorrectSpecial2Hold()
+        {
+            TRexKingBurger trex = new TRexKingBurger();
+            trex.HoldKetchup();
+            trex.HoldBun();
+            
+            Assert.Contains("Hold Bun", trex.Special);
+            Assert.Contains("Hold Ketchup", trex.Special);
+            
+
+
+        }
+        [Fact]
+        public void CorrectSpecial4Hold()
+        {
+            TRexKingBurger trex = new TRexKingBurger();
+            trex.HoldKetchup();
+            trex.HoldLettuce();
+            trex.HoldMustard();
+            trex.HoldTomato();
+            Assert.Contains("Hold Ketchup", trex.Special);
+            Assert.Contains("Hold Lettuce", trex.Special);
+            Assert.Contains("Hold Mustard", trex.Special);
+            Assert.Contains("Hold Tomato", trex.Special);
+
+
+        }
+        [Fact]
         public void CorrectToString()
         {
             TRexKingBurger trex = new TRexKingBurger();
             Assert.Equal("T-Rex King Burger", trex.ToString());
 
+        }
+
+        [Fact]
+        public void shouldHaveEmptySpecialByDefault()
+        {
+            TRexKingBurger trex = new TRexKingBurger();
+            Assert.Empty(trex.Special);
         }
     }
 

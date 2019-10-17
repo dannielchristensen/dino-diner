@@ -107,5 +107,12 @@ namespace MenuTest.Sides
             Assert.Equal(ft.Size.ToString() + " Fryceritops", ft.ToString());
 
         }
+
+        [Fact]
+        public void shouldHaveEmptySpecialByDefault()
+        {
+            Fryceritops ft = new Fryceritops();
+            Assert.Empty(ft.Special);
+        }
     }
 }

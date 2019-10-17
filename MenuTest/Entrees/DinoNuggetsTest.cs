@@ -93,18 +93,7 @@ namespace MenuTest.Entrees
             Assert.Equal(dn.ToString(), dn.Description);
 
         }
-        [Fact]
-        public void CorrectSpecial()
-        {
-            DinoNuggets dn = new DinoNuggets();
-
-
-            Assert.Contains("Total Nugs: 6", dn.Special);
-            dn.AddNugget();
-            Assert.Contains("Total Nugs: 7", dn.Special);
-
-
-        }
+     
 
         [Fact]
         public void CorrectToString()
@@ -112,6 +101,44 @@ namespace MenuTest.Entrees
             DinoNuggets dn = new DinoNuggets();
             Assert.Equal("Dino-Nuggets", dn.ToString());
 
+        }
+        [Fact]
+        public void shouldHaveEmptySpecialByDefault()
+        {
+            DinoNuggets dn = new DinoNuggets();
+            Assert.Empty(dn.Special);
+        }
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(3)]
+        [InlineData(16)]
+        public void ShouldHaveCorrectSpecialForNuggets(int extraNuggets)
+        {
+            DinoNuggets dn = new DinoNuggets();
+            for (int i = 0; i < extraNuggets; i++) {
+                dn.AddNugget();
+            }
+            Assert.Collection<string>(dn.Special, item =>
+            {
+                Assert.Equal($"{extraNuggets} Extra Nuggets", item);
+            });
+        }
+
+        [Theory]
+        [InlineData("Special")]
+        [InlineData("Description")]
+        [InlineData("Price")]
+        [InlineData("Calories")]
+
+        public void AddingNuggetsShouldNotifyOfPropertyChange(string propertyName)
+        {
+            DinoNuggets dn = new DinoNuggets();
+            Assert.PropertyChanged(dn, propertyName, ()=>
+            {
+                dn.AddNugget();
+            }
+            );
         }
     }
 }

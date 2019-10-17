@@ -83,5 +83,12 @@ namespace MenuTest.Entrees
             Assert.Equal("Veloci-Wrap", vw.ToString());
 
         }
+
+        [Fact]
+        public void shouldHaveEmptySpecialByDefault()
+        {
+            VelociWrap vw = new VelociWrap();
+            Assert.Empty(vw.Special);
+        }
     }
 }

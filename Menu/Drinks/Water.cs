@@ -6,13 +6,13 @@ namespace DinoDiner.Menu
 {
     public class Water : Drink, IMenuItem, IOrderItem
     {
-        public uint Calories { get; set; }
-        public double Price { get; set; }
+        public override uint Calories { get; set; }
+        public override double Price { get; set; }
         private Size size {get; set;}
         public bool Lemon { get; set; }
 
         public bool Ice = true;
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
@@ -22,7 +22,7 @@ namespace DinoDiner.Menu
             }
 
         }
-        public string Description
+        public override string Description
         {
             get
             {
@@ -30,7 +30,7 @@ namespace DinoDiner.Menu
             }
         }
 
-        public List<string> Special
+        public override List<string> Special
         {
             get
             {
@@ -43,7 +43,7 @@ namespace DinoDiner.Menu
 
             }
         }
-        public Size Size
+        public override Size Size
         {
             get
             {
