@@ -8,7 +8,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// The VelociWrap objects extends the Entree abstract class
     /// </summary>
-    public class VelociWrap : Entree, IMenuItem
+    public class VelociWrap : Entree, IMenuItem, IOrderItem
     {
         /// <summary>
         /// Allws access to Price via getter and setter
@@ -52,7 +52,30 @@ namespace DinoDiner.Menu
             }
 
         }
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
 
+        public List<string> Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                if (!cheese)
+                    l.Add("Hold Cheese");
+                if (!dressing)
+                    l.Add("Hold Dressing");
+                if (!lettuce)
+                    l.Add("Hold Lettuce");
+
+                return l;
+
+            }
+        }
         /// <summary>
         /// Initializes the value of a VelociWrap and its price/calories to small
         /// </summary>

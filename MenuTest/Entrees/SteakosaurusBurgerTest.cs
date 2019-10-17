@@ -64,6 +64,34 @@ namespace MenuTest.Entrees
             sb.HoldMustard();
             Assert.DoesNotContain<string>("Mustard", sb.Ingredients);
         }
+        [Fact]
+        public void CorrectDescription()
+        {
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+            Assert.Equal(sb.ToString(), sb.Description);
+
+        }
+        [Fact]
+        public void CorrectSpecial()
+        {
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+            sb.HoldBun();
+            sb.HoldMustard();
+            sb.HoldPickle();
+            sb.HoldKetchup();
+            Assert.Contains("Hold Bun", sb.Special);
+            Assert.Contains("Hold Mustard", sb.Special);
+            Assert.Contains("Hold Pickle", sb.Special);
+            Assert.Contains("Hold Ketchup", sb.Special);
+        }
+
+        [Fact]
+        public void CorrectToString()
+        {
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+            Assert.Equal("Steakosaurus Burger", sb.ToString());
+
+        }
     }
 
 }

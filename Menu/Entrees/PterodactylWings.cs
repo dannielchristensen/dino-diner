@@ -8,7 +8,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// The PterodactylWings objects extends the Entree abstract class
     /// </summary>
-    public class PterodactylWings : Entree, IMenuItem
+    public class PterodactylWings : Entree, IMenuItem, IOrderItem
     {
         /// <summary>
         /// Allws access to Price via getter and setter
@@ -32,6 +32,24 @@ namespace DinoDiner.Menu
             }
         }
 
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public List<string> Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+
+                return l;
+
+            }
+        }
         /// <summary>
         /// Initializes the value of a PterodactylWings and its price/calories to small
         /// </summary>

@@ -55,6 +55,37 @@ namespace MenuTest.Entrees
             bw.HoldOnion();
             Assert.DoesNotContain<string>("Onion", bw.Ingredients);
         }
+
+        [Fact]
+        public void CorrectDescription()
+        {
+            Brontowurst bw = new Brontowurst();
+            Assert.Equal(bw.ToString(), bw.Description);
+
+        }
+        [Fact]
+        public void CorrectSpecial()
+        {
+            Brontowurst bw = new Brontowurst();
+            bw.HoldBun();
+            bw.HoldOnion();
+            bw.HoldPeppers();
+
+            Assert.Contains("Hold Bun", bw.Special);
+            Assert.Contains("Hold Onions", bw.Special);
+            Assert.Contains("Hold Peppers", bw.Special);
+
+        }
+
+        [Fact]
+        public void CorrectToString()
+        {
+            Brontowurst bw = new Brontowurst();
+            Assert.Equal("Brontowurst", bw.ToString());
+
+        }
+
+        
     }
 
 }

@@ -158,6 +158,42 @@ namespace MenuTest.Drinks
             s.HoldIce();
             Assert.False(s.Ice);
         }
-       
+
+        [Fact]
+        public void CorrectToString()
+        {
+            Tyrannotea s = new Tyrannotea();
+            s.Size = Size.Large;
+            string test = s.Size.ToString() + " Tyrannotea";
+            Assert.Equal(test, s.ToString());
+            s.MakeSweet();
+            test = s.Size.ToString() + " Sweet Tyrannotea";
+            Assert.Equal(test, s.ToString());
+
+        }
+        [Fact]
+        public void CorrectDescription()
+        {
+            Tyrannotea s = new Tyrannotea();
+            s.Size = Size.Large;
+            string test = s.Size.ToString() + " Tyrannotea";
+            Assert.Equal(test, s.Description);
+            s.MakeSweet();
+            test = s.Size.ToString() + " Sweet Tyrannotea";
+            Assert.Equal(test, s.Description);
+        }
+        [Fact]
+        public void CorrectSpecial()
+        {
+            Tyrannotea s = new Tyrannotea();
+
+            s.HoldIce();
+            s.AddLemon();
+            Assert.Contains("Hold Ice", s.Special);
+            Assert.Contains("Add Lemon", s.Special);
+
+        }
+
     }
 }
+

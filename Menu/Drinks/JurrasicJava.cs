@@ -4,11 +4,35 @@ using System.Text;
 
 namespace DinoDiner.Menu
 {
-    public class JurassicJava : Drink, IMenuItem
+    public class JurassicJava : Drink, IMenuItem, IOrderItem
     {
         public uint Calories { get; set; }
         public double Price { get; set; }
 
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public List<string> Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                if (Ice)
+                    l.Add("Add Ice");
+                if (RoomForCream)
+                    l.Add("Leave room for Cream");
+                if (Decaf)
+                    l.Add("Make Decaf");
+
+                return l;
+
+            }
+        }
         private Size size { get; set; }
 
         public bool RoomForCream = false;

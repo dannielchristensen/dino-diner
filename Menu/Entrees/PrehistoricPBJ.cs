@@ -9,7 +9,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// The PrehistoricPBJ objects extends the Entree abstract class
     /// </summary>
-    public class PrehistoricPBJ : Entree, IMenuItem
+    public class PrehistoricPBJ : Entree, IMenuItem, IOrderItem
     {
 
         /// <summary>
@@ -45,7 +45,28 @@ namespace DinoDiner.Menu
                 return ingredients;
             }
         }
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
 
+        public List<string> Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                if (!peanutButter)
+                    l.Add("Hold Peanut Butter");
+                if (!jelly)
+                    l.Add("Hold Jelly");
+               
+                return l;
+
+            }
+        }
         /// <summary>
         /// Initializes the value of a PrehistoricPBJ and its price/calories to small
         /// </summary>

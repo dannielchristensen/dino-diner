@@ -8,7 +8,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// The DinoNuggets objects extends the Entree abstract class
     /// </summary>
-    public class DinoNuggets : Entree, IMenuItem
+    public class DinoNuggets : Entree, IMenuItem, IOrderItem
     {
 
         /// <summary>
@@ -45,6 +45,25 @@ namespace DinoDiner.Menu
             
         }
 
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public List<string> Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                l.Add($"Total Nugs: {numNugs}");
+
+                return l;
+
+            }
+        }
         /// <summary>
         /// Initializes the value of a DinoNuggets to six (6) nuggets and calculates calories off number of nuggets
         /// </summary>

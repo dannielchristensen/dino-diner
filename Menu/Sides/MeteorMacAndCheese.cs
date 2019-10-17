@@ -10,7 +10,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// The MeteorMacAndCheese objects extends the Side abstract class
     /// </summary>
-    public class MeteorMacAndCheese : Sides, IMenuItem
+    public class MeteorMacAndCheese : Sides, IMenuItem, IOrderItem
     {
         /// <summary>
         /// Creates Size object to hold size of object
@@ -47,6 +47,22 @@ namespace DinoDiner.Menu
                 }
             }
         }
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public List<string> Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                return l;
+            }
+        }
         /// <summary>
         /// Constructor for MeteorMacAndCheese. Sets default Calories and Price to size small.
         /// </summary>
@@ -60,7 +76,7 @@ namespace DinoDiner.Menu
 
         public override string ToString()
         {
-            return size.ToString() + " Meteor Mac and Cheese";
+            return size.ToString() + " Meteor Mac And Cheese";
         }
 
         /// <summary>

@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// The Fryceritops objects extends the Side abstract class
     /// </summary>
-    public class Triceritots: Sides, IMenuItem
+    public class Triceritots: Sides, IMenuItem, IOrderItem
     {
         /// <summary>
         /// Creates Size object to hold size of object
@@ -48,7 +48,22 @@ namespace DinoDiner.Menu
                 }
             }
         }
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
 
+        public List<string> Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                return l;
+            }
+        }
         /// <summary>
         /// Constructor for Triceritots. Sets default Calories and Price to size small.
         /// </summary>

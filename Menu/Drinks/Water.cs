@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DinoDiner.Menu
 {
-    public class Water : Drink, IMenuItem
+    public class Water : Drink, IMenuItem, IOrderItem
     {
         public uint Calories { get; set; }
         public double Price { get; set; }
@@ -21,6 +21,27 @@ namespace DinoDiner.Menu
                 return l;
             }
 
+        }
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public List<string> Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                if (!Ice)
+                    l.Add("Hold Ice");
+                if (Lemon)
+                    l.Add("Add Lemon");
+                return l;
+
+            }
         }
         public Size Size
         {

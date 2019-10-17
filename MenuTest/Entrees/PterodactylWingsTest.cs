@@ -29,6 +29,28 @@ namespace MenuTest.Entrees
             Assert.Contains<string>("Wing Sauce", ingredients);
             Assert.Equal<int>(2, ingredients.Count);
         }
+        [Fact]
+        public void CorrectDescription()
+        {
+            PterodactylWings pw = new PterodactylWings();
+            Assert.Equal(pw.ToString(), pw.Description);
+
+        }
+        [Fact]
+        public void CorrectSpecial()
+        {
+            PterodactylWings pw = new PterodactylWings();
+            Assert.True(pw.Special.Count == 0);
+
+        }
+
+        [Fact]
+        public void CorrectToString()
+        {
+            PterodactylWings pw = new PterodactylWings();
+            Assert.Equal("Pterodactyl Wings", pw.ToString());
+
+        }
 
     }
 }

@@ -56,5 +56,32 @@ namespace MenuTest.Entrees
             vw.HoldCheese();
             Assert.DoesNotContain<string>("Parmesan Cheese", vw.Ingredients);
         }
+        [Fact]
+        public void CorrectDescription()
+        {
+            VelociWrap vw = new VelociWrap();
+            Assert.Equal(vw.ToString(), vw.Description);
+
+        }
+        [Fact]
+        public void CorrectSpecial()
+        {
+            VelociWrap vw = new VelociWrap();
+            vw.HoldCheese();
+            vw.HoldDressing();
+            vw.HoldLettuce();
+            Assert.Contains("Hold Cheese", vw.Special);
+            Assert.Contains("Hold Lettuce", vw.Special);
+            Assert.Contains("Hold Dressing", vw.Special);
+
+        }
+
+        [Fact]
+        public void CorrectToString()
+        {
+            VelociWrap vw = new VelociWrap();
+            Assert.Equal("Veloci-Wrap", vw.ToString());
+
+        }
     }
 }

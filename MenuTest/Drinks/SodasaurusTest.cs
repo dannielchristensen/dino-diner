@@ -163,5 +163,88 @@ namespace MenuTest
             Assert.Equal<SodasaurusFlavor>(SodasaurusFlavor.Vanilla, s.Flavor);
 
         }
+        [Fact]
+        public void CorrectToString()
+        {
+            Sodasaurus s = new Sodasaurus();
+            s.Size = Size.Large;
+            s.setFlavorToOrange();
+            string test = s.Size.ToString() + " " + s.Flavor.ToString()+" Sodasaurus";
+            Assert.Equal(test, s.ToString());
+
+            s.setFlavorToCola();
+            test = s.Size.ToString() + " " + s.Flavor.ToString() + " Sodasaurus";
+            Assert.Equal(test, s.ToString());
+
+            s.setFlavorToGrape();
+            test = s.Size.ToString() + " " + s.Flavor.ToString() + " Sodasaurus";
+            Assert.Equal(test, s.ToString());
+
+            s.setFlavorToCherry();
+            test = s.Size.ToString() + " " + s.Flavor.ToString() + " Sodasaurus";
+            Assert.Equal(test, s.ToString());
+
+            s.setFlavorToChocolate();
+            test = s.Size.ToString() + " " + s.Flavor.ToString() + " Sodasaurus";
+            Assert.Equal(test, s.ToString());
+
+            s.setFlavorToLime();
+            test = s.Size.ToString() + " " + s.Flavor.ToString() + " Sodasaurus";
+            Assert.Equal(test, s.ToString());
+
+            s.setFlavorToRootBeer();
+            test = s.Size.ToString() + " " + s.Flavor.ToString() + " Sodasaurus";
+            Assert.Equal(test, s.ToString());
+
+            s.setFlavorToVanilla();
+            test = s.Size.ToString() + " " + s.Flavor.ToString() + " Sodasaurus";
+            Assert.Equal(test, s.ToString());
+        }
+        [Fact]
+        public void CorrectDescription()
+        {
+            Sodasaurus s = new Sodasaurus();
+            s.Size = Size.Large;
+            s.setFlavorToOrange();
+            string test = s.ToString();
+            Assert.Equal(test, s.Description);
+
+            s.setFlavorToCola();
+            test = s.ToString();
+            Assert.Equal(test, s.Description);
+
+            s.setFlavorToGrape();
+            test = s.ToString();
+            Assert.Equal(test, s.Description);
+
+            s.setFlavorToCherry();
+            test = s.ToString();
+            Assert.Equal(test, s.Description);
+
+            s.setFlavorToChocolate();
+            test = s.ToString();
+            Assert.Equal(test, s.Description);
+
+            s.setFlavorToLime();
+            test = s.ToString();
+            Assert.Equal(test, s.Description);
+
+            s.setFlavorToRootBeer();
+            test = s.ToString();
+            Assert.Equal(test, s.Description);
+
+            s.setFlavorToVanilla();
+            test = s.ToString();
+            Assert.Equal(test, s.Description);
+        }
+        [Fact]
+        public void CorrectSpecial()
+        {
+            Sodasaurus s = new Sodasaurus();
+
+            s.HoldIce();
+            Assert.Contains("Hold Ice", s.Special);
+        }
+
     }
 }

@@ -81,7 +81,40 @@ namespace DinoDiner.Menu
             }
 
         }
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
 
+        public List<string> Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                if (!bun)
+                    l.Add("Hold Bun");
+                if (!mayo)
+                    l.Add("Hold Mayo");
+                if (!mustard)
+                    l.Add("Hold Mustard");
+                if (!onion)
+                    l.Add("Hold Onion");
+                if (!lettuce)
+                    l.Add("Hold Lettuce");
+                if (!tomato)
+                    l.Add("Hold Tomato");
+                if (!ketchup)
+                    l.Add("Hold Ketchup");
+                if (!pickle)
+                    l.Add("Hold Pickle");
+
+                return l;
+
+            }
+        }
         /// <summary>
         /// Initializes the value of a TRexKingBurger and its price/calories to small
         /// </summary>

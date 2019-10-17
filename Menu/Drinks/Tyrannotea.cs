@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DinoDiner.Menu
 {
-    public class Tyrannotea : Drink, IMenuItem
+    public class Tyrannotea : Drink, IMenuItem, IOrderItem
     {
         public double Price { get; set; }
         public uint Calories { get; set; }
@@ -15,6 +15,27 @@ namespace DinoDiner.Menu
         public bool Lemon { get; set; }
 
         public bool Sweet { get; set; }
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public List<string> Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                if (!Ice)
+                    l.Add("Hold Ice");
+                if (Lemon)
+                    l.Add("Add Lemon");
+                return l;
+
+            }
+        }
         public List<string> Ingredients
         {
             get

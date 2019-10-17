@@ -90,5 +90,42 @@ namespace MenuTest.Drinks
             Assert.Contains("Water", j.Ingredients);
             Assert.Contains("Coffee", j.Ingredients);
         }
+        [Fact]
+        public void CorrectToString()
+        { 
+            JurassicJava j = new JurassicJava();
+            j.Size = Size.Large;
+            string test = j.Size.ToString() + " Jurassic Java";
+            Assert.Equal(test, j.ToString());
+
+            test = j.Size.ToString() + " Decaf Jurassic Java";
+            j.MakeDecaf();
+            Assert.Equal(test, j.ToString());
+
+        }
+        [Fact]
+        public void CorrectDescription()
+        {
+            JurassicJava j = new JurassicJava();
+            j.Size = Size.Large;
+            string test = j.ToString();
+            Assert.Equal(test, j.Description);
+            j.MakeDecaf();
+            test = j.ToString();
+            Assert.Equal(test, j.Description);
+        }
+
+        [Fact]
+        public void CorrectSpecial()
+        {
+            JurassicJava j = new JurassicJava();
+            j.MakeDecaf();
+            j.AddIce();
+            j.LeaveRoomForCream();
+
+            Assert.Contains("Add Ice", j.Special);
+            Assert.Contains( "Make Decaf", j.Special);
+            Assert.Contains("Leave room for Cream", j.Special);
+        }
     }
 }

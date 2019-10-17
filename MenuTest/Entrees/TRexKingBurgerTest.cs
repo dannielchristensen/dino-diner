@@ -106,7 +106,44 @@ namespace MenuTest.Entrees
             trex.HoldMayo();
             Assert.DoesNotContain<string>("Mayo", trex.Ingredients);
         }
+        [Fact]
+        public void CorrectDescription()
+        {
+            TRexKingBurger trex = new TRexKingBurger();
+            Assert.Equal(trex.ToString(), trex.Description);
 
+        }
+        [Fact]
+        public void CorrectSpecial()
+        {
+            TRexKingBurger trex = new TRexKingBurger();
+            trex.HoldKetchup();
+            trex.HoldBun();
+            trex.HoldLettuce();
+            trex.HoldMayo();
+            trex.HoldMustard();
+            trex.HoldOnion();
+            trex.HoldPickle();
+            trex.HoldTomato();
+            Assert.Contains("Hold Bun", trex.Special);
+            Assert.Contains("Hold Ketchup", trex.Special);
+            Assert.Contains("Hold Lettuce", trex.Special);
+            Assert.Contains("Hold Mayo", trex.Special);
+            Assert.Contains("Hold Mustard", trex.Special);
+            Assert.Contains("Hold Onion", trex.Special);
+            Assert.Contains("Hold Pickle", trex.Special);
+            Assert.Contains("Hold Tomato", trex.Special);
+
+
+        }
+
+        [Fact]
+        public void CorrectToString()
+        {
+            TRexKingBurger trex = new TRexKingBurger();
+            Assert.Equal("T-Rex King Burger", trex.ToString());
+
+        }
     }
 
 }

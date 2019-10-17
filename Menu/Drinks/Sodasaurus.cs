@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DinoDiner.Menu
 {
-    public class Sodasaurus : Drink,  IMenuItem
+    public class Sodasaurus : Drink,  IMenuItem, IOrderItem
     {
 
         public double Price { get; set; }
@@ -19,6 +19,26 @@ namespace DinoDiner.Menu
                 return new List<string> { "Water", "Natural SodasaurusFlavor", "Cane Sugar" };
             }
 
+        }
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public List<string> Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                if (!Ice)
+                    l.Add("Hold Ice");
+
+                return l;
+
+            }
         }
         private SodasaurusFlavor flavor { get; set; }
         public SodasaurusFlavor Flavor

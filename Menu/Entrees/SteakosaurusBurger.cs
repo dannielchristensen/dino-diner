@@ -8,7 +8,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// The SteakosaurusBurger objects extends the Entree abstract class
     /// </summary>
-    public class SteakosaurusBurger : Entree, IMenuItem
+    public class SteakosaurusBurger : Entree, IMenuItem, IOrderItem
     {
         /// <summary>
         /// Allws access to Price via getter and setter
@@ -56,7 +56,31 @@ namespace DinoDiner.Menu
             }
 
         }
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
 
+        public List<string> Special
+        {
+            get
+            {
+                List<string> l = new List<string>();
+                if (!bun)
+                    l.Add("Hold Bun");
+                if (!ketchup)
+                    l.Add("Hold Ketchup");
+                if (!mustard)
+                    l.Add("Hold Mustard");
+                if (!pickle)
+                    l.Add("Hold Pickle");
+                return l;
+
+            }
+        }
         /// <summary>
         /// Initializes the value of a SteakosaurusBurger and its price/calories to small
         /// </summary>

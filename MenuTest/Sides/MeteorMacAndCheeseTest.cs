@@ -83,5 +83,27 @@ namespace MenuTest.Sides
             mmc.Size = Size.Large;
             Assert.Equal<Size>(Size.Large, mmc.Size);
         }
+        public void CorrectDescription()
+        {
+            MeteorMacAndCheese mmc = new MeteorMacAndCheese();
+            Assert.Equal(mmc.ToString(), mmc.Description);
+
+        }
+        [Fact]
+        public void CorrectSpecial()
+        {
+            MeteorMacAndCheese mmc = new MeteorMacAndCheese();
+            Assert.True(mmc.Special.Count == 0);
+
+        }
+
+        [Fact]
+        public void CorrectToString()
+        {
+            MeteorMacAndCheese mmc = new MeteorMacAndCheese();
+            mmc.Size = Size.Large;
+            Assert.Equal(mmc.Size.ToString() + " Meteor Mac And Cheese", mmc.ToString());
+
+        }
     }
 }
