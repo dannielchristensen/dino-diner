@@ -95,7 +95,7 @@ namespace MenuTest.Sides
         public void CorrectSpecial()
         {
             Fryceritops ft = new Fryceritops();
-            Assert.True(ft.Special.Count == 0);
+            Assert.True(ft.Special.Length == 0);
 
         }
 

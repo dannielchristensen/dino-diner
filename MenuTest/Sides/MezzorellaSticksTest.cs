@@ -94,7 +94,7 @@ namespace MenuTest.Sides
         public void CorrectSpecial()
         {
             MezzorellaSticks ms = new MezzorellaSticks();
-            Assert.True(ms.Special.Count == 0);
+            Assert.True(ms.Special.Length == 0);
 
         }
 

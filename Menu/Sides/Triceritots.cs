@@ -5,13 +5,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// The Fryceritops objects extends the Side abstract class
     /// </summary>
-    public class Triceritots: Sides, IMenuItem, IOrderItem
+    public class Triceritots: Sides, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// Creates Size object to hold size of object
@@ -30,24 +31,34 @@ namespace DinoDiner.Menu
             set
             {
                 size = value;
+                NotifyOfPropertyChanged("Size");
                 switch (size)
                 {
                     default:
                     case Size.Small:
                         Price = 0.99;
                         Calories = 352;
+                        NotifyOfPropertyChanged("Price");
+                        NotifyOfPropertyChanged("Calories");
                         break;
                     case Size.Medium:
                         Price = 1.45;
                         Calories = 410;
+                        NotifyOfPropertyChanged("Price");
+                        NotifyOfPropertyChanged("Calories");
                         break;
                     case Size.Large:
                         Price = 1.95;
                         Calories = 590;
+                        NotifyOfPropertyChanged("Price");
+                        NotifyOfPropertyChanged("Calories");
                         break;
                 }
             }
         }
+        /// <summary>
+        /// Description for Triceritots
+        /// </summary>
         public override string Description
         {
             get
@@ -55,13 +66,15 @@ namespace DinoDiner.Menu
                 return this.ToString();
             }
         }
-
-        public override List<string> Special
+        /// <summary>
+        /// Special for Triceritots
+        /// </summary>
+        public override string[] Special
         {
             get
             {
                 List<string> l = new List<string>();
-                return l;
+                return l.ToArray();
             }
         }
         /// <summary>
@@ -71,10 +84,14 @@ namespace DinoDiner.Menu
         {
             base.Calories = 352;
             base.Price = 0.99;
-
+            NotifyOfPropertyChanged("Price");
+            NotifyOfPropertyChanged("Calories");
 
         }
-
+        /// <summary>
+        /// ToString for Triceritots
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return size.ToString() + " Triceritots";

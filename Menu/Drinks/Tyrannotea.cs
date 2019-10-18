@@ -1,20 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
-    public class Tyrannotea : Drink, IMenuItem, IOrderItem
+    public class Tyrannotea : Drink, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Field for price
+        /// </summary>
         public override double Price { get; set; }
+        /// <summary>
+        /// Field for calories
+        /// </summary>
         public override uint Calories { get; set; }
-
+        /// <summary>
+        /// Field for size
+        /// </summary>
         private Size size { get; set; }
+        /// <summary>
+        /// Field for Ice
+        /// </summary>
         public bool Ice { get; set; }
-
+        /// <summary>
+        /// Field for Lemon
+        /// </summary>
         public bool Lemon { get; set; }
-
+        /// <summary>
+        /// Field for sweet
+        /// </summary>
         public bool Sweet { get; set; }
+        /// <summary>
+        /// Provides description fo Tyrannotea
+        /// </summary>
         public override string Description
         {
             get
@@ -22,8 +41,10 @@ namespace DinoDiner.Menu
                 return this.ToString();
             }
         }
-
-        public override List<string> Special
+        /// <summary>
+        /// Provides special instructions for Tyrannotea
+        /// </summary>
+        public override string[] Special
         {
             get
             {
@@ -32,10 +53,13 @@ namespace DinoDiner.Menu
                     l.Add("Hold Ice");
                 if (Lemon)
                     l.Add("Add Lemon");
-                return l;
+                return l.ToArray();
 
             }
         }
+        /// <summary>
+        /// Ingredients for Tyrannotea
+        /// </summary>
         public override List<string> Ingredients
         {
             get
@@ -47,7 +71,9 @@ namespace DinoDiner.Menu
             }
 
         }
-        
+        /// <summary>
+        /// Size of tyrannotea
+        /// </summary>
         public override Size Size
         {
             get {
@@ -62,22 +88,32 @@ namespace DinoDiner.Menu
                         Price = .99;
                         Calories = 8;
                         if (Sweet) Calories = 16;
+                        NotifyOfPropertyChanged("Calories");
+                        NotifyOfPropertyChanged("Price");
                         break;
                     case Size.Medium:
                         Price = 1.49;
                         Calories = 16;
                         if (Sweet) Calories = 32;
+                        NotifyOfPropertyChanged("Calories");
+                        NotifyOfPropertyChanged("Price");
                         break;
                     case Size.Large:
                         Price = 1.99;
                         Calories = 32;
                         if (Sweet) Calories = 64;
+                        NotifyOfPropertyChanged("Calories");
+                        NotifyOfPropertyChanged("Price");
                         break;
                 }
 
                 size = value;
+                NotifyOfPropertyChanged("Size");
             }
         }
+        /// <summary>
+        /// Tyrannotea constructor
+        /// </summary>
         public Tyrannotea()
         {
             Lemon = false;
@@ -88,7 +124,10 @@ namespace DinoDiner.Menu
             Calories = 8;
             
         }
-
+        /// <summary>
+        /// Tostring for Tyrannotea
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             if (Sweet)
@@ -100,27 +139,46 @@ namespace DinoDiner.Menu
                 return size.ToString() + " Tyrannotea";
             }
         }
+        /// <summary>
+        /// Holds Ice
+        /// </summary>
         public override void HoldIce()
         {
             Ice = false;
+            NotifyOfPropertyChanged("Ice");
         }
-
+        /// <summary>
+        /// Makes tea sweet, also multiplies calories by 2
+        /// </summary>
         public void MakeSweet()
         {
             Sweet = true;
             Calories *= 2;
+            NotifyOfPropertyChanged("Sweet");
+            NotifyOfPropertyChanged("Calories");
+
         }
+        /// <summary>
+        /// makes tea unsweet
+        /// </summary>
         public void MakeUnSweet()
         {
             Sweet = false;
             Calories /= 2;
-        }
+            NotifyOfPropertyChanged("Sweet");
+            NotifyOfPropertyChanged("Calories");
 
+        }
+        /// <summary>
+        /// Adds Lemon
+        /// </summary>
         public void AddLemon()
         {
             Lemon = true;
+            NotifyOfPropertyChanged("Lemon");
+
         }
 
-        
+
     }
 }

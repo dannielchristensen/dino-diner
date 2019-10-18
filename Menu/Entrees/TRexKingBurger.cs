@@ -2,13 +2,14 @@
  *  Author: Danniel Christensen
  */
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// The VelociWrap objects extends the Entree abstract class
     /// </summary>
-    public class TRexKingBurger : Entree, IMenuItem
+    public class TRexKingBurger : Entree, IMenuItem, INotifyPropertyChanged
     {
         /// <summary>
         /// Allws access to Price via getter and setter
@@ -81,6 +82,9 @@ namespace DinoDiner.Menu
             }
 
         }
+        /// <summary>
+        /// Description for TREX BURGER
+        /// </summary>
         public override string Description
         {
             get
@@ -88,8 +92,10 @@ namespace DinoDiner.Menu
                 return this.ToString();
             }
         }
-
-        public override List<string> Special
+        /// <summary>
+        /// SPECIAL INSTRUCTIONS FOR TREX BURGER
+        /// </summary>
+        public override string[] Special
         {
             get
             {
@@ -111,7 +117,7 @@ namespace DinoDiner.Menu
                 if (!pickle)
                     l.Add("Hold Pickle");
 
-                return l;
+                return l.ToArray();
 
             }
         }
@@ -122,8 +128,13 @@ namespace DinoDiner.Menu
         {
             this.Price = 8.45;
             this.Calories = 728;
+            NotifyOfPropertyChanged("Price");
+            NotifyOfPropertyChanged("Calories");
         }
-
+        /// <summary>
+        /// Tostring for TREX burger
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return "T-Rex King Burger";
@@ -132,42 +143,74 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Sets bun to false to show that there is no bun
         /// </summary>
-        public void HoldBun() => this.bun = false;
+        public void HoldBun() {
+            this.bun = false;
+            NotifyOfPropertyChanged("bun");
+        }
 
         /// <summary>
         /// Sets ketchup to false to show that there is no ketchup
         /// </summary>
-        public void HoldKetchup() => this.ketchup = false;
+        public void HoldKetchup()
+        {
+            this.ketchup = false;
+            NotifyOfPropertyChanged("ketchup");
+        }
 
         /// <summary>
         /// Sets pickle to false to show that there is no pickle
         /// </summary>
-        public void HoldPickle() => this.pickle = false;
+        public void HoldPickle()
+        {
+            this.pickle = false;
+            NotifyOfPropertyChanged("pickle");
+        }
 
         /// <summary>
         /// Sets mustard to false to show that there is no mustard
         /// </summary>
-        public void HoldMustard() => this.mustard = false;
+        public void HoldMustard()
+        {
+            this.mustard = false;
+            NotifyOfPropertyChanged("mustard");
+        }
 
         /// <summary>
         /// Sets lettuce to false to show that there is no lettuce
         /// </summary>
-        public void HoldLettuce() => this.lettuce = false;
+        public void HoldLettuce()
+        {
+            this.lettuce = false;
+            NotifyOfPropertyChanged("lettuce");
+        }
 
         /// <summary>
         /// Sets mayo to false to show that there is mayo bun
         /// </summary>
-        public void HoldMayo() => this.mayo = false;
+        public void HoldMayo()
+        {
+            this.mayo = false;
+            NotifyOfPropertyChanged("mayo");
+        }
 
         /// <summary>
         /// Sets onion to false to show that there is no onion
         /// </summary>
-        public void HoldOnion() => this.onion = false;
+        public void HoldOnion()
+        {
+            this.onion = false;
+            NotifyOfPropertyChanged("onion");
+        }
+
 
         /// <summary>
         /// Sets tomato to false to show that there is no tomato
         /// </summary>
-        public void HoldTomato() => this.tomato = false;
+        public void HoldTomato()
+        {
+            this.tomato = false;
+            NotifyOfPropertyChanged("tomato");
+        }
     }
 
 }

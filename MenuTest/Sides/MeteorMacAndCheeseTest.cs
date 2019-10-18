@@ -93,7 +93,7 @@ namespace MenuTest.Sides
         public void CorrectSpecial()
         {
             MeteorMacAndCheese mmc = new MeteorMacAndCheese();
-            Assert.True(mmc.Special.Count == 0);
+            Assert.True(mmc.Special.Length == 0);
 
         }
 

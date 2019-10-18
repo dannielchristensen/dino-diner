@@ -2,13 +2,14 @@
  *  Author: Danniel Christensen
  */
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// The Brontowurst objects extends the Entree abstract class
     /// </summary>
-    public class Brontowurst : Entree, IMenuItem, IOrderItem
+    public class Brontowurst : Entree, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// Initializes the bool bun to true to show that there is a bun in a normal order
@@ -34,6 +35,9 @@ namespace DinoDiner.Menu
         /// Allws access to Calories via getter and setter
         /// </summary>
         public override uint Calories { get; set; }
+        /// <summary>
+        /// Description for Brontowurst
+        /// </summary>
         public override string Description
         {
             get
@@ -41,8 +45,10 @@ namespace DinoDiner.Menu
                 return this.ToString();
             }
         }
-
-        public override List<string> Special
+        /// <summary>
+        /// Special for brontowurst
+        /// </summary>
+        public override string[] Special
         {
             get
             {
@@ -54,7 +60,7 @@ namespace DinoDiner.Menu
                 if (!onions)
                     l.Add("Hold Onions");
 
-                return l;
+                return l.ToArray();
 
             }
         }
@@ -82,7 +88,10 @@ namespace DinoDiner.Menu
             this.Price = 5.36;
             this.Calories = 498;
         }
-
+        /// <summary>
+        /// ToString for brontowurst
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return "Brontowurst";
@@ -91,17 +100,28 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Sets bun to false to show that there is no bun
         /// </summary>
-        public void HoldBun() => this.bun = false;
+        public void HoldBun() {
+            this.bun = false;
+            NotifyOfPropertyChanged("bun");
+        }
 
         /// <summary>
         /// Sets peppers to false to show that there is no peppers
         /// </summary>
-        public void HoldPeppers() => this.peppers = false;
+        public void HoldPeppers() {
+            this.peppers = false;
+            NotifyOfPropertyChanged("peppers");
+
+        }
 
         /// <summary>
         /// Sets onions to false to show that there is no onions
         /// </summary>
-        public void HoldOnion() => this.onions = false;
+        public void HoldOnion() {
+            this.onions = false;
+            NotifyOfPropertyChanged("onions");
+
+        }
 
     }
 }

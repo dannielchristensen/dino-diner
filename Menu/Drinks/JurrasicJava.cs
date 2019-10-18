@@ -1,14 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
-    public class JurassicJava : Drink, IMenuItem, IOrderItem
+    /// <summary>
+    /// Class Jurassic Java
+    /// </summary>
+    public class JurassicJava : Drink, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Calories for Java
+        /// </summary>
         public override uint Calories { get; set; }
+        /// <summary>
+        /// Price for Java
+        /// </summary>
         public override double Price { get; set; }
-
+        /// <summary>
+        /// Description of java
+        /// </summary>
         public override string Description
         {
             get
@@ -16,8 +28,10 @@ namespace DinoDiner.Menu
                 return this.ToString();
             }
         }
-
-        public override List<string> Special
+        /// <summary>
+        /// Special instructions for java
+        /// </summary>
+        public override string[] Special
         {
             get
             {
@@ -29,17 +43,29 @@ namespace DinoDiner.Menu
                 if (Decaf)
                     l.Add("Make Decaf");
 
-                return l;
+                return l.ToArray();
 
             }
         }
+        /// <summary>
+        /// Private backing variable for size
+        /// </summary>
         private Size size { get; set; }
-
+        /// <summary>
+        /// Should have have room for cream
+        /// </summary>
         public bool RoomForCream = false;
-
+        /// <summary>
+        /// Ice in java?
+        /// </summary>
         public bool Ice = false;
-
+        /// <summary>
+        /// Should java be decaf
+        /// </summary>
         public bool Decaf = false;
+        /// <summary>
+        /// Creates a list of ingredients
+        /// </summary>
         public override List<string> Ingredients
         {
             get
@@ -47,7 +73,9 @@ namespace DinoDiner.Menu
                 return new List<string> { "Water", "Coffee" };
             }
         }
-
+        /// <summary>
+        /// Size of java
+        /// </summary>
         public override Size Size
         {
             get
@@ -62,29 +90,47 @@ namespace DinoDiner.Menu
                     case Size.Small:
                         Price = .59;
                         Calories = 2;
+                        NotifyOfPropertyChanged("Price");
+                        NotifyOfPropertyChanged("Calories");
+
                         break;
                     case Size.Medium:
                         Price = .99;
                         Calories = 4;
+                        NotifyOfPropertyChanged("Price");
+                        NotifyOfPropertyChanged("Calories");
                         break;
                     case Size.Large:
                         Price = 1.49;
                         Calories = 8;
+                        NotifyOfPropertyChanged("Price");
+                        NotifyOfPropertyChanged("Calories");
                         break;
                 }
 
                 size = value;
+                NotifyOfPropertyChanged("Size");
+
+
             }
         }
-
+        /// <summary>
+        /// JurassicJava constructor
+        /// </summary>
         public JurassicJava()
         {
             Price = .59;
             Calories = 2;
             Size = Size.Small;
+            NotifyOfPropertyChanged("Price");
+            NotifyOfPropertyChanged("Calories");
+            NotifyOfPropertyChanged("Size");
 
         }
-
+        /// <summary>
+        /// ToString for Java
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             if (Decaf)
@@ -96,24 +142,41 @@ namespace DinoDiner.Menu
                 return size.ToString() + " Jurassic Java";
             }
         }
-
+        /// <summary>
+        /// Adds Ice
+        /// </summary>
         public void AddIce()
         {
             Ice = true;
+            NotifyOfPropertyChanged("Ice");
         }
-
+        /// <summary>
+        /// Holds ice for Java
+        /// </summary>
         public override void HoldIce()
         {
             Ice = false;
+            NotifyOfPropertyChanged("Ice");
+
         }
+        /// <summary>
+        /// Room for cream boolean
+        /// </summary>
         public void LeaveRoomForCream()
         {
             RoomForCream = true;
-        }
 
+            NotifyOfPropertyChanged("RoomForCream");
+
+        }
+        /// <summary>
+        /// Makes java decaf
+        /// </summary>
         public void MakeDecaf()
         {
             Decaf = true;
+            NotifyOfPropertyChanged("Decaf");
+
         }
     }
 }

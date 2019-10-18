@@ -23,8 +23,14 @@ namespace DinoDiner.Menu
         /// </summary>
         public virtual List<string> Ingredients { get; }
 
+        /// <summary>
+        /// Property changed handler
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
-
+        /// <summary>
+        /// Method to invoke property changed
+        /// </summary>
+        /// <param name="propertyName">Name of property being changed</param>
         protected void NotifyOfPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
@@ -38,9 +44,13 @@ namespace DinoDiner.Menu
         /// Getter/Setter for Calories
         /// </summary>
         public virtual uint Calories { get; set; }
-
+        /// <summary>
+        /// Virtual get method for description
+        /// </summary>
         public abstract string Description { get; }
-
-        public abstract List<string> Special { get; }
+        /// <summary>
+        /// virtual get method for special
+        /// </summary>
+        public abstract string[] Special { get; }
     }
 }

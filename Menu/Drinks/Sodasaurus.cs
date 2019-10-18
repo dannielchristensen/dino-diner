@@ -1,17 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
-    public class Sodasaurus : Drink,  IMenuItem, IOrderItem
+    /// <summary>
+    /// Class sodasaurus
+    /// </summary>
+    public class Sodasaurus : Drink,  IMenuItem, IOrderItem, INotifyPropertyChanged
     {
-
+        /// <summary>
+        /// Price of Soda
+        /// </summary>
         public override double Price { get; set; }
+        /// <summary>
+        /// Calories of Soda
+        /// </summary>
         public override uint Calories { get; set; }
-
+        /// <summary>
+        /// Ice in Soda?
+        /// </summary>
         public bool Ice { get; set; }
+        /// <summary>
+        /// Size of Soda
+        /// </summary>
         public Size size { get; set; }
+        /// <summary>
+        /// Ingreidents of Soda
+        /// </summary>
         public override List<string> Ingredients
         {
             get
@@ -20,6 +37,9 @@ namespace DinoDiner.Menu
             }
 
         }
+        /// <summary>
+        /// Description for Soda
+        /// </summary>
         public override string Description
         {
             get
@@ -27,8 +47,10 @@ namespace DinoDiner.Menu
                 return this.ToString();
             }
         }
-
-        public override List<string> Special
+        /// <summary>
+        /// Special Instructions for Soda
+        /// </summary>
+        public override string[] Special
         {
             get
             {
@@ -36,16 +58,28 @@ namespace DinoDiner.Menu
                 if (!Ice)
                     l.Add("Hold Ice");
 
-                return l;
+                return l.ToArray();
 
             }
         }
+        /// <summary>
+        /// private backing for soda
+        /// </summary>
         private SodasaurusFlavor flavor { get; set; }
+        /// <summary>
+        /// flavor of soda
+        /// </summary>
         public SodasaurusFlavor Flavor
         {
             get { return flavor; }
-            set { flavor = value; }
+            set { flavor = value;
+                NotifyOfPropertyChanged("Flavor");
+
+            }
         }
+        /// <summary>
+        /// Size of soda
+        /// </summary>
         public override Size Size
         {
             get
@@ -55,24 +89,36 @@ namespace DinoDiner.Menu
             set
             {
                 size = value;
+                NotifyOfPropertyChanged("Size");
+
                 switch (size)
                 {
                     default:
                     case Size.Small:
                         Price = 1.5;
                         Calories = 112;
+                        NotifyOfPropertyChanged("Price");
+                        NotifyOfPropertyChanged("Calories");
+
                         break;
                     case Size.Medium:
                         Price = 2;
                         Calories = 156;
+                        NotifyOfPropertyChanged("Price");
+                        NotifyOfPropertyChanged("Calories");
                         break;
                     case Size.Large:
                         Price = 2.5;
                         Calories = 208;
+                        NotifyOfPropertyChanged("Price");
+                        NotifyOfPropertyChanged("Calories");
                         break;
                 }
             }
         }
+        /// <summary>
+        /// Constructor for soda 
+        /// </summary>
         public Sodasaurus()
         {
             Price = 1.5;
@@ -80,50 +126,99 @@ namespace DinoDiner.Menu
             Ice = true;
             size = Size.Small;
             flavor = SodasaurusFlavor.Cola;
+            NotifyOfPropertyChanged("Price");
+            NotifyOfPropertyChanged("Calories");
+            NotifyOfPropertyChanged("Ice");
+            NotifyOfPropertyChanged("Size");
+            NotifyOfPropertyChanged("Flavor");
         }
-
+        /// <summary>
+        /// Tostring for Soda
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return size.ToString() + " " + flavor.ToString() + " Sodasaurus";
         }
-
+        /// <summary>
+        /// Holds ice for soda
+        /// </summary>
         public override void HoldIce()
         {
             Ice = false;
-        }
+            NotifyOfPropertyChanged("Ice");
 
+        }
+        /// <summary>
+        /// sets flavor to cola
+        /// </summary>
         public void setFlavorToCola()
         {
             this.Flavor = SodasaurusFlavor.Cola;
-        }
+            NotifyOfPropertyChanged("Flavor");
 
+        }
+        /// <summary>
+        /// sets flavor to root beer
+        /// </summary>
         public void setFlavorToRootBeer()
         {
             this.Flavor = SodasaurusFlavor.RootBeer;
+            NotifyOfPropertyChanged("Flavor");
+
         }
+        /// <summary>
+        /// sets flavor to cherry
+        /// </summary>
         public void setFlavorToCherry()
         {
             this.Flavor = SodasaurusFlavor.Cherry;
+            NotifyOfPropertyChanged("Flavor");
+
         }
+        /// <summary>
+        /// sets flavor to vanilla
+        /// </summary>
         public void setFlavorToVanilla()
         {
             this.Flavor = SodasaurusFlavor.Vanilla;
+            NotifyOfPropertyChanged("Flavor");
+
         }
+        /// <summary>
+        /// sets flavor to chocolate
+        /// </summary>
         public void setFlavorToChocolate()
         {
             this.Flavor = SodasaurusFlavor.Chocolate;
+            NotifyOfPropertyChanged("Flavor");
+
         }
+        /// <summary>
+        /// sets flavor to lime
+        /// </summary>
         public void setFlavorToLime()
         {
             this.Flavor = SodasaurusFlavor.Lime;
+            NotifyOfPropertyChanged("Flavor");
+
         }
+        /// <summary>
+        /// sets flavor to orange
+        /// </summary>
         public void setFlavorToOrange()
         {
             this.Flavor = SodasaurusFlavor.Orange;
+            NotifyOfPropertyChanged("Flavor");
+
         }
+        /// <summary>
+        /// Sets flavor to grape
+        /// </summary>
         public void setFlavorToGrape()
         {
-            this.Flavor = SodasaurusFlavor.Grape;
+            NotifyOfPropertyChanged("Flavor");
+
         }
 
     }

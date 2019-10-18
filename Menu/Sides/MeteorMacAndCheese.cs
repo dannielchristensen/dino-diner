@@ -3,6 +3,7 @@
  */
 
 using System.Collections.Generic;
+using System.ComponentModel;
 
 
 namespace DinoDiner.Menu
@@ -10,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// The MeteorMacAndCheese objects extends the Side abstract class
     /// </summary>
-    public class MeteorMacAndCheese : Sides, IMenuItem, IOrderItem
+    public class MeteorMacAndCheese : Sides, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// Creates Size object to hold size of object
@@ -29,24 +30,34 @@ namespace DinoDiner.Menu
             set
             {
                 size = value;
+                NotifyOfPropertyChanged("Size");
                 switch (size)
                 {
                     default:
                     case Size.Small:
                         Price = 0.99;
                         Calories = 420;
+                        NotifyOfPropertyChanged("Calories");
+                        NotifyOfPropertyChanged("Price");
                         break;
                     case Size.Medium:
                         Price = 1.45;
                         Calories = 490;
+                        NotifyOfPropertyChanged("Calories");
+                        NotifyOfPropertyChanged("Price");
                         break;
                     case Size.Large:
                         Price = 1.95;
                         Calories = 520;
+                        NotifyOfPropertyChanged("Calories");
+                        NotifyOfPropertyChanged("Price");
                         break;
                 }
             }
         }
+        /// <summary>
+        /// Description for MacNCheese
+        /// </summary>
         public override string Description
         {
             get
@@ -54,13 +65,15 @@ namespace DinoDiner.Menu
                 return this.ToString();
             }
         }
-
-        public override List<string> Special
+        /// <summary>
+        /// Special instructions for MacNCheese
+        /// </summary>
+        public override string[] Special
         {
             get
             {
                 List<string> l = new List<string>();
-                return l;
+                return l.ToArray();
             }
         }
         /// <summary>
@@ -70,10 +83,14 @@ namespace DinoDiner.Menu
         {
             base.Calories = 420;
             base.Price = 0.99;
-
+            NotifyOfPropertyChanged("Calories");
+            NotifyOfPropertyChanged("Price");
 
         }
-
+        /// <summary>
+        /// ToString for MacNCheese
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return size.ToString() + " Meteor Mac And Cheese";

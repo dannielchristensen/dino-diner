@@ -2,13 +2,14 @@
  *  Author: Danniel Christensen
  */
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// The VelociWrap objects extends the Entree abstract class
     /// </summary>
-    public class VelociWrap : Entree, IMenuItem, IOrderItem
+    public class VelociWrap : Entree, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// Allws access to Price via getter and setter
@@ -52,6 +53,9 @@ namespace DinoDiner.Menu
             }
 
         }
+        /// <summary>
+        /// Description for VelociWrap
+        /// </summary>
         public override string Description
         {
             get
@@ -59,8 +63,10 @@ namespace DinoDiner.Menu
                 return this.ToString();
             }
         }
-
-        public override List<string> Special
+        /// <summary>
+        /// Special instructions for velociwrap
+        /// </summary>
+        public override string[] Special
         {
             get
             {
@@ -72,7 +78,7 @@ namespace DinoDiner.Menu
                 if (!lettuce)
                     l.Add("Hold Lettuce");
 
-                return l;
+                return l.ToArray();
 
             }
         }
@@ -83,8 +89,13 @@ namespace DinoDiner.Menu
         {
             this.Price = 6.86;
             this.Calories = 356;
+            NotifyOfPropertyChanged("Price");
+            NotifyOfPropertyChanged("Calories");
         }
-
+        /// <summary>
+        /// ToString for Velociwrap
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return "Veloci-Wrap";
@@ -93,16 +104,28 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Sets lettuce to false to show that there is no lettuce
         /// </summary>
-        public void HoldLettuce() => this.lettuce = false;
+        public void HoldLettuce()
+        {
+            this.lettuce = false;
+            NotifyOfPropertyChanged("Lettuce");
+        }
 
         /// <summary>
         /// Sets cheese to false to show that there is no cheese
         /// </summary>
-        public void HoldCheese() => this.cheese = false;
+        public void HoldCheese()
+        {
+            this.cheese = false;
+            NotifyOfPropertyChanged("Cheese");
+        }
 
         /// <summary>
         /// Sets dressing to false to show that there is no dressing
         /// </summary>
-        public void HoldDressing() => this.dressing = false;
+        public void HoldDressing()
+        {
+            this.dressing = false;
+            NotifyOfPropertyChanged("Dressing");
+        }
     }
 }

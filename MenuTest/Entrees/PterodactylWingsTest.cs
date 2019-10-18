@@ -40,7 +40,7 @@ namespace MenuTest.Entrees
         public void CorrectSpecial()
         {
             PterodactylWings pw = new PterodactylWings();
-            Assert.True(pw.Special.Count == 0);
+            Assert.True(pw.Special.Length == 0);
 
         }
 

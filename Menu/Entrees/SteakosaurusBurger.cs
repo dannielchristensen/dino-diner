@@ -2,13 +2,14 @@
  *  Author: Danniel Christensen
  */
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// The SteakosaurusBurger objects extends the Entree abstract class
     /// </summary>
-    public class SteakosaurusBurger : Entree, IMenuItem, IOrderItem
+    public class SteakosaurusBurger : Entree, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// Allws access to Price via getter and setter
@@ -56,6 +57,9 @@ namespace DinoDiner.Menu
             }
 
         }
+        /// <summary>
+        /// Description of SteakosaurusBurger
+        /// </summary>
         public override string Description
         {
             get
@@ -63,8 +67,10 @@ namespace DinoDiner.Menu
                 return this.ToString();
             }
         }
-
-        public override List<string> Special
+        /// <summary>
+        /// Creates list of special instructions for Steakosaurus Burgers
+        /// </summary>
+        public override string[] Special
         {
             get
             {
@@ -77,7 +83,7 @@ namespace DinoDiner.Menu
                     l.Add("Hold Mustard");
                 if (!pickle)
                     l.Add("Hold Pickle");
-                return l;
+                return l.ToArray();
 
             }
         }
@@ -89,7 +95,10 @@ namespace DinoDiner.Menu
             this.Price = 5.15;
             this.Calories = 621;
         }
-
+        /// <summary>
+        /// ToString for SteakosaurusBurger
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return "Steakosaurus Burger";
@@ -98,22 +107,22 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Sets bun to false to show that there is no bun
         /// </summary>
-        public void HoldBun() => this.bun = false;
+        public void HoldBun() { this.bun = false; NotifyOfPropertyChanged("bun"); }
 
         /// <summary>
         /// Sets ketchup to false to show that there is no ketchup
         /// </summary>
-        public void HoldKetchup() => this.ketchup = false;
+        public void HoldKetchup() { this.ketchup = false; NotifyOfPropertyChanged("ketchup"); }
 
         /// <summary>
         /// Sets pickle to false to show that there is no pickle
         /// </summary>
-        public void HoldPickle() => this.pickle = false;
+        public void HoldPickle() { this.pickle = false; NotifyOfPropertyChanged("pickle"); }
 
         /// <summary>
         /// Sets mustard to false to show that there is no mustard
         /// </summary>
-        public void HoldMustard() => this.mustard = false;
+        public void HoldMustard() { this.mustard = false; NotifyOfPropertyChanged("mustard"); }
 
 
 

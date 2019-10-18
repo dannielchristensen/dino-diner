@@ -55,7 +55,7 @@ namespace DinoDiner.Menu
             }
         }
 
-        public override List<string> Special
+        public override string[] Special
         {
             get
             {
@@ -66,7 +66,7 @@ namespace DinoDiner.Menu
                     l.Add($"{numNugs-6} Extra Nuggets");
                 }
 
-                return l;
+                return l.ToArray();
 
             }
         }

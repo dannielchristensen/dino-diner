@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
@@ -14,7 +15,7 @@ namespace DinoDiner.Menu
     /// </summary>
 
 
-    public abstract class Sides : IMenuItem, IOrderItem
+    public abstract class Sides : IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
         /// Gets and sets the price
@@ -27,6 +28,21 @@ namespace DinoDiner.Menu
         public virtual uint Calories { get; set; }
 
         /// <summary>
+        /// Handler for Changing properties
+        /// </summary>
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// method to notify that property has changed
+        /// </summary>
+        /// <param name="propertyName">Name of changed property</param>
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        /// <summary>
         /// Gets the ingredients list
         /// </summary>
         public virtual List<string> Ingredients { get; }
@@ -36,11 +52,16 @@ namespace DinoDiner.Menu
         /// </summary>
         public virtual Size Size { get; set; }
 
+        /// <summary>
+        /// Virtual get method for description
+        /// </summary>
         public virtual string Description
         {
             get;
         }
-
-        public virtual List<string> Special { get; }
+        /// <summary>
+        /// virtual get method for special
+        /// </summary>
+        public virtual string[] Special { get; }
     }
 }

@@ -3,13 +3,14 @@
  *  Modified by: Danniel Christensen
  */
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// The PrehistoricPBJ objects extends the Entree abstract class
     /// </summary>
-    public class PrehistoricPBJ : Entree, IMenuItem, IOrderItem
+    public class PrehistoricPBJ : Entree, IMenuItem, IOrderItem, INotifyPropertyChanged
     {
 
         /// <summary>
@@ -45,6 +46,9 @@ namespace DinoDiner.Menu
                 return ingredients;
             }
         }
+        /// <summary>
+        /// Descritpion for PBJ
+        /// </summary>
         public override string Description
         {
             get
@@ -52,8 +56,10 @@ namespace DinoDiner.Menu
                 return this.ToString();
             }
         }
-
-        public override List<string> Special
+        /// <summary>
+        /// Special for PBJ
+        /// </summary>
+        public override string[] Special
         {
             get
             {
@@ -63,7 +69,7 @@ namespace DinoDiner.Menu
                 if (!jelly)
                     l.Add("Hold Jelly");
                
-                return l;
+                return l.ToArray();
 
             }
         }
@@ -74,8 +80,13 @@ namespace DinoDiner.Menu
         {
             this.Price = 6.52;
             this.Calories = 483;
+            NotifyOfPropertyChanged("Price");
+            NotifyOfPropertyChanged("Calories");
         }
-
+        /// <summary>
+        /// ToString for PBJ
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return "Prehistoric PB&J";
@@ -87,6 +98,7 @@ namespace DinoDiner.Menu
         public void HoldPeanutButter()
         {
             this.peanutButter = false;
+            NotifyOfPropertyChanged("peanutButter");
         }
 
         /// <summary>
@@ -95,6 +107,7 @@ namespace DinoDiner.Menu
         public void HoldJelly()
         {
             this.jelly = false;
+            NotifyOfPropertyChanged("jelly");
         }
     }
 }

@@ -90,7 +90,36 @@ namespace MenuTest.Entrees
             Brontowurst bw = new Brontowurst();
             Assert.Empty(bw.Special);
         }
-
+        [Fact]
+        public void holdBunNotifies()
+        {
+            Brontowurst bw = new Brontowurst();
+            Assert.PropertyChanged(bw, "bun", () =>
+            {
+                bw.HoldBun();
+            }
+            );
+        }
+        [Fact]
+        public void holdOnionNotifies()
+        {
+            Brontowurst bw = new Brontowurst();
+            Assert.PropertyChanged(bw, "onions", () =>
+            {
+                bw.HoldOnion();
+            }
+            );
+        }
+        [Fact]
+        public void holdPeppersNotifies()
+        {
+            Brontowurst bw = new Brontowurst();
+            Assert.PropertyChanged(bw, "peppers", () =>
+            {
+                bw.HoldPeppers();
+            }
+            );
+        }
     }
 
 }

@@ -9,6 +9,22 @@
             A class representing a combo meal
             </summary>
         </member>
+        <member name="F:DinoDiner.Menu.CretaceousCombo.size">
+            <summary>
+            Private backing var for size
+            </summary>
+        </member>
+        <member name="E:DinoDiner.Menu.CretaceousCombo.PropertyChanged">
+            <summary>
+            Property changed handler
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.CretaceousCombo.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            Method to invoke property changed
+            </summary>
+            <param name="propertyName">Name of property being changed</param>
+        </member>
         <member name="P:DinoDiner.Menu.CretaceousCombo.Entree">
             <summary>
             Gets and sets the entree
@@ -44,11 +60,27 @@
             Gets the list of ingredients for the combo
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Description">
+            <summary>
+            Description of Combo
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Special">
+            <summary>
+            Special instructions for combo
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.CretaceousCombo.#ctor(DinoDiner.Menu.Entree)">
             <summary>
             Constructs a new combo with the specified entree
             </summary>
             <param name="entree">The entree to use</param>
+        </member>
+        <member name="M:DinoDiner.Menu.CretaceousCombo.ToString">
+            <summary>
+            ToString for Combo
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:DinoDiner.Menu.Drink">
             <summary>
@@ -65,6 +97,17 @@
             Gets and sets the price
             </summary>
         </member>
+        <member name="E:DinoDiner.Menu.Drink.PropertyChanged">
+            <summary>
+            Field for Property Changed event
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drink.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            Method to call/notify property changed
+            </summary>
+            <param name="propertyName"></param>
+        </member>
         <member name="P:DinoDiner.Menu.Drink.Calories">
             <summary>
             Gets and sets the calories
@@ -78,6 +121,203 @@
         <member name="M:DinoDiner.Menu.Drink.HoldIce">
             <summary>
             sets Ice bool to false
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.JurassicJava">
+            <summary>
+            Class Jurassic Java
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.JurassicJava.Calories">
+            <summary>
+            Calories for Java
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.JurassicJava.Price">
+            <summary>
+            Price for Java
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.JurassicJava.Description">
+            <summary>
+            Description of java
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.JurassicJava.Special">
+            <summary>
+            Special instructions for java
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.JurassicJava.size">
+            <summary>
+            Private backing variable for size
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.JurassicJava.RoomForCream">
+            <summary>
+            Should have have room for cream
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.JurassicJava.Ice">
+            <summary>
+            Ice in java?
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.JurassicJava.Decaf">
+            <summary>
+            Should java be decaf
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.JurassicJava.Ingredients">
+            <summary>
+            Creates a list of ingredients
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.JurassicJava.Size">
+            <summary>
+            Size of java
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.JurassicJava.#ctor">
+            <summary>
+            JurassicJava constructor
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.JurassicJava.ToString">
+            <summary>
+            ToString for Java
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DinoDiner.Menu.JurassicJava.AddIce">
+            <summary>
+            Adds Ice
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.JurassicJava.HoldIce">
+            <summary>
+            Holds ice for Java
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.JurassicJava.LeaveRoomForCream">
+            <summary>
+            Room for cream boolean
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.JurassicJava.MakeDecaf">
+            <summary>
+            Makes java decaf
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Sodasaurus">
+            <summary>
+            Class sodasaurus
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sodasaurus.Price">
+            <summary>
+            Price of Soda
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sodasaurus.Calories">
+            <summary>
+            Calories of Soda
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sodasaurus.Ice">
+            <summary>
+            Ice in Soda?
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sodasaurus.size">
+            <summary>
+            Size of Soda
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sodasaurus.Ingredients">
+            <summary>
+            Ingreidents of Soda
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sodasaurus.Description">
+            <summary>
+            Description for Soda
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sodasaurus.Special">
+            <summary>
+            Special Instructions for Soda
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sodasaurus.flavor">
+            <summary>
+            private backing for soda
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sodasaurus.Flavor">
+            <summary>
+            flavor of soda
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sodasaurus.Size">
+            <summary>
+            Size of soda
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sodasaurus.#ctor">
+            <summary>
+            Constructor for soda 
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sodasaurus.ToString">
+            <summary>
+            Tostring for Soda
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DinoDiner.Menu.Sodasaurus.HoldIce">
+            <summary>
+            Holds ice for soda
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sodasaurus.setFlavorToCola">
+            <summary>
+            sets flavor to cola
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sodasaurus.setFlavorToRootBeer">
+            <summary>
+            sets flavor to root beer
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sodasaurus.setFlavorToCherry">
+            <summary>
+            sets flavor to cherry
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sodasaurus.setFlavorToVanilla">
+            <summary>
+            sets flavor to vanilla
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sodasaurus.setFlavorToChocolate">
+            <summary>
+            sets flavor to chocolate
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sodasaurus.setFlavorToLime">
+            <summary>
+            sets flavor to lime
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sodasaurus.setFlavorToOrange">
+            <summary>
+            sets flavor to orange
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sodasaurus.setFlavorToGrape">
+            <summary>
+            Sets flavor to grape
             </summary>
         </member>
         <member name="T:DinoDiner.Menu.SodasaurusFlavor">
@@ -125,6 +365,153 @@
             Flavoring
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Tyrannotea.Price">
+            <summary>
+            Field for price
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Tyrannotea.Calories">
+            <summary>
+            Field for calories
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Tyrannotea.size">
+            <summary>
+            Field for size
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Tyrannotea.Ice">
+            <summary>
+            Field for Ice
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Tyrannotea.Lemon">
+            <summary>
+            Field for Lemon
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Tyrannotea.Sweet">
+            <summary>
+            Field for sweet
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Tyrannotea.Description">
+            <summary>
+            Provides description fo Tyrannotea
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Tyrannotea.Special">
+            <summary>
+            Provides special instructions for Tyrannotea
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Tyrannotea.Ingredients">
+            <summary>
+            Ingredients for Tyrannotea
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Tyrannotea.Size">
+            <summary>
+            Size of tyrannotea
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Tyrannotea.#ctor">
+            <summary>
+            Tyrannotea constructor
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Tyrannotea.ToString">
+            <summary>
+            Tostring for Tyrannotea
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DinoDiner.Menu.Tyrannotea.HoldIce">
+            <summary>
+            Holds Ice
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Tyrannotea.MakeSweet">
+            <summary>
+            Makes tea sweet, also multiplies calories by 2
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Tyrannotea.MakeUnSweet">
+            <summary>
+            makes tea unsweet
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Tyrannotea.AddLemon">
+            <summary>
+            Adds Lemon
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Water.Calories">
+            <summary>
+            Calories for Water
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Water.Price">
+            <summary>
+            Price for water
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Water.size">
+            <summary>
+            Size of Water
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Water.Lemon">
+            <summary>
+            Is there lemon
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Water.Ice">
+            <summary>
+            Is there ice, default true
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Water.Ingredients">
+            <summary>
+            Gets list of Ingredients
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Water.Description">
+            <summary>
+            Description for water
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Water.Special">
+            <summary>
+            Special instructions for water
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Water.Size">
+            <summary>
+            Size of water
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Water.#ctor">
+            <summary>
+            Constructor for water
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Water.ToString">
+            <summary>
+            ToString for water
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DinoDiner.Menu.Water.AddLemon">
+            <summary>
+            Adds lemon to water
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Water.HoldIce">
+            <summary>
+            Removes ice
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Brontowurst">
             <summary>
             The Brontowurst objects extends the Entree abstract class
@@ -155,6 +542,16 @@
             Allws access to Calories via getter and setter
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Brontowurst.Description">
+            <summary>
+            Description for Brontowurst
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Brontowurst.Special">
+            <summary>
+            Special for brontowurst
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Brontowurst.Ingredients">
             <summary>
             List containing the ingredients of the Brontowurst using bools
@@ -164,6 +561,12 @@
             <summary>
             Initializes the value of a Brontowurst and its price/calories to small
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Brontowurst.ToString">
+            <summary>
+            ToString for brontowurst
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:DinoDiner.Menu.Brontowurst.HoldBun">
             <summary>
@@ -231,6 +634,17 @@
             Getter/setter for Ingredients
             </summary>
         </member>
+        <member name="E:DinoDiner.Menu.Entree.PropertyChanged">
+            <summary>
+            Property changed handler
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entree.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            Method to invoke property changed
+            </summary>
+            <param name="propertyName">Name of property being changed</param>
+        </member>
         <member name="P:DinoDiner.Menu.Entree.Price">
             <summary>
             Getter/Setter for price
@@ -239,6 +653,16 @@
         <member name="P:DinoDiner.Menu.Entree.Calories">
             <summary>
             Getter/Setter for Calories
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entree.Description">
+            <summary>
+            Virtual get method for description
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entree.Special">
+            <summary>
+            virtual get method for special
             </summary>
         </member>
         <member name="T:DinoDiner.Menu.PrehistoricPBJ">
@@ -271,10 +695,26 @@
             List containing the ingredients of the PrehistoricPBJ using bools
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.PrehistoricPBJ.Description">
+            <summary>
+            Descritpion for PBJ
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.PrehistoricPBJ.Special">
+            <summary>
+            Special for PBJ
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.PrehistoricPBJ.#ctor">
             <summary>
             Initializes the value of a PrehistoricPBJ and its price/calories to small
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.PrehistoricPBJ.ToString">
+            <summary>
+            ToString for PBJ
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:DinoDiner.Menu.PrehistoricPBJ.HoldPeanutButter">
             <summary>
@@ -306,10 +746,26 @@
             List containing the ingredients of the PterodactylWings using bools
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.PterodactylWings.Description">
+            <summary>
+            Description for wings
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.PterodactylWings.Special">
+            <summary>
+            Special instructions for wings
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.PterodactylWings.#ctor">
             <summary>
             Initializes the value of a PterodactylWings and its price/calories to small
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.PterodactylWings.ToString">
+            <summary>
+            ToString for wings
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:DinoDiner.Menu.SteakosaurusBurger">
             <summary>
@@ -351,10 +807,26 @@
             List containing the ingredients of the SteakosaurusBurger using bools
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.SteakosaurusBurger.Description">
+            <summary>
+            Description of SteakosaurusBurger
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.SteakosaurusBurger.Special">
+            <summary>
+            Creates list of special instructions for Steakosaurus Burgers
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.SteakosaurusBurger.#ctor">
             <summary>
             Initializes the value of a SteakosaurusBurger and its price/calories to small
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.SteakosaurusBurger.ToString">
+            <summary>
+            ToString for SteakosaurusBurger
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:DinoDiner.Menu.SteakosaurusBurger.HoldBun">
             <summary>
@@ -436,10 +908,26 @@
             List containing the ingredients of the TRexKingBurger using bools
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.TRexKingBurger.Description">
+            <summary>
+            Description for TREX BURGER
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.TRexKingBurger.Special">
+            <summary>
+            SPECIAL INSTRUCTIONS FOR TREX BURGER
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.TRexKingBurger.#ctor">
             <summary>
             Initializes the value of a TRexKingBurger and its price/calories to small
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.TRexKingBurger.ToString">
+            <summary>
+            Tostring for TREX burger
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:DinoDiner.Menu.TRexKingBurger.HoldBun">
             <summary>
@@ -516,10 +1004,26 @@
             List containing the ingredients of the VelociWrap using bools
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.VelociWrap.Description">
+            <summary>
+            Description for VelociWrap
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.VelociWrap.Special">
+            <summary>
+            Special instructions for velociwrap
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.VelociWrap.#ctor">
             <summary>
             Initializes the value of a VelociWrap and its price/calories to small
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.VelociWrap.ToString">
+            <summary>
+            ToString for Velociwrap
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:DinoDiner.Menu.VelociWrap.HoldLettuce">
             <summary>
@@ -551,12 +1055,28 @@
             Allws access to size via getter and setter
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Fryceritops.Description">
+            <summary>
+            Description of Fryceritops
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Fryceritops.Special">
+            <summary>
+            Special for Fryceritops
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.Fryceritops.#ctor">
             <summary>
             Constructor for Fryceritops. Sets default Calories and Price to size small.
             </summary>
         </member>
         <member name="M:DinoDiner.Menu.Fryceritops.ToString">
+            <summary>
+            ToString for Fryceritops
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DinoDiner.Menu.Fryceritops.Ingredients">
             <summary>
             Creates the list Ingredients for Fryceritops 
             Overrides Ingredients in side
@@ -577,10 +1097,26 @@
             Allws access to size via getter and setter
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.MeteorMacAndCheese.Description">
+            <summary>
+            Description for MacNCheese
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.MeteorMacAndCheese.Special">
+            <summary>
+            Special instructions for MacNCheese
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.MeteorMacAndCheese.#ctor">
             <summary>
             Constructor for MeteorMacAndCheese. Sets default Calories and Price to size small.
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.MeteorMacAndCheese.ToString">
+            <summary>
+            ToString for MacNCheese
+            </summary>
+            <returns></returns>
         </member>
         <member name="P:DinoDiner.Menu.MeteorMacAndCheese.Ingredients">
             <summary>
@@ -603,10 +1139,26 @@
             Allws access to size via getter and setter
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.MezzorellaSticks.Description">
+            <summary>
+            Descriptions for MezzorellaSticks
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.MezzorellaSticks.Special">
+            <summary>
+            Special instructions for MezzorellaSticks
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.MezzorellaSticks.#ctor">
             <summary>
             Constructor for MezzorellaSticks. Sets default Calories and Price to size small.
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.MezzorellaSticks.ToString">
+            <summary>
+            ToString for MezzorellaSticks
+            </summary>
+            <returns></returns>
         </member>
         <member name="P:DinoDiner.Menu.MezzorellaSticks.Ingredients">
             <summary>
@@ -629,6 +1181,17 @@
             Gets and sets the calories
             </summary>
         </member>
+        <member name="E:DinoDiner.Menu.Sides.PropertyChanged">
+            <summary>
+            Handler for Changing properties
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sides.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            method to notify that property has changed
+            </summary>
+            <param name="propertyName">Name of changed property</param>
+        </member>
         <member name="P:DinoDiner.Menu.Sides.Ingredients">
             <summary>
             Gets the ingredients list
@@ -637,6 +1200,16 @@
         <member name="P:DinoDiner.Menu.Sides.Size">
             <summary>
             Gets or sets the size
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Description">
+            <summary>
+            Virtual get method for description
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sides.Special">
+            <summary>
+            virtual get method for special
             </summary>
         </member>
         <member name="T:DinoDiner.Menu.Triceritots">
@@ -654,10 +1227,26 @@
             Allws access to size via getter and setter
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Triceritots.Description">
+            <summary>
+            Description for Triceritots
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Triceritots.Special">
+            <summary>
+            Special for Triceritots
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.Triceritots.#ctor">
             <summary>
             Constructor for Triceritots. Sets default Calories and Price to size small.
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Triceritots.ToString">
+            <summary>
+            ToString for Triceritots
+            </summary>
+            <returns></returns>
         </member>
         <member name="P:DinoDiner.Menu.Triceritots.Ingredients">
             <summary>

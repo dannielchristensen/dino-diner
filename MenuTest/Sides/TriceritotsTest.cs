@@ -94,7 +94,7 @@ namespace MenuTest.Sides
         public void CorrectSpecial()
         {
             Triceritots tt = new Triceritots();
-            Assert.True(tt.Special.Count == 0);
+            Assert.True(tt.Special.Length == 0);
 
         }
 
