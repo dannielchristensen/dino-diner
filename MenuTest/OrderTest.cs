@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
+using Moq;
+using DinoDiner.Menu;
 
 namespace MenuTest
 {
@@ -10,7 +12,9 @@ namespace MenuTest
         [Fact]
         public void ItemListAddsItems()
         {
-            myMock = new Mock();
+            var myMock = new Mock<IOrderItem>();
+            myMock.
+           
         }
     }
 }
