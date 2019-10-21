@@ -91,6 +91,40 @@ namespace MenuTest.Entrees
             PrehistoricPBJ pbj = new PrehistoricPBJ();
             Assert.Empty(pbj.Special);
         }
+        [Fact]
+        public void holdJellyNotifies()
+        {
+            PrehistoricPBJ pbj = new PrehistoricPBJ();
+            Assert.PropertyChanged(pbj, "Special", () =>
+            {
+                pbj.HoldJelly();
+            }
+             );
+
+            Assert.PropertyChanged(pbj, "Ingredients", () =>
+            {
+                pbj.HoldJelly();
+            }
+            );
+
+        }
+        [Fact]
+        public void holdPBNotifies()
+        {
+            PrehistoricPBJ pbj = new PrehistoricPBJ();
+            Assert.PropertyChanged(pbj, "Special", () =>
+            {
+                pbj.HoldPeanutButter();
+            }
+            );
+
+            Assert.PropertyChanged(pbj, "Ingredients", () =>
+            {
+                pbj.HoldPeanutButter();
+            }
+            );
+
+        }
     }
 
 }

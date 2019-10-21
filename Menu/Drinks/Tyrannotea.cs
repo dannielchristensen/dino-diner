@@ -145,7 +145,7 @@ namespace DinoDiner.Menu
         public override void HoldIce()
         {
             Ice = false;
-            NotifyOfPropertyChanged("Ice");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// Makes tea sweet, also multiplies calories by 2
@@ -154,8 +154,11 @@ namespace DinoDiner.Menu
         {
             Sweet = true;
             Calories *= 2;
-            NotifyOfPropertyChanged("Sweet");
             NotifyOfPropertyChanged("Calories");
+            NotifyOfPropertyChanged("Special");
+            NotifyOfPropertyChanged("Description");
+
+
 
         }
         /// <summary>
@@ -165,8 +168,9 @@ namespace DinoDiner.Menu
         {
             Sweet = false;
             Calories /= 2;
-            NotifyOfPropertyChanged("Sweet");
             NotifyOfPropertyChanged("Calories");
+           // NotifyOfPropertyChanged("Ingredients"); errors out due to way it is set up
+            NotifyOfPropertyChanged("Description");
 
         }
         /// <summary>
@@ -175,7 +179,8 @@ namespace DinoDiner.Menu
         public void AddLemon()
         {
             Lemon = true;
-            NotifyOfPropertyChanged("Lemon");
+            NotifyOfPropertyChanged("Special");
+            NotifyOfPropertyChanged("Ingredients");
 
         }
 

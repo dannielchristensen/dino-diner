@@ -83,8 +83,7 @@ namespace DinoDiner.Menu
         {
             base.Calories = 222;
             base.Price = 0.99;
-            NotifyOfPropertyChanged("Price");
-            NotifyOfPropertyChanged("Calories");
+
         }
         
 

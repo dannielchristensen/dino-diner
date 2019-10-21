@@ -252,6 +252,101 @@ namespace MenuTest
             Sodasaurus s = new Sodasaurus();
             Assert.Empty(s.Special);
         }
+        [Fact]
+        public void holdIceNotifies()
+        {
+            Sodasaurus s = new Sodasaurus();
+            Assert.PropertyChanged(s, "Special", () =>
+            {
+                s.HoldIce();
+            }
+            );
+        }
 
+
+      
+
+        [Fact]
+        public void SizeChangeNotifiesAll()
+        {
+            Sodasaurus j = new Sodasaurus();
+            j.Size = Size.Large;
+
+            Assert.PropertyChanged(j, "Size", () =>
+            {
+                j.Size = Size.Medium;
+            }
+            );
+            j.Size = Size.Large;
+
+            Assert.PropertyChanged(j, "Price", () =>
+            {
+                j.Size = Size.Small;
+            }
+            );
+            j.Size = Size.Medium;
+
+            Assert.PropertyChanged(j, "Calories", () =>
+            {
+                j.Size = Size.Large;
+            }
+            );
+        }
+
+        [Fact]
+        public void FlavorChangesNotifiesAll()
+        {
+            Sodasaurus s = new Sodasaurus();
+            
+            Assert.PropertyChanged(s, "Flavor", () =>
+            {
+                s.setFlavorToCherry();
+            }
+            );
+
+            Assert.PropertyChanged(s, "Flavor", () =>
+            {
+                s.setFlavorToChocolate();
+            }
+            );
+
+            Assert.PropertyChanged(s, "Flavor", () =>
+            {
+                s.setFlavorToCola();
+            }
+            );
+
+            Assert.PropertyChanged(s, "Flavor", () =>
+            {
+                s.setFlavorToGrape();
+            }
+            );
+
+            Assert.PropertyChanged(s, "Flavor", () =>
+            {
+                s.setFlavorToLime();
+            }
+            );
+
+            Assert.PropertyChanged(s, "Flavor", () =>
+            {
+                s.setFlavorToOrange();
+            }
+            );
+
+            Assert.PropertyChanged(s, "Flavor", () =>
+            {
+                s.setFlavorToRootBeer();
+            }
+            );
+
+            Assert.PropertyChanged(s, "Flavor", () =>
+            {
+                s.setFlavorToVanilla();
+            }
+            );
+
+
+        }
     }
 }

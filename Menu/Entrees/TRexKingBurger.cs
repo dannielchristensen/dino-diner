@@ -145,7 +145,8 @@ namespace DinoDiner.Menu
         /// </summary>
         public void HoldBun() {
             this.bun = false;
-            NotifyOfPropertyChanged("bun");
+            NotifyOfPropertyChanged("Special");
+            NotifyOfPropertyChanged("Ingredients");
         }
 
         /// <summary>
@@ -154,7 +155,8 @@ namespace DinoDiner.Menu
         public void HoldKetchup()
         {
             this.ketchup = false;
-            NotifyOfPropertyChanged("ketchup");
+            NotifyOfPropertyChanged("Special");
+            NotifyOfPropertyChanged("Ingredients");
         }
 
         /// <summary>
@@ -163,7 +165,8 @@ namespace DinoDiner.Menu
         public void HoldPickle()
         {
             this.pickle = false;
-            NotifyOfPropertyChanged("pickle");
+            NotifyOfPropertyChanged("Special");
+            NotifyOfPropertyChanged("Ingredients");
         }
 
         /// <summary>
@@ -172,7 +175,8 @@ namespace DinoDiner.Menu
         public void HoldMustard()
         {
             this.mustard = false;
-            NotifyOfPropertyChanged("mustard");
+            NotifyOfPropertyChanged("Special");
+            NotifyOfPropertyChanged("Ingredients");
         }
 
         /// <summary>
@@ -181,7 +185,8 @@ namespace DinoDiner.Menu
         public void HoldLettuce()
         {
             this.lettuce = false;
-            NotifyOfPropertyChanged("lettuce");
+            NotifyOfPropertyChanged("Special");
+            NotifyOfPropertyChanged("Ingredients");
         }
 
         /// <summary>
@@ -190,7 +195,8 @@ namespace DinoDiner.Menu
         public void HoldMayo()
         {
             this.mayo = false;
-            NotifyOfPropertyChanged("mayo");
+            NotifyOfPropertyChanged("Special");
+            NotifyOfPropertyChanged("Ingredients");
         }
 
         /// <summary>
@@ -199,7 +205,8 @@ namespace DinoDiner.Menu
         public void HoldOnion()
         {
             this.onion = false;
-            NotifyOfPropertyChanged("onion");
+            NotifyOfPropertyChanged("Special");
+            NotifyOfPropertyChanged("Ingredients");
         }
 
 
@@ -209,7 +216,8 @@ namespace DinoDiner.Menu
         public void HoldTomato()
         {
             this.tomato = false;
-            NotifyOfPropertyChanged("tomato");
+            NotifyOfPropertyChanged("Special");
+            NotifyOfPropertyChanged("Ingredients");
         }
     }
 

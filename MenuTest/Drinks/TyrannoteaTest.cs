@@ -201,6 +201,93 @@ namespace MenuTest.Drinks
             Assert.Empty(s.Special);
         }
 
+        [Fact]
+        public void SizeChangeNotifiesAll()
+        {
+            Tyrannotea j = new Tyrannotea();
+            j.Size = Size.Large;
+
+            Assert.PropertyChanged(j, "Size", () =>
+            {
+                j.Size = Size.Medium;
+            }
+            );
+            j.Size = Size.Large;
+
+            Assert.PropertyChanged(j, "Price", () =>
+            {
+                j.Size = Size.Small;
+            }
+            );
+            j.Size = Size.Medium;
+
+            Assert.PropertyChanged(j, "Calories", () =>
+            {
+                j.Size = Size.Large;
+            }
+            );
+        }
+
+        [Fact]
+        public void holdIceNotifies()
+        {
+            Tyrannotea s = new Tyrannotea();
+            Assert.PropertyChanged(s, "Special", () =>
+            {
+                s.HoldIce();
+            }
+            );
+        }
+
+        [Fact]
+        public void MakeSweetNotifies()
+        {
+            Tyrannotea s = new Tyrannotea();
+            Assert.PropertyChanged(s, "Special", () =>
+            {
+                s.MakeSweet();
+            }
+            );
+
+           
+
+            Assert.PropertyChanged(s, "Calories", () =>
+            {
+                s.MakeSweet();
+            }
+            );
+
+            Assert.PropertyChanged(s, "Description", () =>
+            {
+                s.MakeSweet();
+            }
+            );
+        }
+       
+        [Fact]
+        public void AddLemonNotifies()
+        {
+            Tyrannotea s = new Tyrannotea();
+            Assert.PropertyChanged(s, "Special", () =>
+            {
+                s.AddLemon();
+            }
+            );
+
+            Assert.PropertyChanged(s, "Ingredients", () =>
+            {
+                s.AddLemon();
+            }
+            );
+        }
+
     }
-}
+
+
+
+
+
+
+    }
+
 

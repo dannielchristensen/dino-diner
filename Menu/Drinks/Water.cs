@@ -110,7 +110,9 @@ namespace DinoDiner.Menu
         public void AddLemon()
         {
             Lemon = true;
-            NotifyOfPropertyChanged("Lemon");
+            NotifyOfPropertyChanged("Special");
+            //NotifyOfPropertyChanged("Ingredients"); errors out? says it needs to be set but thats not how ours is set up
+
         }
         /// <summary>
         /// Removes ice
@@ -118,7 +120,7 @@ namespace DinoDiner.Menu
         public override void HoldIce()
         {
             Ice = false;
-            NotifyOfPropertyChanged("Ice");
+            NotifyOfPropertyChanged("Special");
         }
 
     }

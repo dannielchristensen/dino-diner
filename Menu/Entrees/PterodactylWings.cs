@@ -62,8 +62,7 @@ namespace DinoDiner.Menu
         {
             this.Price = 7.21;
             this.Calories = 318;
-            NotifyOfPropertyChanged("Price");
-            NotifyOfPropertyChanged("Calories");
+            
         }
         /// <summary>
         /// ToString for wings

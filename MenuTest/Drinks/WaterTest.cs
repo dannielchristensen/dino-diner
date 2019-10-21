@@ -156,6 +156,31 @@ namespace MenuTest.Drinks
             Water w = new Water();
             Assert.Empty(w.Special);
         }
+
+        [Fact]
+        public void HoldIceNotifies()
+        {
+            Water s = new Water();
+            Assert.PropertyChanged(s, "Special", () =>
+            {
+                s.HoldIce();
+            }
+            );
+        }
+
+        [Fact]
+        public void AddLemonNotifies()
+        {
+            Water s = new Water();
+            Assert.PropertyChanged(s, "Special", () =>
+            {
+                s.HoldIce();
+            }
+            );
+
+            
+
+        }
     }
 }
 

@@ -80,8 +80,7 @@ namespace DinoDiner.Menu
         {
             this.Price = 6.52;
             this.Calories = 483;
-            NotifyOfPropertyChanged("Price");
-            NotifyOfPropertyChanged("Calories");
+            
         }
         /// <summary>
         /// ToString for PBJ
@@ -98,7 +97,8 @@ namespace DinoDiner.Menu
         public void HoldPeanutButter()
         {
             this.peanutButter = false;
-            NotifyOfPropertyChanged("peanutButter");
+            NotifyOfPropertyChanged("Special");
+            NotifyOfPropertyChanged("Ingredients");
         }
 
         /// <summary>
@@ -107,7 +107,8 @@ namespace DinoDiner.Menu
         public void HoldJelly()
         {
             this.jelly = false;
-            NotifyOfPropertyChanged("jelly");
+            NotifyOfPropertyChanged("Special");
+            NotifyOfPropertyChanged("Ingredients");
         }
     }
 }

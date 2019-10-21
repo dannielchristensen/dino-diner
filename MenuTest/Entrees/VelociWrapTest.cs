@@ -90,5 +90,60 @@ namespace MenuTest.Entrees
             VelociWrap vw = new VelociWrap();
             Assert.Empty(vw.Special);
         }
+
+        [Fact]
+        public void holdDressingNotifies()
+        {
+
+            VelociWrap vw = new VelociWrap();
+            Assert.PropertyChanged(vw, "Special", () =>
+            {
+                vw.HoldDressing();
+            }
+            );
+
+            Assert.PropertyChanged(vw, "Ingredients", () =>
+            {
+                vw.HoldDressing();
+            }
+            );
+
+        }
+        [Fact]
+        public void holdLettuceNotifies()
+        {
+            VelociWrap vw = new VelociWrap();
+            Assert.PropertyChanged(vw, "Special", () =>
+            {
+                vw.HoldLettuce();
+            }
+           );
+
+            Assert.PropertyChanged(vw, "Ingredients", () =>
+            {
+                vw.HoldLettuce();
+            }
+            );
+
+        }
+        [Fact]
+        public void holdCheeseNotifies()
+        {
+
+            VelociWrap vw = new VelociWrap();
+            Assert.PropertyChanged(vw, "Special", () =>
+            {
+                vw.HoldCheese();
+            }
+           );
+
+            Assert.PropertyChanged(vw, "Ingredients", () =>
+            {
+                vw.HoldCheese();
+            }
+            );
+
+        }
+
     }
 }

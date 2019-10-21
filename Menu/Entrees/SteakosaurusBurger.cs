@@ -107,24 +107,41 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Sets bun to false to show that there is no bun
         /// </summary>
-        public void HoldBun() { this.bun = false; NotifyOfPropertyChanged("bun"); }
+        public void HoldBun()
+        {
+            this.bun = false;
+            NotifyOfPropertyChanged("Special");
+            NotifyOfPropertyChanged("Ingredients");
+        }
 
         /// <summary>
         /// Sets ketchup to false to show that there is no ketchup
         /// </summary>
-        public void HoldKetchup() { this.ketchup = false; NotifyOfPropertyChanged("ketchup"); }
+        public void HoldKetchup()
+        {
+            this.ketchup = false;
+            NotifyOfPropertyChanged("Special");
+            NotifyOfPropertyChanged("Ingredients");
+        }
 
         /// <summary>
         /// Sets pickle to false to show that there is no pickle
         /// </summary>
-        public void HoldPickle() { this.pickle = false; NotifyOfPropertyChanged("pickle"); }
+        public void HoldPickle()
+        {
+            this.pickle = false;
+            NotifyOfPropertyChanged("Special");
+            NotifyOfPropertyChanged("Ingredients");
+        }
 
         /// <summary>
         /// Sets mustard to false to show that there is no mustard
         /// </summary>
-        public void HoldMustard() { this.mustard = false; NotifyOfPropertyChanged("mustard"); }
-
-
-
+        public void HoldMustard()
+        {
+            this.mustard = false;
+            NotifyOfPropertyChanged("Special");
+            NotifyOfPropertyChanged("Ingredients");
+        }
     }
 }

@@ -126,11 +126,7 @@ namespace DinoDiner.Menu
             Ice = true;
             size = Size.Small;
             flavor = SodasaurusFlavor.Cola;
-            NotifyOfPropertyChanged("Price");
-            NotifyOfPropertyChanged("Calories");
-            NotifyOfPropertyChanged("Ice");
-            NotifyOfPropertyChanged("Size");
-            NotifyOfPropertyChanged("Flavor");
+
         }
         /// <summary>
         /// Tostring for Soda
@@ -146,7 +142,7 @@ namespace DinoDiner.Menu
         public override void HoldIce()
         {
             Ice = false;
-            NotifyOfPropertyChanged("Ice");
+            NotifyOfPropertyChanged("Special");
 
         }
         /// <summary>
@@ -217,6 +213,8 @@ namespace DinoDiner.Menu
         /// </summary>
         public void setFlavorToGrape()
         {
+            this.Flavor = SodasaurusFlavor.Grape;
+
             NotifyOfPropertyChanged("Flavor");
 
         }

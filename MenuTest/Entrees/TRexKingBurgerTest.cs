@@ -198,6 +198,162 @@ namespace MenuTest.Entrees
             TRexKingBurger trex = new TRexKingBurger();
             Assert.Empty(trex.Special);
         }
+        [Fact]
+        public void holdBunNotifies()
+        {
+
+            TRexKingBurger sb = new TRexKingBurger();
+            Assert.PropertyChanged(sb, "Special", () =>
+            {
+                sb.HoldBun();
+            }
+           );
+
+            Assert.PropertyChanged(sb, "Ingredients", () =>
+            {
+                sb.HoldBun();
+            }
+            );
+
+        }
+
+        [Fact]
+        public void holdMustardNotifies()
+        {
+
+            TRexKingBurger sb = new TRexKingBurger();
+            Assert.PropertyChanged(sb, "Special", () =>
+            {
+                sb.HoldMustard();
+            }
+           );
+
+            Assert.PropertyChanged(sb, "Ingredients", () =>
+            {
+                sb.HoldMustard();
+            }
+            );
+
+        }
+
+        [Fact]
+        public void holdKetchupNotifies()
+        {
+
+            TRexKingBurger sb = new TRexKingBurger();
+            Assert.PropertyChanged(sb, "Special", () =>
+            {
+                sb.HoldKetchup();
+            }
+           );
+
+            Assert.PropertyChanged(sb, "Ingredients", () =>
+            {
+                sb.HoldKetchup();
+            }
+            );
+
+        }
+
+        [Fact]
+        public void holdPickleNotifies()
+        {
+
+            TRexKingBurger sb = new TRexKingBurger();
+            Assert.PropertyChanged(sb, "Special", () =>
+            {
+                sb.HoldPickle();
+            }
+           );
+
+            Assert.PropertyChanged(sb, "Ingredients", () =>
+            {
+                sb.HoldPickle();
+            }
+            );
+
+        }
+
+        //  lettuce mayo onion tomato
+        [Fact]
+        public void holdLettuceNotifies()
+        {
+
+            TRexKingBurger sb = new TRexKingBurger();
+            Assert.PropertyChanged(sb, "Special", () =>
+            {
+                sb.HoldLettuce();
+            }
+           );
+
+            Assert.PropertyChanged(sb, "Ingredients", () =>
+            {
+                sb.HoldLettuce();
+            }
+            );
+
+        }
+
+        [Fact]
+        public void holdMayoNotifies()
+        {
+
+            TRexKingBurger sb = new TRexKingBurger();
+            Assert.PropertyChanged(sb, "Special", () =>
+            {
+                sb.HoldMayo();
+            }
+           );
+
+            Assert.PropertyChanged(sb, "Ingredients", () =>
+            {
+                sb.HoldMayo();
+            }
+            );
+
+        }
+
+        [Fact]
+        public void holdOnionNotifies()
+        {
+
+            TRexKingBurger sb = new TRexKingBurger();
+            Assert.PropertyChanged(sb, "Special", () =>
+            {
+                sb.HoldOnion();
+            }
+           );
+
+            Assert.PropertyChanged(sb, "Ingredients", () =>
+            {
+                sb.HoldOnion();
+            }
+            );
+
+        }
+
+        [Fact]
+        public void holdTomatoNotifies()
+        {
+
+            TRexKingBurger sb = new TRexKingBurger();
+            Assert.PropertyChanged(sb, "Special", () =>
+            {
+                sb.HoldTomato();
+            }
+           );
+
+            Assert.PropertyChanged(sb, "Ingredients", () =>
+            {
+                sb.HoldTomato();
+            }
+            );
+
+        }
+
+
+
+
     }
 
 }

@@ -148,7 +148,7 @@ namespace DinoDiner.Menu
         public void AddIce()
         {
             Ice = true;
-            NotifyOfPropertyChanged("Ice");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// Holds ice for Java
@@ -156,7 +156,7 @@ namespace DinoDiner.Menu
         public override void HoldIce()
         {
             Ice = false;
-            NotifyOfPropertyChanged("Ice");
+            NotifyOfPropertyChanged("Special");
 
         }
         /// <summary>
@@ -166,7 +166,7 @@ namespace DinoDiner.Menu
         {
             RoomForCream = true;
 
-            NotifyOfPropertyChanged("RoomForCream");
+            NotifyOfPropertyChanged("Special");
 
         }
         /// <summary>
@@ -175,7 +175,7 @@ namespace DinoDiner.Menu
         public void MakeDecaf()
         {
             Decaf = true;
-            NotifyOfPropertyChanged("Decaf");
+            NotifyOfPropertyChanged("Special");
 
         }
     }

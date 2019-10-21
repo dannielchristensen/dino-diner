@@ -120,6 +120,82 @@ namespace MenuTest.Entrees
             SteakosaurusBurger sb = new SteakosaurusBurger();
             Assert.Empty(sb.Special);
         }
+        //bun, ketchup, mustard pickle -- hold
+        [Fact]
+        public void holdBunNotifies()
+        {
+            
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+            Assert.PropertyChanged(sb, "Special", () =>
+            {
+                sb.HoldBun();
+            }
+           );
+
+            Assert.PropertyChanged(sb, "Ingredients", () =>
+            {
+                sb.HoldBun();
+            }
+            );
+
+        }
+
+        [Fact]
+        public void holdMustardNotifies()
+        {
+
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+            Assert.PropertyChanged(sb, "Special", () =>
+            {
+                sb.HoldMustard();
+            }
+            );
+
+            Assert.PropertyChanged(sb, "Ingredients", () =>
+            {
+                sb.HoldMustard();
+            }
+            );
+
+        }
+
+        [Fact]
+        public void holdKetchupNotifies()
+        {
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+
+            Assert.PropertyChanged(sb, "Special", () =>
+            {
+                sb.HoldKetchup();
+            }
+            );
+
+            Assert.PropertyChanged(sb, "Ingredients", () =>
+            {
+                sb.HoldKetchup();
+            }
+            );
+
+        }
+
+        [Fact]
+        public void holdPickleNotifies()
+        {
+
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+            Assert.PropertyChanged(sb, "Special", () =>
+            {
+                sb.HoldPickle();
+            }
+            );
+
+            Assert.PropertyChanged(sb, "Ingredients", () =>
+            {
+                sb.HoldPickle();
+            }
+            );
+
+        }
     }
 
 }

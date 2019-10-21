@@ -94,7 +94,13 @@ namespace MenuTest.Entrees
         public void holdBunNotifies()
         {
             Brontowurst bw = new Brontowurst();
-            Assert.PropertyChanged(bw, "bun", () =>
+            Assert.PropertyChanged(bw, "Special", () =>
+            {
+                bw.HoldBun();
+            }
+            );
+
+            Assert.PropertyChanged(bw, "Ingredients", () =>
             {
                 bw.HoldBun();
             }
@@ -104,17 +110,30 @@ namespace MenuTest.Entrees
         public void holdOnionNotifies()
         {
             Brontowurst bw = new Brontowurst();
-            Assert.PropertyChanged(bw, "onions", () =>
+            Assert.PropertyChanged(bw, "Special", () =>
             {
                 bw.HoldOnion();
             }
             );
+
+            Assert.PropertyChanged(bw, "Ingredients", () =>
+            {
+                bw.HoldOnion();
+            }
+            );
+
         }
         [Fact]
         public void holdPeppersNotifies()
         {
             Brontowurst bw = new Brontowurst();
-            Assert.PropertyChanged(bw, "peppers", () =>
+            Assert.PropertyChanged(bw, "Special", () =>
+            {
+                bw.HoldPeppers();
+            }
+            );
+
+            Assert.PropertyChanged(bw, "Ingredients", () =>
             {
                 bw.HoldPeppers();
             }
