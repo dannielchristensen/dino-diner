@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DinoDiner.Menu;
 
 namespace PointOfSale
 {
@@ -31,17 +32,9 @@ namespace PointOfSale
         public DrinkSelection()
         {
             InitializeComponent();
-            uxChangingButton.Visibility = Visibility.Hidden;
-
 
         }
-        bool lemon = false;
-        bool ice = true;
-        bool flavor = false;
-        bool java = false;
-        bool tea = false;
-        bool isDecaf = false;
-        bool isSweet = false;
+
         /// <summary>
         /// Changes screen to update for drink as soda
         /// </summary>
@@ -49,12 +42,17 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void Soda_Click(object sender, RoutedEventArgs e)
         {
-            uxChangingButton.Content = "Flavor";
-            uxChangingButton.Visibility = Visibility.Visible;
 
-            tea = false;
-            java = false;
-            flavor = true;
+
+     
+            if (DataContext is Order order)
+            {
+                Drink drink = new Sodasaurus();
+                order.Items.Add(drink);
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+            }
+
+
         }
         /// <summary>
         /// Changes screen to update for drink as tea
@@ -63,12 +61,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void Tea_Click(object sender, RoutedEventArgs e)
         {
-            uxChangingButton.Content = "Sweet";
-            uxChangingButton.Visibility = Visibility.Visible;
 
-            tea = true;
-            java = false;
-            flavor = false;
+            if (DataContext is Order order)
+            {
+                Drink drink = new Tyrannotea();
+                order.Items.Add(drink);
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+            }
+          
         }
         /// <summary>
         /// Changes screen to update as Java
@@ -77,12 +77,13 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void Java_Click(object sender, RoutedEventArgs e)
         {
-            uxChangingButton.Content = "Decaf";
-            uxChangingButton.Visibility = Visibility.Visible;
 
-            tea = false;
-            java = true;
-            flavor = false;
+            if (DataContext is Order order)
+            {
+                Drink drink = new JurassicJava();
+                order.Items.Add(drink);
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+            }
         }
         /// <summary>
         /// Changes screen to update as water
@@ -91,12 +92,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void Water_Click(object sender, RoutedEventArgs e)
         {
-            uxChangingButton.Content = "";
-            uxChangingButton.Visibility = Visibility.Hidden; 
 
-            tea = false;
-            java = false;
-            flavor = false;
+            if (DataContext is Order order)
+            {
+                Drink drink = new Water();
+                order.Items.Add(drink);
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+            }
+            
         }
         /// <summary>
         /// Controls lemon button to change it as needed
@@ -105,16 +108,43 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void Lemon_Click(object sender, RoutedEventArgs e)
         {
-            lemon = !lemon;
-            if (lemon)
-            {
-                this.Content = "Hold Lemon";
+            if (DataContext is Order order) {
+
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.Water drink )
+                {
+                    if (drink.Lemon)
+                    {
+                        drink.HoldLemon();
+
+                    }
+                    else
+                    {
+                        drink.AddLemon();
+                    }
+                    
+                }
+                else if(CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.Tyrannotea drink2)
+                {
+
+                    if (drink2.Lemon)
+                    {
+                        drink2.HoldLemon();
+
+                    }
+                    else
+                    {
+                        drink2.AddLemon();
+
+                    }
+
+
+
+                }
+                CollectionViewSource.GetDefaultView(order.Items).Refresh();
 
             }
-            else
-            {
-                this.Content = "Add Lemon";
-            }
+
+
         }
         /// <summary>
         /// controls ice button to control it as needed
@@ -123,14 +153,23 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void Ice_Click(object sender, RoutedEventArgs e)
         {
-            ice = !ice;
-            if (ice)
+            if (DataContext is Order order)
             {
-                this.Content = "Hold Ice";
-            }
-            else
-            {
-                this.Content = "Add Ice";
+                    
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.Drink drink)
+                {
+                    if (drink.Ice)
+                    {
+                        drink.HoldIce();
+                    }
+                    else
+                    {
+                        drink.AddIce();
+                    }
+                }
+
+                CollectionViewSource.GetDefaultView(order.Items).Refresh();
+
             }
         }
         /// <summary>
@@ -140,18 +179,110 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void ChangingButton_Click(object sender, RoutedEventArgs e)
         {
-            if (flavor)
+            if (DataContext is Order order)
             {
-                this.NavigationService.Navigate(new Uri("FlavorSelection.xaml", UriKind.Relative));
+                if(CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.JurassicJava java)
+                {
+                    if (java.Decaf)
+                    {
+                        java.MakeUndecaf();
+                    }
+                    else
+                    {
+                        java.MakeDecaf();
+                    }
+                }else if(CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.Sodasaurus soda)
+                {
+                    this.NavigationService.Navigate(new FlavorSelection());
 
+                }else if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.Tyrannotea tea)
+                {
+                    if (tea.Sweet)
+                    {
+                        tea.MakeUnSweet();
+                    }
+                    else
+                    {
+                        tea.MakeSweet();
+                    }
+                }
+                CollectionViewSource.GetDefaultView(order.Items).Refresh();
             }
-            else if (java)
+        }
+
+        /// <summary>
+        /// Click event for done to return to main page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void ReturnToMain(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Page1());
+        }
+
+        /// <summary>
+        /// Sets size to size selected. Helper function
+        /// </summary>
+        /// <param name="size"></param>
+        private void SetSize(DinoDiner.Menu.Size size)
+        {
+            if (DataContext is Order order)
             {
-                isDecaf = !isDecaf;
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is Drink side)
+                {
+                    side.Size = size;
+                    //OrderBox.Items
+                    CollectionViewSource.GetDefaultView(order.Items).Refresh();
+
+                }
             }
-            else if (tea)
+        }
+
+        /// <summary>
+        /// Sets size to large of selected item
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void MakeLarge(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Order order)
             {
-                isSweet = !isSweet;
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.Drink side)
+                {
+                    SetSize(DinoDiner.Menu.Size.Large);
+                }
+            }
+        }
+
+        /// <summary>
+        /// sets size to medium for selected item
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void MakeMedium(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Order order)
+            {
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.Drink side)
+                {
+                    SetSize(DinoDiner.Menu.Size.Medium);
+                }
+            }
+        }
+
+        /// <summary>
+        /// sets size to small for selected item
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void MakeSmall(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Order order)
+            {
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.Drink side)
+                {
+                    SetSize(DinoDiner.Menu.Size.Small);
+                }
             }
         }
     }

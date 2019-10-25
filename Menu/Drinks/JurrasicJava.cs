@@ -58,7 +58,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Ice in java?
         /// </summary>
-        public bool Ice = false;
+        public override bool Ice { get; set; } = false;
         /// <summary>
         /// Should java be decaf
         /// </summary>
@@ -145,7 +145,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Adds Ice
         /// </summary>
-        public void AddIce()
+        public override void AddIce()
         {
             Ice = true;
             NotifyOfPropertyChanged("Special");
@@ -178,5 +178,13 @@ namespace DinoDiner.Menu
             NotifyOfPropertyChanged("Special");
 
         }
+        public void MakeUndecaf()
+        {
+            Decaf = false;
+            NotifyOfPropertyChanged("Special");
+
+        }
+
+
     }
 }

@@ -27,7 +27,7 @@ namespace DinoDiner.Menu
         /// Is there ice, default true
         /// </summary>
 
-        public bool Ice = true;
+        public override bool Ice { get; set; } = true;
         /// <summary>
         /// Gets list of Ingredients
         /// </summary>
@@ -121,6 +121,17 @@ namespace DinoDiner.Menu
         {
             Ice = false;
             NotifyOfPropertyChanged("Special");
+        }
+        public override void AddIce()
+        {
+            Ice = true;
+            NotifyOfPropertyChanged("Special");
+        }
+        public void HoldLemon()
+        {
+            Lemon = false;
+            NotifyOfPropertyChanged("Special");
+
         }
 
     }

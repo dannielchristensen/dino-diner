@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DinoDiner.Menu;
 
 namespace PointOfSale
 {
@@ -30,6 +31,110 @@ namespace PointOfSale
         public FlavorSelection()
         {
             InitializeComponent();
+        }
+        public void cherryFlavor(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Order order)
+            {
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.Sodasaurus soda)
+                {
+                    soda.Flavor = SodasaurusFlavor.Cherry;
+                    CollectionViewSource.GetDefaultView(order.Items).Refresh();
+                    this.NavigationService.Navigate(new DrinkSelection());
+
+                }
+            }
+
+        }
+
+        public void chocFlavor(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Order order)
+            {
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.Sodasaurus soda)
+                {
+                    soda.Flavor = SodasaurusFlavor.Chocolate;
+                    CollectionViewSource.GetDefaultView(order.Items).Refresh();
+                    this.NavigationService.Navigate(new DrinkSelection());
+
+                }
+            }
+
+        }
+
+        public void colaFlavor(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Order order)
+            {
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.Sodasaurus soda)
+                {
+                    soda.Flavor = SodasaurusFlavor.Cola;
+                    CollectionViewSource.GetDefaultView(order.Items).Refresh();
+                    this.NavigationService.Navigate(new DrinkSelection());
+
+                }
+            }
+
+        }
+
+        public void limeFlavor(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Order order)
+            {
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.Sodasaurus soda)
+                {
+                    soda.Flavor = SodasaurusFlavor.Lime;
+                    CollectionViewSource.GetDefaultView(order.Items).Refresh();
+                    this.NavigationService.Navigate(new DrinkSelection());
+
+                }
+            }
+
+        }
+
+        public void orangeFlavor(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Order order)
+            {
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.Sodasaurus soda)
+                {
+                    soda.Flavor = SodasaurusFlavor.Orange;
+                    CollectionViewSource.GetDefaultView(order.Items).Refresh();
+                    this.NavigationService.Navigate(new DrinkSelection());
+
+                }
+            }
+
+        }
+
+        public void rootbeerFlavor(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Order order)
+            {
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.Sodasaurus soda)
+                {
+                    soda.Flavor = SodasaurusFlavor.RootBeer;
+                    CollectionViewSource.GetDefaultView(order.Items).Refresh();
+                    this.NavigationService.Navigate(new DrinkSelection());
+
+                }
+            }
+
+        }
+
+        public void vanillaFlavor(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Order order)
+            {
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.Sodasaurus soda)
+                {
+                    soda.Flavor = SodasaurusFlavor.Vanilla;
+                    CollectionViewSource.GetDefaultView(order.Items).Refresh();
+                    this.NavigationService.Navigate(new DrinkSelection());
+
+                }
+            }
+
         }
     }
 }

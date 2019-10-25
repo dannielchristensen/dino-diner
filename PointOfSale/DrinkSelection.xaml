@@ -53,7 +53,9 @@
                 RenderTransformOrigin="0.516,1.917" Height="76" FontSize="24" Click="Water_Click">
 
         </Button>
-        <Button Content="Small"
+        <Button 
+            Click="MakeSmall"
+            Content="Small"
             HorizontalAlignment="Left"
             Margin="221,91,0,0"
             VerticalAlignment="Top"
@@ -68,7 +70,9 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Medium"
+        <Button 
+            Click="MakeMedium"
+            Content="Medium"
             HorizontalAlignment="Left"
             Margin="221,201,0,0"
             VerticalAlignment="Top"
@@ -83,7 +87,9 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Large"
+        <Button 
+            Click="MakeLarge"
+            Content="Large"
             HorizontalAlignment="Left"
             Margin="221,311,0,0"
             VerticalAlignment="Top"
@@ -101,7 +107,7 @@
         <Label x:Name="Special"  
             Content="Special"   
             FontSize="24" FontFamily="Georgia" Margin="115.8,29,269,428" RenderTransformOrigin="1.521,1.285" Background="{x:Null}" Grid.Column="1"/>
-        <Button Content="n/a"
+        <Button Content="Special"
                 x:Name="uxChangingButton"
             HorizontalAlignment="Left"
             Margin="91.8,91,0,0"
@@ -117,7 +123,8 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Add Lemon"
+        <Button Name ="LemonButton"
+            Content="Add Lemon"
             HorizontalAlignment="Left"
             Margin="91.8,201,0,0"
             VerticalAlignment="Top"
@@ -132,12 +139,30 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Hold Ice"
+        <Button Name="IceButton"
+            Content="Add/Hold&#xa;     Ice"
             HorizontalAlignment="Left"
             Margin="91.8,311,0,0"
             VerticalAlignment="Top"
             Width="141"
             RenderTransformOrigin="0.516,1.917" Height="103" FontSize="24" Click="Ice_Click" Grid.Column="1">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="DONE"
+            Click="ReturnToMain"
+            Content="DONE"
+            HorizontalAlignment="Left"
+            Margin="22,419,0,0"
+            VerticalAlignment="Top"
+            Width="534"
+            RenderTransformOrigin="0.516,1.917" Height="39" FontSize="24" Grid.ColumnSpan="2">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

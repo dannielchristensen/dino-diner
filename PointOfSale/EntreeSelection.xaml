@@ -9,7 +9,9 @@
       Title="Entree">
 
     <Grid Background="White">
-        <Button Content="Dino-Nuggets"
+        <Button 
+            Click="AddDinoNuggets"
+            Content="Dino-Nuggets"
             HorizontalAlignment="Left"
             Margin="237,63,0,0"
             VerticalAlignment="Top"
@@ -24,7 +26,9 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Brontowurst"
+        <Button 
+            Click="AddBrontowurst"
+            Content="Brontowurst"
             HorizontalAlignment="Left"
             Margin="41,63,0,0"
             VerticalAlignment="Top"
@@ -39,7 +43,9 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Prehistoric &#xa;    PB &amp;j"
+        <Button 
+            Click="AddPBJ"
+            Content="Prehistoric &#xa;    PB &amp;j"
             HorizontalAlignment="Left"
             Margin="442,63,0,0"
             VerticalAlignment="Top"
@@ -54,7 +60,9 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Steakosaurus&#xa;     Burger"
+        <Button 
+            Click="AddSteakBurger"
+            Content="Steakosaurus&#xa;     Burger"
             HorizontalAlignment="Left"
             Margin="237,205,0,0"
             VerticalAlignment="Top"
@@ -69,7 +77,9 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Pterodactyl&#xa;    Wings"
+        <Button 
+            Click="AddWings"
+            Content="Pterodactyl&#xa;    Wings"
             HorizontalAlignment="Left"
             Margin="41,205,0,0"
             VerticalAlignment="Top"
@@ -84,7 +94,9 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="   T-Rex&#xa;KingBurger"
+        <Button 
+            Click="AddKingBurger"
+            Content="   T-Rex&#xa;KingBurger"
             HorizontalAlignment="Left"
             Margin="442,205,0,0"
             VerticalAlignment="Top"
@@ -99,11 +111,30 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Veloci-Wrap"
+        <Button 
+            Click="AddVelociWrap"
+            Content="Veloci-Wrap"
             HorizontalAlignment="Left"
             Margin="41,345,0,0"
             VerticalAlignment="Top"
             Width="159"
+            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button 
+            Click="ReturnToMain"
+            Content="DONE"
+            HorizontalAlignment="Left"
+            Margin="237,345,0,0"
+            VerticalAlignment="Top"
+            Width="364"
             RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24">
             <Button.RenderTransform>
                 <TransformGroup>

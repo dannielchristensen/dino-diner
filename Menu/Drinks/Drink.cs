@@ -18,6 +18,7 @@ namespace DinoDiner.Menu
     /// </summary>
     public abstract class Drink : IMenuItem, IOrderItem, INotifyPropertyChanged
     {
+        public virtual bool Ice { get; set;  }
         /// <summary>
         /// List of ingredients for the drink
         /// </summary>
@@ -58,5 +59,6 @@ namespace DinoDiner.Menu
         /// sets Ice bool to false
         /// </summary>
         public abstract void HoldIce();
+        public abstract void AddIce();
     }
 }

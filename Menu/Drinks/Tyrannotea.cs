@@ -22,7 +22,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Field for Ice
         /// </summary>
-        public bool Ice { get; set; }
+        public override bool Ice { get; set; } = true;
         /// <summary>
         /// Field for Lemon
         /// </summary>
@@ -183,7 +183,18 @@ namespace DinoDiner.Menu
             NotifyOfPropertyChanged("Ingredients");
 
         }
+        public void HoldLemon()
+        {
+            Lemon = false;
+            NotifyOfPropertyChanged("Special");
+            NotifyOfPropertyChanged("Ingredients");
 
+        }
+        public override void AddIce()
+        {
+            Ice = true;
+            NotifyOfPropertyChanged("Special");
 
+        }
     }
 }

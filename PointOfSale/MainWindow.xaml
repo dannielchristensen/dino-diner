@@ -1,13 +1,17 @@
-﻿<Window x:Class="PointOfSale.MainWindow2"
+﻿<Window x:Class="PointOfSale.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PointOfSale"
+        xmlns:menu="clr-namespace:DinoDiner.Menu;assembly=Menu"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="850">
+    <Window.DataContext>
+        <menu:Order/>
+    </Window.DataContext>
     <DockPanel>
-        <TextBlock DockPanel.Dock="Right" Width="200" TextAlignment="Center" Background="LightSteelBlue">// TODO: Order</TextBlock>
-        <Frame Source="MenuCategorySelection.xaml"></Frame>
+        <local:OrderControl x:Name="OrderControl" DockPanel.Dock="Right" Width="200" ></local:OrderControl>
+        <Frame Name ="Frame" Source="MenuCategorySelection.xaml" LoadCompleted="OnLoadCompleted" DataContextChanged="OnDataContextChanged"></Frame>
     </DockPanel>
 </Window>

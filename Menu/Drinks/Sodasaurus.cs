@@ -21,7 +21,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Ice in Soda?
         /// </summary>
-        public bool Ice { get; set; }
+        public override bool Ice { get; set; } = true;
         /// <summary>
         /// Size of Soda
         /// </summary>
@@ -216,6 +216,13 @@ namespace DinoDiner.Menu
             this.Flavor = SodasaurusFlavor.Grape;
 
             NotifyOfPropertyChanged("Flavor");
+
+        }
+
+        public override void AddIce()
+        {
+            Ice = true;
+            NotifyOfPropertyChanged("Special");
 
         }
 

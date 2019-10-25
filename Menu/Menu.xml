@@ -158,7 +158,7 @@
             Should have have room for cream
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.JurassicJava.Ice">
+        <member name="P:DinoDiner.Menu.JurassicJava.Ice">
             <summary>
             Ice in java?
             </summary>
@@ -466,7 +466,7 @@
             Is there lemon
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.Water.Ice">
+        <member name="P:DinoDiner.Menu.Water.Ice">
             <summary>
             Is there ice, default true
             </summary>
@@ -1039,6 +1039,32 @@
             <summary>
             Sets dressing to false to show that there is no dressing
             </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IOrderItem.Price">
+            <summary>
+            Price of IOrderItem
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IOrderItem.Description">
+            <summary>
+            Description of IOrderItem
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IOrderItem.Special">
+            <summary>
+            Special instructions for IOrderItem
+            </summary>
+        </member>
+        <member name="E:DinoDiner.Menu.Order.PropertyChanged">
+            <summary>
+            Property changed handler
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Order.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            Method to invoke property changed
+            </summary>
+            <param name="propertyName">Name of property being changed</param>
         </member>
         <member name="T:DinoDiner.Menu.Fryceritops">
             <summary>

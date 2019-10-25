@@ -22,7 +22,8 @@
             Margin="41,94,0,0"
             VerticalAlignment="Top"
             Width="140"
-           RenderTransformOrigin="0.5,0.5" Height="72" FontSize="24">
+           RenderTransformOrigin="0.5,0.5" Height="72" FontSize="24"
+                Click="AddFryceritops">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -33,6 +34,7 @@
             </Button.RenderTransform>
         </Button>
         <Button Content="Meteor Mac &#xa;    &amp; Cheese"
+            Click="AddMeteorMacAndCheese"
             HorizontalAlignment="Left"
             Margin="41,171,0,0"
             VerticalAlignment="Top"
@@ -47,7 +49,9 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Mezzorella&#xa;    Sticks"
+        <Button 
+            Click="AddMezzorellaSticks"
+            Content="Mezzorella&#xa;    Sticks"
             HorizontalAlignment="Left"
             Margin="41,248,0,0"
             VerticalAlignment="Top"
@@ -62,7 +66,9 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Triceritots"
+        <Button 
+            Click="AddTriceritots"
+            Content="Triceritots"
             HorizontalAlignment="Left"
             Margin="41,325,0,0"
             VerticalAlignment="Top"
@@ -78,6 +84,7 @@
             </Button.RenderTransform>
         </Button>
         <Button Content="Small"
+            Click="MakeSmall"
             HorizontalAlignment="Left"
             Margin="229,94,0,0"
             VerticalAlignment="Top"
@@ -93,6 +100,7 @@
             </Button.RenderTransform>
         </Button>
         <Button Content="Medium"
+            Click="MakeMedium"
             HorizontalAlignment="Left"
             Margin="229,197,0,0"
             VerticalAlignment="Top"
@@ -108,11 +116,30 @@
             </Button.RenderTransform>
         </Button>
         <Button Content="Large"
+            Click="MakeLarge"
             HorizontalAlignment="Left"
             Margin="229,300,0,0"
             VerticalAlignment="Top"
             Width="147"
             RenderTransformOrigin="0.516,1.917" Height="97" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button 
+            Click="ReturnToMain"
+            Content="DONE"
+            
+            HorizontalAlignment="Left"
+            Margin="419,94,0,0"
+            VerticalAlignment="Top"
+            Width="147"
+            RenderTransformOrigin="1.442,0.602" Height="304" FontSize="24">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
