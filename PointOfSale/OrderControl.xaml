@@ -40,7 +40,7 @@
                 
         </ListBox>
         <TextBlock Text="$" Grid.Row="2" TextAlignment="Right" FontWeight="Bold"/>
-        <TextBlock Text="{Binding Path=SubtotalCost,StringFormat=n2}" Grid.Row="2" Grid.Column="1" FontWeight="Bold"/>
+        <TextBlock Name="costTest" Text="{Binding Path=SubtotalCost,StringFormat=n2}" Grid.Row="2" Grid.Column="1" FontWeight="Bold"/>
         <Button Grid.Row="3">Pay</Button>
         <Button Grid.Row="3" Grid.Column="2">Cancel</Button>
     </Grid>

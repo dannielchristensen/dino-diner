@@ -141,6 +141,7 @@ namespace PointOfSale
                 if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.Sides side)
                 {
                     SetSize(DinoDiner.Menu.Size.Medium);
+
                 }
             }
         }
@@ -157,6 +158,7 @@ namespace PointOfSale
                 if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.Sides side)
                 {
                     SetSize(DinoDiner.Menu.Size.Small);
+
                 }
             }
         }
@@ -176,6 +178,8 @@ namespace PointOfSale
                     side.Size = size;
                     //OrderBox.Items
                     CollectionViewSource.GetDefaultView(order.Items).Refresh();
+                    order.OnCollectionChanged(null, null);
+
 
                 }
             }
