@@ -91,20 +91,20 @@ namespace DinoDiner.Menu
                         Price = .59;
                         Calories = 2;
                         NotifyOfPropertyChanged("Price");
-                        NotifyOfPropertyChanged("Calories");
+                        NotifyOfPropertyChanged("Description");
 
                         break;
                     case Size.Medium:
                         Price = .99;
                         Calories = 4;
                         NotifyOfPropertyChanged("Price");
-                        NotifyOfPropertyChanged("Calories");
+                        NotifyOfPropertyChanged("Description");
                         break;
                     case Size.Large:
                         Price = 1.49;
                         Calories = 8;
                         NotifyOfPropertyChanged("Price");
-                        NotifyOfPropertyChanged("Calories");
+                        NotifyOfPropertyChanged("Description");
                         break;
                 }
 

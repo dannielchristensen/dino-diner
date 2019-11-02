@@ -11,7 +11,7 @@ namespace MenuTest
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public double Price { get; } = 5.0;
+        double IOrderItem.Price { get; set;  } = 5.0;
 
         public string Description { get; } = "Something";
 
@@ -630,7 +630,7 @@ namespace MenuTest
             MockOrderItem item = new MockOrderItem();
             Assert.PropertyChanged(order, propertyName, () =>
             {
-                order.Add(item);
+                order.Items.Add(item);
             });
         }
 
@@ -643,10 +643,10 @@ namespace MenuTest
         {
             Order order = new Order();
             MockOrderItem item = new MockOrderItem();
-            order.Add(item);
+            order.Items.Add(item);
             Assert.PropertyChanged(order, propertyName, () =>
             {
-                order.Remove(item);
+                order.Items.Remove(item);
             });
         }
 
@@ -658,7 +658,7 @@ namespace MenuTest
         {
             Order order = new Order();
             MockOrderItem item = new MockOrderItem();
-            order.Add(item);
+            order.Items.Add(item);
             Assert.PropertyChanged(order, propertyName, () =>
             {
                 item.Mutate();
