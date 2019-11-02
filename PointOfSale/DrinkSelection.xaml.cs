@@ -67,8 +67,9 @@ namespace PointOfSale
                 Drink drink = new Tyrannotea();
                 order.Items.Add(drink);
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+
             }
-          
+
         }
         /// <summary>
         /// Changes screen to update as Java
@@ -98,8 +99,9 @@ namespace PointOfSale
                 Drink drink = new Water();
                 order.Items.Add(drink);
                 CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+
             }
-            
+
         }
         /// <summary>
         /// Controls lemon button to change it as needed
@@ -207,6 +209,8 @@ namespace PointOfSale
                     }
                 }
                 CollectionViewSource.GetDefaultView(order.Items).Refresh();
+
+
             }
         }
 
@@ -233,6 +237,8 @@ namespace PointOfSale
                     side.Size = size;
                     //OrderBox.Items
                     CollectionViewSource.GetDefaultView(order.Items).Refresh();
+                    order.OnCollectionChanged(null, null);
+
 
                 }
             }
