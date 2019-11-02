@@ -67,6 +67,27 @@
     <Compile Include="DrinkSelection.xaml.cs">
       <DependentUpon>DrinkSelection.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EntreeScreen\Brontowurst.xaml.cs">
+      <DependentUpon>Brontowurst.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EntreeScreen\DinoNuggets.xaml.cs">
+      <DependentUpon>DinoNuggets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EntreeScreen\PrehistoricPBJ.xaml.cs">
+      <DependentUpon>PrehistoricPBJ.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EntreeScreen\PterodactylWings.xaml.cs">
+      <DependentUpon>PterodactylWings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EntreeScreen\SteakosaurusBurger.xaml.cs">
+      <DependentUpon>SteakosaurusBurger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EntreeScreen\TRexKingBurger.xaml.cs">
+      <DependentUpon>TRexKingBurger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EntreeScreen\VelociWrap.xaml.cs">
+      <DependentUpon>VelociWrap.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EntreeSelection.xaml.cs">
       <DependentUpon>EntreeSelection.xaml</DependentUpon>
     </Compile>
@@ -91,6 +112,34 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DrinkSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EntreeScreen\Brontowurst.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EntreeScreen\DinoNuggets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EntreeScreen\PrehistoricPBJ.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EntreeScreen\PterodactylWings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EntreeScreen\SteakosaurusBurger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EntreeScreen\TRexKingBurger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EntreeScreen\VelociWrap.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
