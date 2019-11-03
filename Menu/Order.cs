@@ -88,36 +88,5 @@ namespace DinoDiner.Menu
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        
-        public void Add(IOrderItem i)
-        {
-            Items.Add(i);
-            NotifyOfPropertyChanged("Items");
-            NotifyOfPropertyChanged("SubtotalCost");
-            NotifyOfPropertyChanged("TotalCost");
-            NotifyOfPropertyChanged("SalesTaxCost");
-        }
-
-        public bool Remove (IOrderItem i)
-        {
-            bool r = Items.Remove(i);
-            if (r)
-            {
-                NotifyOfPropertyChanged("Items");
-                NotifyOfPropertyChanged("SubtotalCost");
-                NotifyOfPropertyChanged("TotalCost");
-                NotifyOfPropertyChanged("SalesTaxCost");
-            }
-            return r;
-        }
-
-        private void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            NotifyOfPropertyChanged("SubtotalCost");
-            NotifyOfPropertyChanged("TotalCost");
-            NotifyOfPropertyChanged("SalesTaxCost");
-
-        }
-        
     }
 }
