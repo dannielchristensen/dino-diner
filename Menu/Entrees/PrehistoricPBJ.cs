@@ -98,7 +98,7 @@ namespace DinoDiner.Menu
         {
             this.peanutButter = false;
             NotifyOfPropertyChanged("Special");
-            //NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Ingredients");
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace DinoDiner.Menu
         {
             this.jelly = false;
             NotifyOfPropertyChanged("Special");
-            //NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Ingredients");
         }
     }
 }

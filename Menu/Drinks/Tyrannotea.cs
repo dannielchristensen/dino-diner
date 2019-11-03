@@ -30,7 +30,28 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Field for sweet
         /// </summary>
-        public bool Sweet { get; set; }
+        private bool sweet { get; set; }
+        public bool Sweet
+        {
+            get
+            {
+                return sweet;
+            }
+            set
+            {
+                if (value)
+                {
+                    this.MakeSweet();
+                }
+                else
+                {
+                    this.MakeUnSweet();
+                }
+
+
+            }
+        }
+
         /// <summary>
         /// Provides description fo Tyrannotea
         /// </summary>
@@ -88,27 +109,26 @@ namespace DinoDiner.Menu
                         Price = .99;
                         Calories = 8;
                         if (Sweet) Calories = 16;
-                        NotifyOfPropertyChanged("Calories");
-                        NotifyOfPropertyChanged("Description");
                         break;
                     case Size.Medium:
                         Price = 1.49;
                         Calories = 16;
                         if (Sweet) Calories = 32;
-                        NotifyOfPropertyChanged("Calories");
-                        NotifyOfPropertyChanged("Description");
                         break;
                     case Size.Large:
                         Price = 1.99;
                         Calories = 32;
                         if (Sweet) Calories = 64;
-                        NotifyOfPropertyChanged("Calories");
-                        NotifyOfPropertyChanged("Description");
+                        
+
                         break;
                 }
 
                 size = value;
                 NotifyOfPropertyChanged("Size");
+                NotifyOfPropertyChanged("Calories");
+                NotifyOfPropertyChanged("Description");
+                NotifyOfPropertyChanged("Price");
             }
         }
         /// <summary>
@@ -152,21 +172,18 @@ namespace DinoDiner.Menu
         /// </summary>
         public void MakeSweet()
         {
-            Sweet = true;
+            sweet = true;
             Calories *= 2;
             NotifyOfPropertyChanged("Calories");
             NotifyOfPropertyChanged("Special");
             NotifyOfPropertyChanged("Description");
-
-
-
         }
         /// <summary>
         /// makes tea unsweet
         /// </summary>
         public void MakeUnSweet()
         {
-            Sweet = false;
+            sweet = false;
             Calories /= 2;
             NotifyOfPropertyChanged("Calories");
            // NotifyOfPropertyChanged("Ingredients"); errors out due to way it is set up

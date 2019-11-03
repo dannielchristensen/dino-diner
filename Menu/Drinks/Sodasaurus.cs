@@ -73,6 +73,7 @@ namespace DinoDiner.Menu
         {
             get { return flavor; }
             set { flavor = value;
+                NotifyOfPropertyChanged("Description");
                 NotifyOfPropertyChanged("Flavor");
 
             }
@@ -89,31 +90,26 @@ namespace DinoDiner.Menu
             set
             {
                 size = value;
-                NotifyOfPropertyChanged("Size");
-
                 switch (size)
                 {
                     default:
                     case Size.Small:
                         Price = 1.5;
                         Calories = 112;
-                        NotifyOfPropertyChanged("Price");
-                        NotifyOfPropertyChanged("Description");
-
                         break;
                     case Size.Medium:
                         Price = 2;
                         Calories = 156;
-                        NotifyOfPropertyChanged("Price");
-                        NotifyOfPropertyChanged("Description");
                         break;
                     case Size.Large:
                         Price = 2.5;
                         Calories = 208;
-                        NotifyOfPropertyChanged("Price");
-                        NotifyOfPropertyChanged("Description");
                         break;
                 }
+                NotifyOfPropertyChanged("Size");
+                NotifyOfPropertyChanged("Calories");
+                NotifyOfPropertyChanged("Description");
+                NotifyOfPropertyChanged("Price");
             }
         }
         /// <summary>
@@ -151,7 +147,9 @@ namespace DinoDiner.Menu
         public void setFlavorToCola()
         {
             this.Flavor = SodasaurusFlavor.Cola;
+            NotifyOfPropertyChanged("Description");
             NotifyOfPropertyChanged("Flavor");
+
 
         }
         /// <summary>
@@ -160,7 +158,9 @@ namespace DinoDiner.Menu
         public void setFlavorToRootBeer()
         {
             this.Flavor = SodasaurusFlavor.RootBeer;
+            NotifyOfPropertyChanged("Description");
             NotifyOfPropertyChanged("Flavor");
+
 
         }
         /// <summary>
@@ -169,7 +169,9 @@ namespace DinoDiner.Menu
         public void setFlavorToCherry()
         {
             this.Flavor = SodasaurusFlavor.Cherry;
+            NotifyOfPropertyChanged("Description");
             NotifyOfPropertyChanged("Flavor");
+
 
         }
         /// <summary>
@@ -178,7 +180,9 @@ namespace DinoDiner.Menu
         public void setFlavorToVanilla()
         {
             this.Flavor = SodasaurusFlavor.Vanilla;
+            NotifyOfPropertyChanged("Description");
             NotifyOfPropertyChanged("Flavor");
+
 
         }
         /// <summary>
@@ -187,7 +191,9 @@ namespace DinoDiner.Menu
         public void setFlavorToChocolate()
         {
             this.Flavor = SodasaurusFlavor.Chocolate;
+            NotifyOfPropertyChanged("Description");
             NotifyOfPropertyChanged("Flavor");
+
 
         }
         /// <summary>
@@ -196,7 +202,9 @@ namespace DinoDiner.Menu
         public void setFlavorToLime()
         {
             this.Flavor = SodasaurusFlavor.Lime;
+            NotifyOfPropertyChanged("Description");
             NotifyOfPropertyChanged("Flavor");
+
 
         }
         /// <summary>
@@ -205,7 +213,9 @@ namespace DinoDiner.Menu
         public void setFlavorToOrange()
         {
             this.Flavor = SodasaurusFlavor.Orange;
+            NotifyOfPropertyChanged("Description");
             NotifyOfPropertyChanged("Flavor");
+
 
         }
         /// <summary>
@@ -215,7 +225,9 @@ namespace DinoDiner.Menu
         {
             this.Flavor = SodasaurusFlavor.Grape;
 
+            NotifyOfPropertyChanged("Description");
             NotifyOfPropertyChanged("Flavor");
+
 
         }
 

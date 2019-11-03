@@ -68,7 +68,10 @@ namespace DinoDiner.Menu
         }
         public void OnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
+            NotifyOfPropertyChanged("Items");
             NotifyOfPropertyChanged("SubtotalCost");
+            NotifyOfPropertyChanged("TotalCost");
+            NotifyOfPropertyChanged("SalesTaxCost");
         }
 
         /// <summary>
@@ -85,11 +88,10 @@ namespace DinoDiner.Menu
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        /*
+        
         public void Add(IOrderItem i)
         {
-            i.PropertyChanged += OnPropertyChanged;
-            items.Add(i);
+            Items.Add(i);
             NotifyOfPropertyChanged("Items");
             NotifyOfPropertyChanged("SubtotalCost");
             NotifyOfPropertyChanged("TotalCost");
@@ -98,15 +100,15 @@ namespace DinoDiner.Menu
 
         public bool Remove (IOrderItem i)
         {
-            bool removed = items.Remove(i);
-            if (removed)
+            bool r = Items.Remove(i);
+            if (r)
             {
                 NotifyOfPropertyChanged("Items");
                 NotifyOfPropertyChanged("SubtotalCost");
                 NotifyOfPropertyChanged("TotalCost");
                 NotifyOfPropertyChanged("SalesTaxCost");
             }
-            return removed;
+            return r;
         }
 
         private void OnPropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -116,6 +118,6 @@ namespace DinoDiner.Menu
             NotifyOfPropertyChanged("SalesTaxCost");
 
         }
-        */
+        
     }
 }

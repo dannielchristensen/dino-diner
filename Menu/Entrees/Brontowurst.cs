@@ -103,7 +103,7 @@ namespace DinoDiner.Menu
         public void HoldBun() {
             this.bun = false;
             NotifyOfPropertyChanged("Special");
-            //NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Ingredients");
         }
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace DinoDiner.Menu
         public void HoldPeppers() {
             this.peppers = false;
             NotifyOfPropertyChanged("Special");
-            //NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Ingredients");
         }
 
         /// <summary>
@@ -121,7 +121,7 @@ namespace DinoDiner.Menu
         public void HoldOnion() {
             this.onions = false;
             NotifyOfPropertyChanged("Special");
-            //NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Ingredients");
 
 
         }

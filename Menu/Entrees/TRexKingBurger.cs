@@ -146,7 +146,7 @@ namespace DinoDiner.Menu
         public void HoldBun() {
             this.bun = false;
             NotifyOfPropertyChanged("Special");
-       //     NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Ingredients");
         }
 
         /// <summary>
@@ -156,7 +156,7 @@ namespace DinoDiner.Menu
         {
             this.ketchup = false;
             NotifyOfPropertyChanged("Special");
-      //      NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Ingredients");
         }
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace DinoDiner.Menu
         {
             this.pickle = false;
             NotifyOfPropertyChanged("Special");
-       //     NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Ingredients");
         }
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace DinoDiner.Menu
         {
             this.mustard = false;
             NotifyOfPropertyChanged("Special");
-      //      NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Ingredients");
         }
 
         /// <summary>
@@ -186,7 +186,7 @@ namespace DinoDiner.Menu
         {
             this.lettuce = false;
             NotifyOfPropertyChanged("Special");
-       //     NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Ingredients");
         }
 
         /// <summary>
@@ -196,7 +196,7 @@ namespace DinoDiner.Menu
         {
             this.mayo = false;
             NotifyOfPropertyChanged("Special");
-     //       NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Ingredients");
         }
 
         /// <summary>
@@ -206,7 +206,7 @@ namespace DinoDiner.Menu
         {
             this.onion = false;
             NotifyOfPropertyChanged("Special");
-   //         NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Ingredients");
         }
 
 
@@ -217,7 +217,7 @@ namespace DinoDiner.Menu
         {
             this.tomato = false;
             NotifyOfPropertyChanged("Special");
-      //      NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Ingredients");
         }
     }
 
