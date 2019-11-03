@@ -58,6 +58,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ComboEntreeScreen\Brontowurst.xaml.cs">
+      <DependentUpon>Brontowurst.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComboEntreeScreen\DinoNuggets.xaml.cs">
+      <DependentUpon>DinoNuggets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComboEntreeScreen\PrehistoricPBJ.xaml.cs">
+      <DependentUpon>PrehistoricPBJ.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComboEntreeScreen\SteakosaurusBurger.xaml.cs">
+      <DependentUpon>SteakosaurusBurger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComboEntreeScreen\TRexKingBurger.xaml.cs">
+      <DependentUpon>TRexKingBurger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComboEntreeScreen\VelociWrap.xaml.cs">
+      <DependentUpon>VelociWrap.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ComboSelection.xaml.cs">
       <DependentUpon>ComboSelection.xaml</DependentUpon>
     </Compile>
@@ -103,6 +121,30 @@
     <Compile Include="SideSelection.xaml.cs">
       <DependentUpon>SideSelection.xaml</DependentUpon>
     </Compile>
+    <Page Include="ComboEntreeScreen\Brontowurst.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ComboEntreeScreen\DinoNuggets.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ComboEntreeScreen\PrehistoricPBJ.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ComboEntreeScreen\SteakosaurusBurger.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ComboEntreeScreen\TRexKingBurger.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ComboEntreeScreen\VelociWrap.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="ComboSelection.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

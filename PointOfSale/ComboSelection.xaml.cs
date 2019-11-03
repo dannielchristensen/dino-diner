@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DinoDiner.Menu;
 
 namespace PointOfSale
 {
@@ -38,8 +39,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void Brontowurst_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("CustomizeCombo.xaml", UriKind.Relative));
+            if (DataContext is Order order)
+            {
+                DinoDiner.Menu.Entree entree = new Brontowurst();
+                order.Items.Add(new CretaceousCombo(entree));
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                this.NavigationService.Navigate(new Uri("ComboEntreeScreen/Brontowurst.xaml", UriKind.Relative));
 
+            }
         }
         /// <summary>
         /// changes screen to customzie combo
@@ -48,8 +55,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void DinoNuggets_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("CustomizeCombo.xaml", UriKind.Relative));
+            if (DataContext is Order order)
+            {
+                DinoDiner.Menu.Entree entree = new DinoNuggets();
+                order.Items.Add(new CretaceousCombo(entree));
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                this.NavigationService.Navigate(new Uri("ComboEntreeScreen/DinoNuggets.xaml", UriKind.Relative));
 
+            }
         }
         /// <summary>
         /// changes screen to customzie combo
@@ -58,8 +71,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void PrehistoricPBandJ_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("CustomizeCombo.xaml", UriKind.Relative));
+            if (DataContext is Order order)
+            {
+                DinoDiner.Menu.Entree entree = new PrehistoricPBJ();
+                order.Items.Add(new CretaceousCombo(entree));
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                this.NavigationService.Navigate(new Uri("ComboEntreeScreen/PrehistoricPBJ.xaml", UriKind.Relative));
 
+            }
         }
         /// <summary>
         /// changes screen to customzie combo
@@ -68,8 +87,15 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void PterodactylWings_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("CustomizeCombo.xaml", UriKind.Relative));
 
+            if (DataContext is Order order)
+            {
+                DinoDiner.Menu.Entree entree = new PterodactylWings();
+                order.Items.Add(new CretaceousCombo(entree));
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                this.NavigationService.Navigate(new Uri("CustomizeCombo.xaml", UriKind.Relative));
+
+            }
         }
         /// <summary>
         /// changes screen to customzie combo
@@ -78,14 +104,26 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void SteakosaurusBurger_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("CustomizeCombo.xaml", UriKind.Relative));
+            if (DataContext is Order order)
+            {
+                DinoDiner.Menu.Entree entree = new SteakosaurusBurger();
+                order.Items.Add(new CretaceousCombo(entree));
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                this.NavigationService.Navigate(new Uri("ComboEntreeScreen/SteakosaurusBurger.xaml", UriKind.Relative));
 
+            }
         }
 
         private void TRexKingBurger_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("CustomizeCombo.xaml", UriKind.Relative));
+            if (DataContext is Order order)
+            {
+                DinoDiner.Menu.Entree entree = new TRexKingBurger();
+                order.Items.Add(new CretaceousCombo(entree));
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                this.NavigationService.Navigate(new Uri("ComboEntreeScreen/TRexKingBurger.xaml", UriKind.Relative));
 
+            }
         }
         /// <summary>
         /// changes screen to customzie combo
@@ -94,8 +132,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void VelociWrap_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("CustomizeCombo.xaml", UriKind.Relative));
+            if (DataContext is Order order)
+            {
+                DinoDiner.Menu.Entree entree = new VelociWrap();
+                order.Items.Add(new CretaceousCombo(entree));
+                CollectionViewSource.GetDefaultView(order.Items).MoveCurrentToLast();
+                this.NavigationService.Navigate(new Uri("ComboEntreeScreen/VelociWrap.xaml", UriKind.Relative));
 
+            }
         }
     }
 }

@@ -32,16 +32,16 @@ namespace DinoDiner.Menu
         {
             get
             {
-                return Entree;
+                return entree;
             }
             set
             {
-                Entree = value;
+                entree = value;
                 NotifyOfPropertyChanged("Entree");
             }
 
         }
-
+        private Entree entree { get; set; }
         /// <summary>
         /// Gets and sets the side
         /// </summary>
@@ -49,15 +49,15 @@ namespace DinoDiner.Menu
         {
             get
             {
-                return Side;
+                return side;
             }
             set
             {
-                Side = value;
+                side = value;
                 NotifyOfPropertyChanged("Side");
             }
         } 
-
+        private Sides side { get; set; }
         /// <summary>
         /// Gets and sets the drink
         /// </summary>
@@ -65,16 +65,16 @@ namespace DinoDiner.Menu
         {
             get
             {
-                return Drink;
+                return drink;
             }
             set
             {
-                Drink = value;
+                drink = value;
                 NotifyOfPropertyChanged("Drink");
             }
                
         } 
-
+        private Drink drink { get; set; }
         /// <summary>
         /// Gets the price of the combo
         /// </summary>
