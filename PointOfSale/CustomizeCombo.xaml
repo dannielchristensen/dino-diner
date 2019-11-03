@@ -13,24 +13,26 @@
             <ColumnDefinition Width="468"/>
             <ColumnDefinition Width="332"/>
         </Grid.ColumnDefinitions>
-        <Button Content="SIDE INFO"
+        <Button Content="Update Side"
             HorizontalAlignment="Left"
-            Margin="105,100,0,0"
+            Margin="21,101,0,0"
             VerticalAlignment="Top"
-            Width="159"
+            Width="166"
             RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24" Click="Side_Click">
 
         </Button>
         <Button
-            Content="DRINK INFO"
+            Content="Update Drink"
             HorizontalAlignment="Left"
-            Margin="269,100,0,0"
+            Margin="187,101,0,0"
             VerticalAlignment="Top"
-            Width="159"
+            Width="166"
             RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24" Click="Drink_Click">
 
         </Button>
-        <Button Content="Small"
+        <Button 
+            Click="MakeSmall"
+            Content="Small"
             HorizontalAlignment="Left"
             Margin="21,331,0,0"
             VerticalAlignment="Top"
@@ -38,13 +40,17 @@
             RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24">
 
         </Button>
-        <Button Content="Large"
+        <Button 
+            Click="MakeLarge"
+            Content="Large"
             HorizontalAlignment="Left"
             Margin="351,331,0,0"
             VerticalAlignment="Top"
             Width="166"
             RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24" Grid.ColumnSpan="2"/>
-        <Button Content="Medium"
+        <Button 
+            Click="MakeMedium"
+            Content="Medium"
             HorizontalAlignment="Left"
             Margin="186,331,0,0"
             VerticalAlignment="Top"
@@ -54,13 +60,20 @@
         </Button>
         <Label x:Name="Flavor"  
             Content="Side"   
-            FontSize="24" FontFamily="Georgia" Margin="142,52,178,408" RenderTransformOrigin="1.521,1.285"/>
+            FontSize="24" FontFamily="Georgia" Margin="43,53,277,407" RenderTransformOrigin="1.521,1.285"/>
         <Label x:Name="Flavor_Copy"  
             Content="Drink"   
-            FontSize="24" FontFamily="Georgia" Margin="303,52,17,408" RenderTransformOrigin="1.521,1.285"/>
+            FontSize="24" FontFamily="Georgia" Margin="191,53,129,407" RenderTransformOrigin="1.521,1.285"/>
         <Label x:Name="Flavor_Copy1"  
             Content="Size"   
             FontSize="24" FontFamily="Georgia" Margin="221,262,99,198" RenderTransformOrigin="1.521,1.285"/>
+        <Button
+            Content="Done"
+            HorizontalAlignment="Left"
+            Margin="351,101,0,0"
+            VerticalAlignment="Top"
+            Width="166"
+            RenderTransformOrigin="0.5,0.5" Height="95" FontSize="24" Click="ReturnToMain" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Page>

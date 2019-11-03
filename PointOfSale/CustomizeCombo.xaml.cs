@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DinoDiner.Menu;
 
 namespace PointOfSale
 {
@@ -39,7 +40,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void Side_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("SideSelection.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("ComboDrinkSideScreen/SideSelection.xaml", UriKind.Relative));
 
         }
         /// <summary>
@@ -49,10 +50,50 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void Drink_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("DrinkSelection.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("ComboDrinkSideScreen/DrinkSelection.xaml", UriKind.Relative));
 
         }
 
-       
+        private void MakeSmall(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Order order)
+            {
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.CretaceousCombo Combo)
+                {
+                    Combo.Size = DinoDiner.Menu.Size.Small;
+                    CollectionViewSource.GetDefaultView(order.Items).Refresh();
+                }
+            }
+        }
+
+        private void MakeMedium(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Order order)
+            {
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.CretaceousCombo Combo)
+                {
+                    Combo.Size = DinoDiner.Menu.Size.Medium;
+
+                    CollectionViewSource.GetDefaultView(order.Items).Refresh();
+                }
+            }
+        }
+
+        private void MakeLarge(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Order order)
+            {
+                if (CollectionViewSource.GetDefaultView(order.Items).CurrentItem is DinoDiner.Menu.CretaceousCombo Combo)
+                {
+                    Combo.Size = DinoDiner.Menu.Size.Large;
+
+                    CollectionViewSource.GetDefaultView(order.Items).Refresh();
+                }
+            }
+        }
+        public void ReturnToMain(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("MenuCategorySelection.xaml", UriKind.Relative));
+        }
     }
 }

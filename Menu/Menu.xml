@@ -9,7 +9,7 @@
             A class representing a combo meal
             </summary>
         </member>
-        <member name="F:DinoDiner.Menu.CretaceousCombo.size">
+        <member name="P:DinoDiner.Menu.CretaceousCombo.size">
             <summary>
             Private backing var for size
             </summary>

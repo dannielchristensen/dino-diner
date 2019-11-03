@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Private backing var for size
         /// </summary>
-        private Size size;
+        private Size size { get; set; }
         /// <summary>
         /// Property changed handler
         /// </summary>
@@ -152,10 +152,11 @@ namespace DinoDiner.Menu
             {
                 List<string> l = new List<string>();
                 l.AddRange(Entree.Special);
-                l.AddRange(Side.Special);
                 l.Add(Side.Description);
-                l.AddRange(Drink.Special);
+                l.AddRange(Side.Special);
                 l.Add(Drink.Description);
+                l.AddRange(Drink.Special);
+
 
                 return l.ToArray();
             }
