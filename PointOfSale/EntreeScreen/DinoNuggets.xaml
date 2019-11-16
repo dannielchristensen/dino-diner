@@ -1,0 +1,50 @@
+﻿<Page x:Class="PointOfSale.EntreeScreen.DinoNuggets"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PointOfSale.EntreeScreen"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DinoNuggets">
+
+    <Grid>
+        <Button 
+            Click="AddNug"
+            Content="Add Nugget"
+            
+            HorizontalAlignment="Left"
+            Margin="136,29,0,0"
+            VerticalAlignment="Top"
+            Width="441"
+            RenderTransformOrigin="1.442,0.602" Height="304" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button 
+            Click="ReturnToMain"
+            Content="Done"
+            
+            HorizontalAlignment="Left"
+            Margin="136,333,0,0"
+            VerticalAlignment="Top"
+            Width="441"
+            RenderTransformOrigin="1.442,0.602" Height="61" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+    </Grid>
+</Page>

@@ -1,0 +1,123 @@
+﻿<Page x:Class="PointOfSale.ComboDrinkSideScreen.DrinkSelection"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PointOfSale"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="DrinkSelection">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="323"/>
+            <ColumnDefinition Width="477"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="Label1"  
+            Content="Drink"   
+            FontSize="24" FontFamily="Georgia" Margin="48,29,201.571,428" RenderTransformOrigin="1.521,1.285"/>
+
+        <Button 
+                Content="Sodasaurus"
+                HorizontalAlignment="Left"
+                Margin="22,91,0,0"
+                VerticalAlignment="Top"
+                Width="250"
+                RenderTransformOrigin="0.5,0.5" Height="76" FontSize="24" Click="Soda_Click">
+
+        </Button>
+        <Button Content="Tyrannotea"
+                HorizontalAlignment="Left"
+                Margin="22,173,0,0"
+                VerticalAlignment="Top"
+                Width="250"
+                RenderTransformOrigin="0.5,0.5" Height="76" FontSize="24" Click="Tea_Click">
+
+        </Button>
+        <Button Content="Jurrasic Java"
+                HorizontalAlignment="Left"
+                Margin="22,256,0,0"
+                VerticalAlignment="Top"
+                Width="250"
+                RenderTransformOrigin="0.516,1.917" Height="76" FontSize="24" Click="Java_Click">
+
+        </Button>
+        <Button Content="Water"
+                HorizontalAlignment="Left"
+                Margin="22,338,0,0"
+                VerticalAlignment="Top"
+                Width="250"
+                RenderTransformOrigin="0.516,1.917" Height="76" FontSize="24" Click="Water_Click">
+
+        </Button>
+        <Label x:Name="Special"  
+            Content="Special"   
+            FontSize="24" FontFamily="Georgia" Margin="115.8,29,269,428" RenderTransformOrigin="1.521,1.285" Background="{x:Null}" Grid.Column="1"/>
+        <Button Content="Special"
+                x:Name="uxChangingButton"
+            HorizontalAlignment="Left"
+            Margin="306,91,0,0"
+            VerticalAlignment="Top"
+            Width="250"
+            RenderTransformOrigin="0.5,0.5" Height="103" FontSize="24" Click="ChangingButton_Click" Grid.ColumnSpan="2">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name ="LemonButton"
+            Content="Add Lemon"
+            HorizontalAlignment="Left"
+            Margin="306,201,0,0"
+            VerticalAlignment="Top"
+            Width="250"
+            RenderTransformOrigin="0.5,0.5" Height="103" FontSize="24" Click="Lemon_Click" Grid.ColumnSpan="2">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="IceButton"
+            Content="Add/Hold&#xa;     Ice"
+            HorizontalAlignment="Left"
+            Margin="306,311,0,0"
+            VerticalAlignment="Top"
+            Width="250"
+            RenderTransformOrigin="0.516,1.917" Height="103" FontSize="24" Click="Ice_Click" Grid.ColumnSpan="2">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="DONE"
+            Click="ReturnToMain"
+            Content="DONE"
+            HorizontalAlignment="Left"
+            Margin="22,419,0,0"
+            VerticalAlignment="Top"
+            Width="534"
+            RenderTransformOrigin="0.516,1.917" Height="39" FontSize="24" Grid.ColumnSpan="2">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+    </Grid>
+</Page>
