@@ -11,4 +11,36 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
+/* Credit goes to https://stackoverflow.com/questions/26518339/how-to-make-a-banner-image */
+#bannerimage {
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+    background-image: url("https://k-state.instructure.com/courses/83099/files/10852332/preview");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: white;
+    background-position: center;
+}
 
+.bannerdiv {
+    height: 400px;
+    width: 100%
+}
+
+.tab {
+    overflow: hidden;
+    border: 5px solid white;
+    background-color: white;
+}
+
+.twotab {
+    overflow: hidden;
+    border: 10px solid white;
+    background-color: white;
+}
+
+.threetab {
+    overflow: hidden;
+    border: 15px solid white;
+    background-color: white;
+}

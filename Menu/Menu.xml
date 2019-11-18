@@ -1055,6 +1055,48 @@
             Special instructions for IOrderItem
             </summary>
         </member>
+        <member name="T:DinoDiner.Menu.Menu">
+            <summary>
+            Menu class containing lists of all stuff on the menu
+            Also seperated by type
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableMenuItem">
+            <summary>
+            list off Menu items
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableEntrees">
+            <summary>
+            List of entrees items
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableSides">
+            <summary>
+            List of side items
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableDrinks">
+            <summary>
+            List of drink items
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableCombos">
+            <summary>
+            List of combo items
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Menu.#ctor">
+            <summary>
+            creates an instance of menu
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Menu.ToString">
+            <summary>
+            ToString for available
+            </summary>
+            <returns></returns>
+        </member>
         <member name="E:DinoDiner.Menu.Order.PropertyChanged">
             <summary>
             Property changed handler

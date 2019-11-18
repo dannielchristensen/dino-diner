@@ -19,5 +19,9 @@ namespace DinoDiner.Menu
         /// Special instructions for IOrderItem
         /// </summary>
         string[] Special { get;  }
+
+        uint Calories { get; set; }
+
+        List<string> Ingredients { get; }
     }
 }

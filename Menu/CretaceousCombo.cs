@@ -99,6 +99,10 @@ namespace DinoDiner.Menu
             {
                 return Entree.Calories + Side.Calories + Drink.Calories;
             }
+            set
+            {
+                
+            }
         }
 
         /// <summary>
