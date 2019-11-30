@@ -44,3 +44,23 @@ body {
     border: 15px solid white;
     background-color: white;
 }
+/* Credit for side bar CSS goes to W3Schools. Edits made by Danniel Christensen*/
+/* The side navigation menu */
+.sidebar {
+  margin-left: 75%;
+  margin-right: 100%;
+  padding: 0;
+  width: 500px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  float: right;
+}
+
+
+
+#filterBar {
+    display: block;
+   margin-left: 20px;
+}

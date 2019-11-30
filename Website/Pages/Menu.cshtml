@@ -2,30 +2,92 @@
 @model Website.Pages.MenuModel
 @{DinoDiner.Menu.Menu menu = new DinoDiner.Menu.Menu();}
 
-<h1>Menu</h1>
-<div style="clear: both">
-    <div>
-        <h2>Combos </h2>
-        @foreach (DinoDiner.Menu.IOrderItem i in menu.AvailableCombos)
+<div class="sidebar">
+    <h2>Filters</h2>
+    <form method="post" id="search-post">
+        <input type="text" name="search" /> <br />
+        <input type="submit" value="Search" />
+        <h3>Menu Categories</h3>
+        <label>
+            <input type="checkbox" value="Combo" class="MenuSection" name="MenuSection" checked="@Model.MenuSection.Contains("Combo")" />
+            Combos
+        </label>
+        <label>
+            <input type="checkbox" value="Entree" class="MenuSection" name="MenuSection" checked="@Model.MenuSection.Contains("Entree")" />
+            Entrees
+        </label>
+        <label>
+            <input type="checkbox" value="Side" class="MenuSection" name="MenuSection" checked="@Model.MenuSection.Contains("Side")" />
+            Sides
+        </label>
+        <label>
+            <input type="checkbox" value="Drink" class="MenuSection" name="MenuSection" checked="@Model.MenuSection.Contains("Drink")" />
+            Drinks
+        </label>
+        <h3>Price</h3>
+        <label>
+            Min Price
+            <input type="number" id="minPrice" min="0" max="20" step="0.01" name="minPrice" value="@Model.minPrice" />
+        </label>
+        <label>
+            Max Price
+            <input type="number" id="maxPrice" min="0" max="20" step="0.01" name="maxPrice" value="@Model.maxPrice" />
+        </label>
+        <br />
+        <h3>
+            Excluding Ingredients
+        </h3>
+        @foreach (string s in menu.PossibleIngredients)
         {
-            <h3 class="tab">@i.ToString()<br /></h3>
-            <div class="twotab">
-                <p>Price: $@i.Price.ToString("0.00")</p>
-                <p>Calories: @i.Calories<p>
-                <p>Ingredients<p>
-                    <div class="threetab">
-                        @foreach (string s in i.Ingredients)
-                        {
-                    <p>@s</p>
-                }
-                    </div>
+            <label>
+                <input type="checkbox" value="@s" class="Ingredients" name="Ingredients" checked="@Model.Ingredients.Contains(s)" />
+                @s
+            </label> <br />
+        }
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    </form>
+</div>
+<h1>Menu</h1>
+<!-- Page content -->
+<div class="content">
+    ..
 
-                </div>
+    <div style="clear: both">
+        <div>
+            <h2>Combos </h2>
+            @if (Model.Combo.Count == 0)
+            {
+                <h4>**None**</h4>
             }
+            @foreach (DinoDiner.Menu.IOrderItem i in Model.Combo)
+            {
+                <h3 class="tab">@i.ToString()<br /></h3>
+                <div class="twotab">
+                    <p>Price: $@i.Price.ToString("0.00")</p>
+                    <p>Calories: @i.Calories<p>
+                    <p>Ingredients<p>
+                        <div class="threetab">
+                            @foreach (string s in i.Ingredients)
+                            {
+                        <p>@s</p>
+                    }
+                        </div>
+
+                    </div>}
+                
     </div>
     <div>
         <h2>Entrees</h2>
-        @foreach (DinoDiner.Menu.IOrderItem i in menu.AvailableEntrees)
+        @if (Model.Entree.Count == 0)
+        {
+            <h4>**None**</h4>
+        }
+        @foreach (DinoDiner.Menu.IOrderItem i in Model.Entree)
         {
             <h3>@i.ToString()<br /></h3>
             <div class="twotab">
@@ -40,60 +102,57 @@
                     </div>
 
                 </div>
-            }
-        </div>
-        <div>
-            <h2>Sides</h2>
-            @foreach (DinoDiner.Menu.IOrderItem i in menu.AvailableSides)
-            {
-                @foreach (DinoDiner.Menu.Size e in Enum.GetValues(typeof(DinoDiner.Menu.Size)))
-                {
-                    @if (i is DinoDiner.Menu.Sides n)
-                    {
-                        n.Size = e;
-                    }
-                    <h3>@i.ToString()<br /></h3>
-                    <div class="twotab">
-                        <p>Price: $@i.Price.ToString("0.00")</p>
-                        <p>Calories: @i.Calories<p>
-                        <p>Ingredients<p>
-                            <div class="threetab">
-                                @foreach (string s in i.Ingredients)
-                                {
-                            <p>@s</p>
-                        }
-                            </div>
+         }
+<div>
+    <h2>Sides</h2>
+    @if (Model.Side.Count == 0)
+    {
+        <h4>**None**</h4>
+    }
 
-                        </div>
-                    }
+    @foreach (DinoDiner.Menu.IOrderItem i in Model.Side)
+    {
+
+        <h3>@i.ToString()<br /></h3>
+        <div class="twotab">
+            <p>Price: $@i.Price.ToString("0.00")</p>
+            <p>Calories: @i.Calories<p>
+            <p>Ingredients<p>
+                <div class="threetab">
+                    @foreach (string s in i.Ingredients)
+                    {
+                <p>@s</p>
             }
+                </div>
 
             </div>
-            <div>
-                <h2>Drinks</h2>
-                @foreach (DinoDiner.Menu.IOrderItem i in menu.AvailableDrinks)
-                {
-                    @foreach (DinoDiner.Menu.Size e in Enum.GetValues(typeof(DinoDiner.Menu.Size)))
-                    {
-                        @if (i is DinoDiner.Menu.Drink n)
-                        {
-                            n.Size = @e;
-                        }
-                        <h3>@i.ToString()<br /></h3>
-                        <div class="twotab">
-                            <p>Price: $@i.Price.ToString("0.00")</p>
-                            <p>Calories: @i.Calories<p>
-                            <p>Ingredients<p>
-                                <div class="threetab">
-                                    @foreach (string s in i.Ingredients)
-                                    {
-                                <p>@s</p>
+                
+        }
+
+    <div>
+        <h2>Drinks</h2>
+        @if(Model.Drink.Count == 0)
+        {
+            <h4>**None**</h4>
+        }
+        @foreach (DinoDiner.Menu.IOrderItem i in Model.Drink)
+        {
+           
+               
+                <h3>@i.ToString()<br /></h3>
+                <div class="twotab">
+                    <p>Price: $@i.Price.ToString("0.00")</p>
+                    <p>Calories: @i.Calories<p>
+                    <p>Ingredients<p>
+                        <div class="threetab">
+                            @foreach (string s in i.Ingredients)
+                            {
+                             <p>@s</p>
                             }
-                                </div>
+                        </div>
 
-                            </div>
-                        }
-                }
                 </div>
-                </div>
-
+                
+        }
+    </div>
+     

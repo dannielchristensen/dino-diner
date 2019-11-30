@@ -31,6 +31,7 @@ namespace DinoDiner.Menu
         /// </summary>
         public List<IOrderItem> AvailableCombos { get; } = new List<IOrderItem>();
 
+        public List<string> PossibleIngredients { get; } = new List<string>();
         /// <summary>
         /// creates an instance of menu
         /// </summary>
@@ -88,6 +89,18 @@ namespace DinoDiner.Menu
             AvailableCombos.Add(new CretaceousCombo(new SteakosaurusBurger()));
             AvailableCombos.Add(new CretaceousCombo(new TRexKingBurger()));
             AvailableCombos.Add(new CretaceousCombo(new VelociWrap()));
+
+            foreach(IOrderItem menu in AvailableMenuItem)
+            {
+                foreach(string i in menu.Ingredients)
+                {
+                    if (!PossibleIngredients.Contains(i))
+                    {
+                        PossibleIngredients.Add(i);
+                    }
+                }
+            }
+            PossibleIngredients.Sort();
         }
 
         /// <summary>
