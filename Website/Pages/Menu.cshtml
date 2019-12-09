@@ -60,30 +60,51 @@
     <div style="clear: both">
         <div>
             <h2>Combos </h2>
-            @if (Model.Combo.Count == 0)
+            @if (Model.Combo.Count() == 0)
             {
                 <h4>**None**</h4>
             }
             @foreach (DinoDiner.Menu.IOrderItem i in Model.Combo)
             {
-                <h3 class="tab">@i.ToString()<br /></h3>
-                <div class="twotab">
-                    <p>Price: $@i.Price.ToString("0.00")</p>
-                    <p>Calories: @i.Calories<p>
-                    <p>Ingredients<p>
-                        <div class="threetab">
-                            @foreach (string s in i.Ingredients)
-                            {
-                        <p>@s</p>
-                    }
-                        </div>
-
-                    </div>}
                 
-    </div>
+                <h3 class="tab">@i.ToString()<br /></h3>
+                <table border="1">
+                    <tr>
+                        <th>Size</th>
+                        <th>Price</th>
+                        <th>Calories</th>
+                    </tr>
+
+                    @foreach (DinoDiner.Menu.Size s in (DinoDiner.Menu.Size[])Enum.GetValues(typeof(DinoDiner.Menu.Size)))
+                    {
+                        @if (i is DinoDiner.Menu.CretaceousCombo sides)
+                        {
+                            sides.Size = s;
+                            <tr>
+                                <td>@s.ToString()</td>
+                                <td>$@sides.Price.ToString("0.00")</td>
+                                <td>@sides.Calories</td>
+                            </tr>
+                        }
+                    }
+
+
+                </table>
+                <div class="twotab">
+                    <h4>Ingredients</h4>
+                    <div class="threetab">
+                        @foreach (string s in i.Ingredients)
+                        {
+                            <p>@s</p>
+                        }
+                    </div>
+
+                </div>}
+
+        </div>
     <div>
         <h2>Entrees</h2>
-        @if (Model.Entree.Count == 0)
+        @if (Model.Entree.Count() == 0)
         {
             <h4>**None**</h4>
         }
@@ -103,56 +124,101 @@
 
                 </div>
          }
-<div>
-    <h2>Sides</h2>
-    @if (Model.Side.Count == 0)
-    {
-        <h4>**None**</h4>
-    }
-
-    @foreach (DinoDiner.Menu.IOrderItem i in Model.Side)
-    {
-
-        <h3>@i.ToString()<br /></h3>
-        <div class="twotab">
-            <p>Price: $@i.Price.ToString("0.00")</p>
-            <p>Calories: @i.Calories<p>
-            <p>Ingredients<p>
-                <div class="threetab">
-                    @foreach (string s in i.Ingredients)
-                    {
-                <p>@s</p>
-            }
-                </div>
-
-            </div>
-                
-        }
-
     <div>
-        <h2>Drinks</h2>
-        @if(Model.Drink.Count == 0)
+        <h2>Sides</h2>
+        @if (Model.Side.Count() == 0)
         {
             <h4>**None**</h4>
         }
-        @foreach (DinoDiner.Menu.IOrderItem i in Model.Drink)
+
+        @foreach (DinoDiner.Menu.IOrderItem i in Model.Side)
         {
-           
-               
-                <h3>@i.ToString()<br /></h3>
+
+            List<string> temp = i.ToString().Split(' ').ToList();
+            temp.RemoveAt(0);
+            string final = string.Join(" ", temp.ToArray());
+            <h3>@final<br /></h3>
+            <table border="1">
+                <tr>
+                    <th>Size</th>
+                    <th>Price</th>
+                    <th>Calories</th>
+                </tr>
+
+                @foreach (DinoDiner.Menu.Size s in (DinoDiner.Menu.Size[])Enum.GetValues(typeof(DinoDiner.Menu.Size)))
+                {
+                    @if (i is DinoDiner.Menu.Sides sides)
+                    {
+                        sides.Size = s;
+                        <tr>
+                            <td>@s.ToString()</td>
+                            <td>$@sides.Price.ToString("0.00")</td>
+                            <td>@sides.Calories</td>
+                        </tr>
+                    }
+                }
+
+
+            </table>
+            <div class="twotab">
+
+                <h4>Ingredients</h4>
+                <div class="threetab">
+                    @foreach (string s in i.Ingredients)
+                    {
+                        <p>@s</p>
+                    }
+                </div>
+            </div>
+        }
+
+        <div>
+            <h2>Drinks</h2>
+            @if (Model.Drink.Count() == 0)
+            {
+                <h4>**None**</h4>
+            }
+            @foreach (DinoDiner.Menu.IOrderItem i in Model.Drink)
+            {
+
+                List<string> temp = i.ToString().Split(' ').ToList();
+                temp.RemoveAt(0);
+                string final = string.Join(" ", temp.ToArray());
+                <h3>@final<br /></h3>
+                <table border="1">
+                    <tr>
+                        <th>Size</th>
+                        <th>Price</th>
+                        <th>Calories</th>
+                    </tr>
+
+                    @foreach (DinoDiner.Menu.Size s in (DinoDiner.Menu.Size[])Enum.GetValues(typeof(DinoDiner.Menu.Size)))
+                    {
+                        @if (i is DinoDiner.Menu.Drink sides)
+                        {
+                            sides.Size = s;
+                            <tr>
+                                <td>@s.ToString()</td>
+                                <td>$@sides.Price.ToString("0.00")</td>
+                                <td>@sides.Calories</td>
+                            </tr>
+                        }
+                    }
+
+
+                </table>
                 <div class="twotab">
-                    <p>Price: $@i.Price.ToString("0.00")</p>
-                    <p>Calories: @i.Calories<p>
-                    <p>Ingredients<p>
-                        <div class="threetab">
-                            @foreach (string s in i.Ingredients)
-                            {
-                             <p>@s</p>
-                            }
-                        </div>
+                    <h4>Ingredients</h4>
+                    <div class="threetab">
+                        @foreach (string s in i.Ingredients)
+                        {
+                            <p>@s</p>
+                        }
+                    </div>
 
                 </div>
-                
-        }
+
+            }
+        </div>
     </div>
-     
+</div>

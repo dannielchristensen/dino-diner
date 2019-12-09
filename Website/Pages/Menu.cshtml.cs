@@ -11,10 +11,10 @@ namespace Website.Pages
     public class MenuModel : PageModel
     {
         private Menu menu = new Menu();
-        public List<IOrderItem> Entree = new List<IOrderItem>();
-        public List<IOrderItem> Side = new List<IOrderItem>();
-        public List<IOrderItem> Combo = new List<IOrderItem>();
-        public List<IOrderItem> Drink = new List<IOrderItem>();
+        public IEnumerable<IOrderItem> Entree = new List<IOrderItem>();
+        public IEnumerable<IOrderItem> Side = new List<IOrderItem>();
+        public IEnumerable<IOrderItem> Combo = new List<IOrderItem>();
+        public IEnumerable<IOrderItem> Drink = new List<IOrderItem>();
         public void OnGet()
         {
             Entree = menu.AvailableEntrees;
@@ -42,10 +42,10 @@ namespace Website.Pages
             Drink = menu.AvailableDrinks;
             if (search != null)
             {
-                Entree = s.searchEntree(search);
-                Combo = s.searchCombo(search);
-                Side = s.searchSide(search);
-                Drink = s.searchDrink(search);
+                Entree = Entree.Where(item => item.ToString().Contains(search, StringComparison.OrdinalIgnoreCase));
+                Combo = Combo.Where(item => item.ToString().Contains(search, StringComparison.OrdinalIgnoreCase));
+                Side = Side.Where(item => item.ToString().Contains(search, StringComparison.OrdinalIgnoreCase));
+                Drink = Drink.Where(item => item.ToString().Contains(search, StringComparison.OrdinalIgnoreCase));
             }
             if (MenuSection.Count > 0)
             {
@@ -73,26 +73,30 @@ namespace Website.Pages
 
             if(minPrice is float min)
             {
-                Entree = s.FilterByMinPrice(Entree, min);
-                Combo = s.FilterByMinPrice(Combo, min);
-                Side = s.FilterByMinPrice(Side, min);
-                Drink = s.FilterByMinPrice(Drink, min);
+                Entree = Entree.Where(item => item.Price > min);
+                Combo = Combo.Where(item => item.Price > min);
+                Side = Side.Where(item => item.Price > min);
+                Drink = Drink.Where(item => item.Price > min);
             }
 
             if(maxPrice is float max)
             {
-                Entree = s.FilterByMaxPrice(Entree, max);
-                Combo = s.FilterByMaxPrice(Combo, max);
-                Side = s.FilterByMaxPrice(Side, max);
-                Drink = s.FilterByMaxPrice(Drink, max);
+                Entree = Entree.Where(item => item.Price < max);
+                Combo = Combo.Where(item => item.Price < max);
+                Side = Side.Where(item => item.Price < max);
+                Drink = Drink.Where(item => item.Price < max);
             }
 
             if(Ingredients.Count > 0)
             {
-                Entree = s.FilterByIngredients(Entree, Ingredients);
-                Combo = s.FilterByIngredients(Combo, Ingredients);
-                Side = s.FilterByIngredients(Side, Ingredients);
-                Drink = s.FilterByIngredients(Drink, Ingredients);
+                foreach(string i in Ingredients)
+                {
+                    Entree = Entree.Where(item => !item.Ingredients.Contains(i));
+                    Combo = Combo.Where(item => !item.Ingredients.Contains(i));
+                    Side = Side.Where(item => !item.Ingredients.Contains(i));
+                    Drink = Drink.Where(item => !item.Ingredients.Contains(i));
+                }
+                
             }
         }
     }
